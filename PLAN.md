@@ -21,7 +21,7 @@ is a bet.
 | # | Task | Backlog | Done when | |
 |---|------|---------|-----------|---|
 | 0.1 | `git init`, `.gitignore` for `__pycache__`, first commit of everything as it stands | 9 | `git log` shows one commit; `git status` clean | ✅ |
-| 0.2 | Push to a GitHub repo and turn on Pages from `main` (or Netlify drop, if you'd rather not have a repo be public) | — | A URL you can open on your phone | ⬜ needs you |
+| 0.2 | Push to a GitHub repo and turn on Pages from `main` (or Netlify drop, if you'd rather not have a repo be public) | — | A URL you can open on your phone | ✅ https://iamjoshknox.github.io/the-books/ |
 | 0.3 | Fold the ad-hoc audits into `verify.py`: 66 chapters, no duplicate ids, five division counts, no unfilled locator tracks, no `46 of 66`, every `data-yt` present, every section has a Wikipedia link, no horizontal overflow markers | 11 | `python verify.py` prints PASS and exits 0; a deliberately broken copy fails | ✅ |
 | 0.4 | `verify.py --net`: oEmbed every video id, MediaWiki-resolve every Wikipedia slug, fail on a redirect or a 404 | 11 | Runs clean once; then leave it for the month-later check | ✅ |
 | 0.5 | One `books.py` holding the 66-row table; `build_spine.py` imports it; delete `_letters_a/b/c.py` and `_lettertpl.py` (their output is in the HTML and in git now) | 10 | `build_spine.py` produces a byte-identical page from `books.py`; the folder has no one-shot scripts | ✅ |
@@ -61,7 +61,7 @@ content. These are ordered by value per hour.
 |---|------|---------|-----------|
 | 2.1 | Sharing metadata: `<meta name="description">`, Open Graph title / description / image (a cropped screenshot of the spine, baked as a data URI or committed PNG), favicon | 18 | Pasting the link into a chat shows a card with the spine on it | ✅ `og.png` 1200×630 committed; favicon is the ten era colours as an SVG bookshelf |
 | 2.2 | **One "Paul's world" map** — Aegean and eastern Mediterranean, same baked-SVG pipeline as the ten existing maps — reused across all thirteen Pauline letters with the destination lit, the origin marked, and the route drawn between. `_paulmap.py`, idempotent, 3.5KB a plate | 13 | Thirteen more books have a map, from one drawing | ✅ 23 of 66 books mapped |
-| 2.3 | "Reads with" line under each spec block, from a `PAIRS` table in `books.py`: Kings ↔ Chronicles, Luke ↔ Acts, Jeremiah ↔ Lamentations, Ezra ↔ Nehemiah ↔ Haggai ↔ Zechariah, Colossians ↔ Philemon, 1 Timothy ↔ Titus, 2 Peter ↔ Jude, 1–3 John | 14 | Every pair links both ways; `verify.py` checks symmetry |
+| 2.3 | "Reads with" line under each spec block, from a `PAIRS` table in `books.py`: Kings ↔ Chronicles, Luke ↔ Acts, Jeremiah ↔ Lamentations, Ezra ↔ Nehemiah ↔ Haggai ↔ Zechariah, Colossians ↔ Philemon, 1 Timothy ↔ Titus, 2 Peter ↔ Jude, 1–3 John | 14 | Every pair links both ways; `verify.py` checks symmetry | ✅ 54 edges, all 66 books, symmetry checked |
 | 2.4 | Divided-kingdom map — serves Kings, Chronicles, Hosea, Amos, Micah and most of the minor prophets | 13 | ~14 more books mapped |
 | 2.5 | Empires map (Assyria → Babylon → Persia) for Isaiah, Jeremiah, Ezekiel, Daniel, Esther, Nehemiah; Galilee and Judea for the four gospels | 13 | Under ten books left unmapped; decide whether those need one at all |
 

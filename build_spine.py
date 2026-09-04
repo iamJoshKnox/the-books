@@ -333,6 +333,29 @@ for d in sorted(DIVISIONS):
     s = s[:m.start()] + m.group(1) + label + m.group(2) + s[m.end():]
     edits += 1
 
+# ---- "Reads with": one line under each spec block, from the PAIRS table
+from books import PAIRS
+NAME = {b[0]: b[2] for b in BOOKS}
+reads = {}
+for a, b, why in PAIRS:
+    assert a in NAME and b in NAME and a != b, (a, b)
+    reads.setdefault(a, []).append((b, why))
+    reads.setdefault(b, []).append((a, why))
+for bid in NAME:
+    assert bid in reads, 'no "reads with" for %s' % bid
+    # in canonical order, so the line reads like the shelf
+    items = sorted(reads[bid], key=lambda t: canon[t[0]])
+    line = ('    <p class="reads"><span class="reads-lab">Reads with</span> '
+            + ' <span class="sep">&middot;</span> '.join(
+                '<span class="rw"><a href="#%s">%s</a><span class="why"> &mdash; %s</span></span>'
+                % (o, NAME[o], why) for o, why in items)
+            + '</p>')
+    m = re.search(r'(<section class="chapter" id="%s".*?<dl class="spec">.*?</dl>\n)(    <p class="reads">.*?</p>\n)?'
+                  % re.escape(bid), s, re.S)
+    assert m, 'no spec block in %s' % bid
+    s = s[:m.start()] + m.group(1) + line + '\n' + s[m.end():]
+    edits += 1
+
 print('eras: %d bands, boundaries %s' % (len(ERAS), [b[0] for b in BOUNDS] + [100]))
 print('books: %d of %d written' % (len(built), len(BOOKS)))
 for bid in ('genesis', 'joshua', 'kings-2', 'psalms', 'matthew', 'revelation'):

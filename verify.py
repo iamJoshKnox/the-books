@@ -102,6 +102,20 @@ for bid in PAUL:
 mapped = len(re.findall(r'<figure class="mapfig"', s))
 check(mapped == 10 + len(PAUL), 'expected %d map figures, found %d' % (10 + len(PAUL), mapped))
 
+# ------------------------------------------------------- reads with
+# every book has a line, and every link on it has its mirror on the other book
+links = {}
+for bid in want:
+    sec = section(bid)
+    m = re.search(r'<p class="reads">(.*?)</p>', sec, re.S)
+    check(m is not None, '%s: no "reads with" line' % bid)
+    links[bid] = set(re.findall(r'<a href="#([^"]+)">', m.group(1))) if m else set()
+    check(bool(links[bid]), '%s: "reads with" names no books' % bid)
+for a, tos in links.items():
+    for b in tos:
+        check(b in links, '%s reads with %s, which is not a book' % (a, b))
+        check(a in links.get(b, ()), '%s reads with %s but not the other way round' % (a, b))
+
 # ---------------------------------------------------------- front matter
 for stale in ('46 of 66', 'Built so far', 'slice-note', 'design slice', 'none built yet',
               'in progress</span>'):

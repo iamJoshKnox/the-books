@@ -1028,6 +1028,19 @@ main { display: flex; flex-direction: column; }
   text-transform: uppercase; color: var(--k-muted); margin-bottom: .25rem;
 }
 .spec dd { margin: 0; font-family: var(--f-head); font-size: 1rem; font-weight: 500; color: var(--k-ink); line-height: 1.3; }
+/* the books this one belongs beside, tucked under the spec card */
+.reads {
+  margin: -1.15rem 0 1.8rem; padding: 0 .2rem;
+  font-size: .8rem; line-height: 1.55; color: var(--k-muted);
+}
+.reads-lab {
+  font-size: .62rem; font-weight: 700; letter-spacing: .14em; text-transform: uppercase;
+  color: var(--k-muted); margin-right: .35rem;
+}
+.reads .rw { white-space: normal; }
+.reads a { color: var(--k-ink); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--k-line); }
+.reads a:hover { color: var(--k-accent); border-color: var(--k-accent); }
+.reads .sep { opacity: .45; padding: 0 .3rem; }
 
 /* ---------- note ---------- */
 .note {
@@ -2013,6 +2026,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Mesopotamia, Canaan, Egypt</dd></div>
       <div><dt>Theme</dt><dd>Beginnings, and a promise</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#exodus">Exodus</a><span class="why"> &mdash; ends with Joseph&rsquo;s coffin; Exodus carries it out</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -2090,6 +2104,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Egypt, the Red Sea, Mount Sinai</dd></div>
       <div><dt>Theme</dt><dd>Rescue, and a God who moves in</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#genesis">Genesis</a><span class="why"> &mdash; ends with Joseph&rsquo;s coffin; Exodus carries it out</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#numbers">Numbers</a><span class="why"> &mdash; the tabernacle built, then carried</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#deuteronomy">Deuteronomy</a><span class="why"> &mdash; the law given, then the law retold forty years on</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -2163,6 +2178,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>The foot of Mount Sinai</dd></div>
       <div><dt>Theme</dt><dd>How to live next door to a holy God</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#hebrews">Hebrews</a><span class="why"> &mdash; the sacrificial system, and the letter that reads it as a sketch</span></span></p>
 
     <div class="prose">
       <p>Almost nothing happens in Leviticus. Nobody travels; the whole book takes place at the foot of the same mountain across roughly a month, and it is mostly God speaking to Moses out of the tent that was finished on the last page of Exodus. The question it answers is the one Exodus leaves hanging &mdash; if God is now living in the middle of the camp, how does the camp survive it? The answer arrives in movements: a manual of five offerings and who eats which parts, the ordination of Aaron and his sons, and a long section on what makes a person or a garment or a house unclean and what is done about it. The narrative stops twice, both times abruptly. Once for Nadab and Abihu, Aaron's own sons, who offer unauthorised fire and are killed where they stand while their father is told not to mourn. Once for a blasphemer, who is stoned. At the centre of the book sits chapter 16, the Day of Atonement, when the high priest goes behind the curtain once a year with blood and a second goat carries the nation's sin out into the wilderness. Everything after that turns outward, from ritual to ordinary conduct: wages paid the same day, the deaf not cursed, no stumbling block in front of the blind, the immigrant loved as yourself. It closes with a calendar of feasts, a sabbath year for the land itself, and a jubilee that cancels debt and hands property back every fiftieth year.</p>
@@ -2235,6 +2251,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>The wildernesses of Sinai, Paran and Zin</dd></div>
       <div><dt>Theme</dt><dd>A generation that would not go in</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#exodus">Exodus</a><span class="why"> &mdash; the tabernacle built, then carried</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -2304,6 +2321,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>The plains of Moab</dd></div>
       <div><dt>Theme</dt><dd>Choose life</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#exodus">Exodus</a><span class="why"> &mdash; the law given, then the law retold forty years on</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#joshua">Joshua</a><span class="why"> &mdash; the speech on the plains, then the crossing</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -2401,6 +2419,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Canaan, west of the Jordan</dd></div>
       <div><dt>Theme</dt><dd>The promise, finally in hand</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#deuteronomy">Deuteronomy</a><span class="why"> &mdash; the speech on the plains, then the crossing</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -2462,6 +2481,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Canaan, tribe by tribe</dd></div>
       <div><dt>Theme</dt><dd>Everyone did what was right in their own eyes</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ruth">Ruth</a><span class="why"> &mdash; the same lawless decades, one household wide</span></span></p>
 
     <div class="prose">
       <p>Judges covers roughly three centuries in which there is no king, no capital and very little unity &mdash; the tribes act separately, and the book is a set of regional stories rather than a national history. It runs on a cycle stated plainly in chapter 2 and then repeated: the people abandon the covenant, God hands them to a neighbouring power, they are oppressed until they cry out, God raises up a deliverer, and the land has rest until that deliverer dies, at which point it begins again. The deliverers get less impressive each time. Othniel is exemplary and gets six verses. Deborah has to lead because Barak will not go without her. Gideon needs three separate signs before he will act and ends up making an object the nation worships. Jephthah wins a battle and loses his daughter to a vow he did not have to make. Samson, who gets four chapters, breaks every term of his own consecration and accomplishes most of what he accomplishes out of personal grievance. The book then closes with two appendices &mdash; a stolen shrine and a civil war that begins with a gang rape and nearly wipes out a tribe &mdash; and repeats its refrain: in those days there was no king in Israel, and everyone did what was right in his own eyes.</p>
@@ -2520,6 +2540,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Moab and Bethlehem</dd></div>
       <div><dt>Theme</dt><dd>Loyalty, and a genealogy that matters later</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#judges">Judges</a><span class="why"> &mdash; the same lawless decades, one household wide</span></span></p>
 
     <div class="prose">
       <p>Ruth is set in the same period as Judges and is its deliberate opposite: no armies, no atrocities, four chapters in which ordinary people behave decently. A famine drives an Israelite family into Moab, where the father and both sons die, leaving three widows. Naomi tells her Moabite daughters-in-law to go home; one does, and Ruth refuses in the book&rsquo;s best-known lines, binding herself to a woman with nothing to offer and to a God not her own. They return to Bethlehem at barley harvest, destitute, and Ruth goes out to glean &mdash; a provision written into Leviticus, the corners of the field left unharvested for the poor and the immigrant, here shown working exactly as intended. She gleans in the field of Boaz, a relative, who notices her, protects her and feeds her. Naomi then engineers a proposal, Boaz navigates a nearer kinsman with a legal manoeuvre at the town gate, and they marry. The child is handed to Naomi, and the women of the town tell her that her daughter-in-law, a foreigner, is worth more to her than seven sons. Then the book does the thing it has been building to all along and gives four generations of genealogy, ending on a name nobody in the story could have known was coming.</p>
@@ -2573,6 +2594,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Shiloh, Gibeah, the Judean wilderness</dd></div>
       <div><dt>Theme</dt><dd>Israel asks for a king</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#samuel-2">2 Samuel</a><span class="why"> &mdash; one scroll, cut in two by its Greek translators</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#psalms">Psalms</a><span class="why"> &mdash; the headings that point back to the cave and the flight</span></span></p>
 
     <div class="prose">
       <p>First Samuel turns on a request. The priesthood at Shiloh is corrupt, the ark is captured by the Philistines and returned because it is more trouble than it is worth, and Samuel &mdash; prophet, judge, and the last of a line that ran back to Moses &mdash; grows old with sons who take bribes. So the elders ask for a king, to judge them like all the nations. Samuel takes it as a personal rejection; God tells him it is not personal, and instructs him to warn them exactly what a king will cost: your sons for his army, your daughters for his kitchens, a tenth of everything, and no way back. They ask anyway. Saul is tall, handsome, initially reluctant and briefly impressive, and then unravels over a series of small disobediences that he keeps explaining rather than admitting. Samuel privately anoints a shepherd boy from Bethlehem, and the last two thirds of the book are the two men&rsquo;s lives running in opposite directions &mdash; David rising through a giant, a friendship with Saul&rsquo;s own son, and years as a fugitive commanding a company of the discontented and indebted, while Saul deteriorates into paranoia, massacres a town of priests, and finally consults a medium the night before dying on Mount Gilboa with his sons.</p>
@@ -2628,6 +2650,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Hebron, then Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>A promise to a house, and the cost of one night</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#samuel-1">1 Samuel</a><span class="why"> &mdash; one scroll, cut in two by its Greek translators</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#chronicles-1">1 Chronicles</a><span class="why"> &mdash; David&rsquo;s reign told twice, once with the failures and once without</span></span></p>
 
     <div class="prose">
       <p>Second Samuel is one reign, and it divides cleanly in half. In the first, everything works: David is made king over Judah and then over all Israel, takes the Jebusite fortress that becomes Jerusalem, brings the ark into the city dancing in front of it, beats every neighbouring army, and is given a promise through the prophet Nathan that his house and his kingdom will endure &mdash; the covenant the rest of the Old Testament keeps returning to. Then, in the spring, at the time when kings go out to war, David stays home. What follows is adultery, a pregnancy, a failed cover-up, and the arranged death of the husband, a man loyal enough that the plan only works because he refuses to sleep in his own house while the army is in the field. Nathan tells him a story about a stolen lamb, David convicts himself, and the sentence is that the sword will not depart from his house. It does not: his eldest son rapes his daughter, another son murders that son and then raises a rebellion that drives David barefoot out of his own city, and the king ends the book as an old man taking a census he was warned not to take.</p>
@@ -2683,6 +2706,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem, Samaria, Mount Carmel</dd></div>
       <div><dt>Theme</dt><dd>The temple built, the kingdom divided</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#kings-2">2 Kings</a><span class="why"> &mdash; one scroll, cut in two by its Greek translators</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#chronicles-2">2 Chronicles</a><span class="why"> &mdash; Solomon and the kings of Judah, from a priest&rsquo;s side of the aisle</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -2764,6 +2788,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Samaria, Jerusalem, Babylon</dd></div>
       <div><dt>Theme</dt><dd>Both kingdoms fall</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#kings-1">1 Kings</a><span class="why"> &mdash; one scroll, cut in two by its Greek translators</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#chronicles-2">2 Chronicles</a><span class="why"> &mdash; the same kings to the same end, from a priest&rsquo;s side of the aisle</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#isaiah">Isaiah</a><span class="why"> &mdash; Hezekiah&rsquo;s crisis, 2 Kings 18&ndash;20 and Isaiah 36&ndash;39, nearly word for word</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#jeremiah">Jeremiah</a><span class="why"> &mdash; the last kings of Judah from outside the city and from inside it</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#zephaniah">Zephaniah</a><span class="why"> &mdash; Josiah&rsquo;s reform, and the prophet preaching just before it</span></span></p>
 
     <div class="prose">
       <p>Second Kings continues the two-track narrative and takes both tracks to their ends. It opens with Elijah going up in a whirlwind and Elisha inheriting a double portion of his spirit, and the Elisha cycle that follows is the most miracle-dense stretch in the Old Testament outside Exodus &mdash; a widow&rsquo;s oil, a poisoned stew, a floating axe head, a Syrian general cured of leprosy after being told to wash in a river he considers beneath him. Then the political narrative closes in. Assyria takes tribute, then territory, and in 722 BC the northern kingdom ends: Samaria falls after a three-year siege, the population is deported and replaced, and the narrator stops the story to explain in a long, unusually direct passage that this happened because of everything the book has been documenting since Jeroboam. Judah survives, and produces two of its best kings in Hezekiah and Josiah &mdash; Josiah finds a lost scroll of the law during temple repairs, reads it aloud, tears his clothes and launches the most thorough reform in the book. It is not enough, and the narrator says so. Babylon comes in three waves, and in 586 BC the walls are breached, the temple burned, the last king blinded after watching his sons killed, and the population marched east. The book ends on a small strange note of hope: thirty-seven years later, an exiled Judean king is released from prison in Babylon and given a seat at the royal table.</p>
@@ -2819,6 +2844,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>David, and the temple he was not allowed to build</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#samuel-2">2 Samuel</a><span class="why"> &mdash; David&rsquo;s reign told twice, once with the failures and once without</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#chronicles-2">2 Chronicles</a><span class="why"> &mdash; one scroll, cut in two by its Greek translators</span></span></p>
 
     <div class="prose">
       <p>First Chronicles opens with nine chapters that are almost entirely names &mdash; Adam, Seth, Enosh, on through Noah and Abraham and Judah to David, then the tribes, then the priests, then the families who came back from Babylon. Modern readers skip it; those last families were the point of it. This is a history written for people who have just returned from exile to a small province with no king, a half-built temple and a reasonable suspicion that they have become a footnote. The genealogy is the answer to that suspicion: you are the same people, the line is unbroken, and it runs from the first man to the person holding this scroll. The narrative proper starts at chapter 10, disposes of Saul in a single paragraph, and gives everything after it to David &mdash; but a different David from the one in Samuel. There is no Bathsheba, no Absalom, no civil war, no deathbed score-settling. What there is instead is David organising: the ark brought up to Jerusalem with three chapters of Levites and singers, the threshing floor bought that will become the temple site, and then the plans, the materials, the courses of priests, the gatekeepers and the treasurers, all arranged in advance for a building he is told plainly he will not construct. It ends with him handing his son a finished blueprint and a national fundraising campaign.</p>
@@ -2873,6 +2899,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem and the temple</dd></div>
       <div><dt>Theme</dt><dd>Measured by what they did about the temple</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#kings-1">1 Kings</a><span class="why"> &mdash; Solomon and the kings of Judah, from a priest&rsquo;s side of the aisle</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#kings-2">2 Kings</a><span class="why"> &mdash; the same kings to the same end, from a priest&rsquo;s side of the aisle</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#chronicles-1">1 Chronicles</a><span class="why"> &mdash; one scroll, cut in two by its Greek translators</span></span></p>
 
     <div class="prose">
       <p>Second Chronicles covers the same four centuries as First and Second Kings and tells them very differently. Solomon gets nine chapters, almost all of it temple: the construction, the dedication, the prayer, the glory filling the house. Then the kingdom divides, and the northern ten tribes essentially disappear from the account &mdash; no Elijah cycle, no Elisha, no Ahab and Jezebel, no fall of Samaria except as background noise. The book follows the line of David alone, king by king, and measures each one against a single question: what did he do about the temple. Hezekiah, who gets three verses of reform in Kings, gets four chapters here, because he reopened the doors and kept the Passover. Josiah&rsquo;s repairs and the scroll found during them get the same weight. And Manasseh, who in Kings is simply the worst king Judah ever had, is given something Kings never mentions: a deportation to Babylon in chains, a prayer of repentance, and a restoration &mdash; because this book is written for people who have themselves been deported and need to know whether coming back is possible. It ends not with the temple burning, which it reports in a handful of verses, but with Cyrus of Persia decreeing that the house in Jerusalem be rebuilt. The last sentence is an invitation: whoever is among you of all his people, let him go up.</p>
@@ -2945,6 +2972,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Babylon, and Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>The temple rebuilt, and a community redefined</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#nehemiah">Nehemiah</a><span class="why"> &mdash; one book in the Hebrew Bible; the return, in two waves</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#esther">Esther</a><span class="why"> &mdash; Esther falls in the gap between Ezra 6 and Ezra 7</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#haggai">Haggai</a><span class="why"> &mdash; the prophet who got the temple built in Ezra 5&ndash;6</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#zechariah">Zechariah</a><span class="why"> &mdash; the prophet who got the temple built in Ezra 5&ndash;6</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -3009,6 +3037,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Susa, and Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>Walls are the easy part</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ezra">Ezra</a><span class="why"> &mdash; one book in the Hebrew Bible; the return, in two waves</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#malachi">Malachi</a><span class="why"> &mdash; the same abuses, found on Nehemiah&rsquo;s second visit</span></span></p>
 
     <div class="prose">
       <p>Nehemiah is the only book in the Old Testament that reads like a memoir, and it opens with its author holding a job in the Persian palace: cupbearer to Artaxerxes, a post that means daily access to the king. News reaches him that Jerusalem&rsquo;s wall is broken down and its gates burned, and he weeps and fasts and then does something extremely practical &mdash; waits for an opening, asks for letters and timber, and gets both. What follows is a construction project narrated by its project manager. He inspects the wall at night without telling anyone, assigns families to the sections in front of their own houses, and handles opposition that escalates from mockery to threatened assault to an assassination plot dressed up as a friendly meeting in a village on the plain. The wall goes up in fifty-two days. Then the book changes register completely: with the perimeter secure, Ezra reads the law aloud from a wooden platform from early morning until midday while Levites move through the crowd explaining it, and the people weep, are told to stop weeping and celebrate instead, and then sign a written covenant. The last chapter is the deflating one. Nehemiah goes back to Persia, returns some years later, and finds the temple storerooms rented out to a man he had specifically excluded, the Levites unpaid and back working their fields, the sabbath being traded straight through, and the intermarriage problem returned. He reacts with physical violence and a short prayer to be remembered, and the book simply stops there.</p>
@@ -3063,6 +3092,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Susa, the Persian capital</dd></div>
       <div><dt>Theme</dt><dd>Rescue, with the rescuer never named</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ezra">Ezra</a><span class="why"> &mdash; Esther falls in the gap between Ezra 6 and Ezra 7</span></span></p>
 
     <div class="prose">
       <p>Esther is set in the Persian capital of Susa among the Jews who did not return, and it is the only book in the Bible that never mentions God. It never mentions prayer, the law, the temple or Jerusalem either. What it has instead is a chain of coincidences so pointed that the omission starts to look like the argument. A king deposes his queen at a drunken banquet. A Jewish orphan raised by her older cousin wins the replacement contest without disclosing her people. That cousin happens to overhear an assassination plot, reports it, and the credit is written into the royal record and then forgotten. A courtier named Haman, enraged that one man will not bow to him, obtains a sealed edict to destroy every Jew in a hundred and twenty-seven provinces on a date chosen by casting lots. Mordecai&rsquo;s response is the closest the book comes to theology, and it is a question rather than a claim: who knows whether you have come to the kingdom for such a time as this. Esther approaches the king uninvited, a capital offence, and then does not ask for anything &mdash; she invites him to dinner, twice. In between the two dinners the king cannot sleep, calls for the records to be read to him, and hears the one entry nobody ever acted on. Everything after that inverts, mechanically and completely: Haman hanged on the gallows he had built for someone else, his edict countered rather than revoked because Persian law could not be unmade, and a two-day festival established that Jews keep to this day.</p>
@@ -3136,6 +3166,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Uz, outside Israel</dd></div>
       <div><dt>Theme</dt><dd>Why the innocent suffer, and who may ask</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#proverbs">Proverbs</a><span class="why"> &mdash; what happens when the rules of Proverbs stop holding</span></span></p>
 
     <div class="prose">
       <p>Job is set outside Israel, mentions no covenant, no law, no temple and no Jewish history, and is written in some of the hardest Hebrew in the Bible. It opens with a wager. A man of exemplary integrity loses his livestock, his servants, his ten children and finally his health inside two chapters &mdash; and the reader is told exactly why, through a challenge in the divine court about whether anyone is good for nothing, whether Job fears God for God or for the herds. Job himself is never told. Three friends arrive and sit with him on the ground for seven days without speaking, which is the wisest thing anyone does in the book. Then they open their mouths, and thirty-five chapters of increasingly heated poetry follow in three cycles: the friends argue with mounting confidence that suffering follows sin and that Job should confess, and Job insists he has nothing to confess and demands a hearing. He is not asking for comfort. He is asking for a trial. A fourth speaker, Elihu, appears from nowhere, is never properly introduced and is never answered afterwards. Then God arrives in a whirlwind, never mentions the wager, never explains, and never answers the question &mdash; instead asking about seventy of his own. Where were you when I laid the foundations. Do you know when the mountain goats give birth. Did you give the horse his strength. Look at the ostrich, who is spectacularly stupid and outruns you anyway. Job withdraws his case. And then the friends, who spent the whole book defending God, are told they have not spoken rightly of him, and that Job &mdash; who accused him to his face &mdash; has.</p>
@@ -3198,6 +3229,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem and the temple</dd></div>
       <div><dt>Theme</dt><dd>The whole range of what is sayable to God</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#samuel-1">1 Samuel</a><span class="why"> &mdash; the headings that point back to the cave and the flight</span></span></p>
 
     <div class="prose">
       <p>Psalms is not a narrative but a collection &mdash; 150 poems gathered across roughly a thousand years and arranged into five books, each closing with a doxology, in deliberate echo of the five books of Moses. The voices in it run the full range of what people say to God: victory songs and coronation hymns, tightly argued meditations on the law, liturgies for pilgrims climbing the road to Jerusalem, and a great deal of complaint. Something like a third of the collection is lament &mdash; psalms that accuse God of sleeping, of forgetting, of hiding his face &mdash; and whoever assembled the book left them in without softening them. The arc of the whole is visible if you read it straight through as a book rather than dipping in: it opens with the confident promise that the righteous prosper like a tree planted by water, spends its middle in the wreckage of a monarchy that failed and a temple that burned, and climbs out through the final book into five uninterrupted hymns of praise. Book III ends with the covenant with David apparently broken and God asked, flatly, where his old faithfulness went. Book IV answers by changing the subject: the LORD reigns anyway, and reigned before there was a king in Jerusalem to lose.</p>
@@ -3260,6 +3292,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>The royal court</dd></div>
       <div><dt>Theme</dt><dd>Skill at being alive</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#job">Job</a><span class="why"> &mdash; what happens when the rules of Proverbs stop holding</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#ecclesiastes">Ecclesiastes</a><span class="why"> &mdash; wisdom, and the case against it</span></span></p>
 
     <div class="prose">
       <p>Proverbs is an anthology and says so out loud, naming its own sources as it goes &mdash; including one collection introduced as sayings of Solomon that the men of Hezekiah copied out, two centuries after Solomon died. The first nine chapters are not proverbs at all but a sustained address from a father to a son, and they are the key to everything that follows: wisdom is personified as a woman calling in the street, folly as a rival woman with a competing invitation, and the choice between them is presented as the choice that organises a life. Only then do the one-line sayings begin, and they are not promises. A proverb is a observation about how things generally go &mdash; the diligent get rich, the lazy go hungry, a soft answer turns away wrath &mdash; and the book is perfectly aware that life supplies exceptions, which is why Job and Ecclesiastes sit next to it in the canon arguing the other side. Its range is startlingly practical: debt, gossip, drink, table manners, business weights, how long to stay at a neighbour&rsquo;s house, how not to greet someone too loudly early in the morning. It closes with two chapters by writers nobody can identify, and then an acrostic poem about a woman running an estate, trading in real property and laughing at the future, which the book offers as wisdom made visible rather than as a job description.</p>
@@ -3319,6 +3352,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>Everything is vapour</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#proverbs">Proverbs</a><span class="why"> &mdash; wisdom, and the case against it</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#song-of-songs">Song of Songs</a><span class="why"> &mdash; the two Solomon books the rabbis argued over keeping</span></span></p>
 
     <div class="prose">
       <p>Ecclesiastes is the strangest book in the Old Testament and the one most people are surprised to find in it. Its key word, <em>hevel</em>, appears nearly forty times and is usually translated &ldquo;vanity&rdquo; or &ldquo;meaningless&rdquo;, but it literally means vapour or breath &mdash; something real that you cannot hold. The Preacher applies it to everything in turn, and he does not argue the case abstractly; he runs experiments. He tries pleasure, wine, great works, houses, vineyards, pools, singers, silver and gold, and reports that he denied himself nothing his eyes desired. He tries wisdom, and finds that the wise man and the fool meet the same end and are forgotten equally. He tries work, and observes that everything he built will pass to a successor who may well be an idiot. He notices that the righteous perish and the wicked prosper, that the courts are corrupt, that the oppressed have no comforter, and that a living dog is better than a dead lion. What he keeps returning to, without ever resolving the tension, is a small recurring instruction: eat your bread, drink your wine, enjoy your work and the person you live with, because these are given and today is what you have. The book closes with an epilogue in a different voice, and the last word is not despair but limit &mdash; fear God and keep his commandments, because God will bring every deed into judgement, including every hidden thing.</p>
@@ -3374,6 +3408,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Vineyards, gardens, the streets of Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>Desire, spoken plainly</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ecclesiastes">Ecclesiastes</a><span class="why"> &mdash; the two Solomon books the rabbis argued over keeping</span></span></p>
 
     <div class="prose">
       <p>The Song of Songs is a sequence of love poems exchanged between a woman and a man, with occasional interjections from a chorus described as the daughters of Jerusalem. There is no narrator, no story that resolves, no law, no covenant, no Israel, and no God &mdash; the divine name appears nowhere, unless you count a single possible compound in the last chapter. What there is instead is desire described without apology and largely from the woman&rsquo;s side: she speaks the first words and the last, she initiates, she searches the city at night for him, and she has more lines than he does, which is true of no other woman in the Bible. The imagery is agricultural and unembarrassed &mdash; vineyards, gardens, spices, a locked garden and its fountain, flocks of goats, a tower of ivory &mdash; and it is applied to bodies in ways that have made translators nervous for two thousand years. Because of that, the book was read allegorically almost from the start: Israel and the LORD in Jewish tradition, the church and Christ in Christian, and it earned its place in the canon partly on those readings. Rabbi Akiva called it the holy of holies. It is worth noticing that the plain sense and the allegory only conflict if you assume the plain sense needs excusing &mdash; the book itself never suggests it does.</p>
@@ -3430,6 +3465,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem, and the royal court</dd></div>
       <div><dt>Theme</dt><dd>The Holy One of Israel</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#kings-2">2 Kings</a><span class="why"> &mdash; Hezekiah&rsquo;s crisis, 2 Kings 18&ndash;20 and Isaiah 36&ndash;39, nearly word for word</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#micah">Micah</a><span class="why"> &mdash; contemporaries; Isaiah 2 and Micah 4 share a passage</span></span></p>
 
     <div class="prose">
       <p>Isaiah is the longest prophetic book and the one most quoted in the New Testament. It opens in the year King Uzziah died with a call vision &mdash; the temple filled with smoke, seraphim calling to each other, and a prophet who says he is a man of unclean lips and is then handed a message he is told outright nobody will listen to. The first thirty-nine chapters belong to that world: Assyria is the threat, Ahaz is offered a sign and refuses it, Hezekiah is besieged by Sennacherib and survives, and the poetry alternates between blistering indictment of a nation that keeps its festivals scrupulously while ignoring the widow and the orphan, and promises of a child born, a shoot from the stump of Jesse, a government on his shoulders. Then at chapter 40 the book changes voice entirely. Assyria is gone, Babylon has come and gone, and the addressee is a people already in exile: comfort, comfort my people. What follows is the most sustained argument in the Old Testament that the God of one small defeated nation is the only God there is &mdash; the idols are inventoried and mocked, Cyrus of Persia is named as an instrument two centuries early, and four poems appear about a servant who is despised, silent, wounded for the transgressions of others, and somehow vindicated. The last chapters go further out still, to new heavens and a new earth.</p>
@@ -3488,6 +3524,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem, then Egypt</dd></div>
       <div><dt>Theme</dt><dd>A covenant written on hearts</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#kings-2">2 Kings</a><span class="why"> &mdash; the last kings of Judah from outside the city and from inside it</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#lamentations">Lamentations</a><span class="why"> &mdash; the fall Jeremiah foretold, wept over</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#obadiah">Obadiah</a><span class="why"> &mdash; a dozen verses on Edom in common, Jeremiah 49 and Obadiah</span></span></p>
 
     <div class="prose">
       <p>Jeremiah is called as a young man, told he was appointed before he was formed, and objects that he does not know how to speak &mdash; which turns out to be the least of his problems. He preaches for forty years across the reigns of five kings and the destruction of the city, and almost nobody listens to any of it. He stands in the temple gate and tells worshippers that the building they are trusting is no safe-conduct and will go the way of Shiloh, and is nearly lynched. He buys a clay jar and smashes it in front of the elders. He wears a wooden yoke around the city to argue for surrender, and a rival prophet breaks it off his neck. He is beaten and put in the stocks, accused of desertion, and lowered into a cistern with no water in it, where he sinks into the mud. He is also the most interior of the prophets: the book preserves his complaints to God, which are not pious &mdash; you deceived me, why does the way of the wicked prosper, cursed be the day I was born. Its arrangement is famously not chronological, which frustrates readers who expect a narrative. And in the middle of the wreckage it contains the passage that gets quoted more than any other, about a new covenant that will not be written on tablets at all but put inside people and written on their hearts. After the city falls, the survivors ask his advice, ignore it, and drag him to Egypt.</p>
@@ -3544,6 +3581,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>The ruins of Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>Grief given a shape</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#jeremiah">Jeremiah</a><span class="why"> &mdash; the fall Jeremiah foretold, wept over</span></span></p>
 
     <div class="prose">
       <p>Lamentations is five poems about the destruction of Jerusalem, written close enough to the event that the details are specific and unbearable: the roads to Zion mourn because nobody comes to the festivals, the young women are dragged off, the priests and elders die looking for food, children ask for bread and there is none, and the book twice reports that women boiled and ate their own children during the siege &mdash; a horror it states flatly and does not soften. It is not a book about grief in general. It is about one city, in one year, and it refuses every consolation on offer. What holds it together is form. Four of the five poems are alphabetic acrostics: twenty-two verses, each beginning with the next letter of the Hebrew alphabet in order, so that the suffering is walked through from A to Z rather than allowed to spill. The middle poem triples that, sixty-six verses in threes, and it is exactly there, at the structural centre of the book, that the one turn toward hope appears &mdash; the steadfast love of the LORD never ceases, his mercies are new every morning. Then the form starts to come apart. The fifth poem still has twenty-two verses but is not an acrostic at all, and it ends not with restoration but with a question left open: restore us, unless you have utterly rejected us and are angry with us beyond measure.</p>
@@ -3601,6 +3639,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Babylon, by the Kebar canal</dd></div>
       <div><dt>Theme</dt><dd>The glory leaves, and comes back</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#daniel">Daniel</a><span class="why"> &mdash; the exile from Babylon, from the canal and from the palace</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#revelation">Revelation</a><span class="why"> &mdash; the throne, the scroll, the measured city &mdash; Revelation&rsquo;s furniture</span></span></p>
 
     <div class="prose">
       <p>Ezekiel was a priest, deported to Babylon in 597 BC with the first wave, eleven years before the city fell. He never serves in the temple. Instead, at thirty &mdash; the age a priest would have begun &mdash; the sky opens over a canal in Babylonia and he sees a storm out of the north carrying four living creatures with four faces each, wheels within wheels rimmed with eyes, and above it all a figure like a man on a throne of sapphire. He falls on his face, and the rest of the book is what that figure tells him. Much of it he is required to perform rather than say: he lies on his left side for three hundred and ninety days and his right for forty, builds a model siege of Jerusalem out of a brick, shaves his head with a sword and divides the hair three ways, cooks his food over dung, digs through a wall with his hands in the dark, and when his wife dies is told not to mourn her, as a sign. The central vision is the one that explains the exile: he is carried to Jerusalem and shown what is happening inside the temple, and then watches the glory of God get up and leave it &mdash; from the holy place, to the threshold, to the east gate, to the mountain outside the city. After the news of the fall arrives, the book turns. He is set down in a valley of dry bones and asked whether they can live, and the last nine chapters are a meticulous architectural vision of a new temple with a river running out from under its threshold, getting deeper the further it goes, and a city whose name is: the LORD is there.</p>
@@ -3660,6 +3699,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Babylon, and the Persian court</dd></div>
       <div><dt>Theme</dt><dd>Empires end; one kingdom does not</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ezekiel">Ezekiel</a><span class="why"> &mdash; the exile from Babylon, from the canal and from the palace</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#revelation">Revelation</a><span class="why"> &mdash; the visions Revelation reuses</span></span></p>
 
     <div class="prose">
       <p>Daniel divides cleanly in half and is written in two languages. The first six chapters are stories about four young men deported into the Babylonian civil service and educated for it, who keep finding that competence and conscience pull in different directions. They decline the king&rsquo;s food. Daniel interprets a dream the professional interpreters cannot even be told, because the king demands they describe it first. Three of them refuse to bow to a statue and say, before they are thrown into the furnace, that God can save them and that if he does not they still will not bow &mdash; which is the sharpest sentence in the book. A hand writes on a wall during a feast and a kingdom changes hands that night. Daniel, by then an old man serving his third empire, keeps praying at an open window under a law designed specifically to catch him, and spends a night with lions. The second half turns from stories to visions, and they are strange in a different way: four beasts out of the sea, a ram and a goat, a figure like a son of man given an everlasting kingdom, and seventy weeks counted out. The same conviction runs under both halves &mdash; the empire on top at the moment is not permanent, and behaving as though it were is the actual danger.</p>
@@ -3723,6 +3763,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>The northern kingdom</dd></div>
       <div><dt>Theme</dt><dd>Love that will not let go</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#amos">Amos</a><span class="why"> &mdash; the northern kingdom in its last good years, from two directions</span></span></p>
 
     <div class="prose">
       <p>Hosea is told to marry a woman who will be unfaithful to him, and the marriage becomes the argument. Gomer bears three children and God names each of them after a piece of the coming catastrophe: Jezreel, after a massacre; Lo-Ruhamah, meaning <em>not pitied</em>; Lo-Ammi, meaning <em>not my people</em> &mdash; a reversal of the covenant formula, spoken over an infant. She leaves. Hosea is then told to go and buy her back, which he does, for silver and barley, and the price is recorded like a receipt. The rest of the book prosecutes the northern kingdom for the same pattern: treaties with Assyria and Egypt, altars multiplying, a priesthood that feeds on the people&rsquo;s sin, and a nation described as a cake not turned, a silly dove, a bow that misfires. What keeps it from being merely a denunciation is that the anger never resolves into rejection. In chapter 11 God speaks as a parent who taught a child to walk and finds he cannot follow through: how can I give you up, my compassion grows warm and tender. And the three ruined names are handed back, inverted &mdash; pitied, my people &mdash; which is the whole book in three words.</p>
@@ -3783,6 +3824,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Judah and Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>The day of the LORD</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#acts">Acts</a><span class="why"> &mdash; the passage Peter quoted at Pentecost</span></span></p>
 
     <div class="prose">
       <p>Joel opens on a disaster with no metaphor attached: locusts have stripped the land in four successive waves, the grain offering has stopped because there is no grain, the cattle wander because there is no pasture, and even the seeds have shrivelled under the clods. He tells the elders to ask whether anything like this has happened in their lifetime or their fathers&rsquo;, and to make sure their children hear about it. Then he does something unexpected with it. The locusts become a lens: if an army of insects can do this, consider the day of the LORD, which is coming and is not smaller. The call is to return &mdash; and specifically to tear your hearts and not your garments, which is the book&rsquo;s sharpest line about performed repentance. What follows the turn is out of proportion to a three-chapter book. The years the locusts ate will be repaid. And then a promise that goes past the harvest entirely: the Spirit poured out on all flesh, sons and daughters, old and young, and male and female slaves &mdash; the categories named deliberately, because the point is that the list has no one left off it. Peter quotes exactly this passage on the morning of Pentecost, and Acts hangs the whole event on it.</p>
@@ -3838,6 +3880,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Bethel, in the northern kingdom</dd></div>
       <div><dt>Theme</dt><dd>Let justice roll down</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#hosea">Hosea</a><span class="why"> &mdash; the northern kingdom in its last good years, from two directions</span></span></p>
 
     <div class="prose">
       <p>Amos is a herdsman and a dresser of sycamore figs from Tekoa in Judah, with no prophetic training and no interest in claiming any &mdash; when challenged he says flatly that he is not a prophet or a prophet&rsquo;s son. He turns up at Bethel, the royal sanctuary of the northern kingdom, during the long prosperous reign of Jeroboam II, and opens with a sequence of oracles against the neighbours: Damascus, Gaza, Tyre, Edom, Ammon, Moab. Each begins the same way, each names an atrocity, and a Bethel audience would have enjoyed every one of them. Then Judah. Then Israel &mdash; and the indictment is longer than all the others combined, and it is not about foreign policy. They sell the righteous for silver and the needy for a pair of sandals. They trample the poor and take levies of grain while building houses of hewn stone. They lie on beds of ivory, invent instruments like David, and are not grieved over the ruin of Joseph. The religion is impeccable and Amos says God cannot stand it: take away from me the noise of your songs, let justice roll down like waters. The priest of Bethel tells him to go home and prophesy in Judah where he can be paid for it, which is as close as the book comes to a response.</p>
@@ -3891,6 +3934,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Judah, addressed to Edom</dd></div>
       <div><dt>Theme</dt><dd>What you did while your brother burned</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#jeremiah">Jeremiah</a><span class="why"> &mdash; a dozen verses on Edom in common, Jeremiah 49 and Obadiah</span></span></p>
 
     <div class="prose">
       <p>Obadiah is twenty-one verses long and has one subject. Edom was descended from Esau, Jacob&rsquo;s twin, which makes the two nations brothers in the book&rsquo;s own reckoning &mdash; and when Babylon breached Jerusalem&rsquo;s walls in 586, Edom did not intervene. Worse, according to this oracle, they stood at the crossroads and cut off the escaping, handed over survivors, looted the city and gloated in the street. The first half addresses Edom&rsquo;s confidence: they lived in the rock clefts of a mountain country that looked unassailable, and the prophet tells them that though they build their nest among the stars they will be brought down, and that their allies will be the ones to do it. The second half generalises. The day of the LORD is near upon all nations, and the measure is uncomplicated: as you have done, it shall be done to you. It closes with the exiles returning and possessing the territory, and a final clause that is the only positive note in the book &mdash; the kingdom shall be the LORD&rsquo;s. There is no call to repentance anywhere in it, which makes Obadiah unusual among the prophets and uncomfortable to read straight through.</p>
@@ -3946,6 +3990,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Joppa, the open sea, Nineveh</dd></div>
       <div><dt>Theme</dt><dd>Mercy, extended to the enemy</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#nahum">Nahum</a><span class="why"> &mdash; Nineveh spared, then Nineveh finished</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -4019,6 +4064,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Moresheth, and Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>What the LORD requires</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#isaiah">Isaiah</a><span class="why"> &mdash; contemporaries; Isaiah 2 and Micah 4 share a passage</span></span></p>
 
     <div class="prose">
       <p>Micah is from a small town in the Judean foothills and prophesies through the same decades as Isaiah, on the same crisis, from outside the capital rather than inside it &mdash; and the difference in vantage point shows. His indictment is specific and rural: landowners who covet fields and seize them, who take a man&rsquo;s house and his inheritance, and rulers who he says tear the skin off his people and chop them up like meat for the pot. He is equally hard on the professionals. Prophets who cry peace when they are fed and declare war on anyone who does not fill their mouths; priests who teach for a price; judges who take bribes &mdash; and all of them leaning on God and saying, is not the LORD among us, no disaster will come upon us. Micah says Jerusalem will be ploughed like a field, which is quoted a century later in Jeremiah&rsquo;s trial as the precedent that saved his life. But the book turns three times, and the turns are famous: a ruler from Bethlehem, small among the clans of Judah; swords beaten into ploughshares, every man under his own vine; and the question of what to bring to God &mdash; thousands of rams, rivers of oil, a firstborn child &mdash; answered by the shortest summary of the prophets there is: do justice, love mercy, walk humbly with your God.</p>
@@ -4077,6 +4123,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Judah, addressed to Nineveh</dd></div>
       <div><dt>Theme</dt><dd>The end of an empire</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#jonah">Jonah</a><span class="why"> &mdash; Nineveh spared, then Nineveh finished</span></span></p>
 
     <div class="prose">
       <p>Nahum is the other book about Nineveh, and reading it after Jonah is the point. Assyria had by now been the terror of the region for two centuries: it destroyed the northern kingdom, deported its population, besieged Jerusalem, and its own royal annals boast about flaying prisoners and stacking heads. Nahum announces its end. He opens with a hymn about a God who is slow to anger and great in power and will by no means clear the guilty &mdash; quoting the same formula Jonah quoted, and drawing the opposite conclusion from it. Then the poetry turns to the siege itself, and it is written like a battle seen from inside the walls: the shields of the soldiers are red, the chariots flash like torches and rush madly in the streets, the river gates are opened, the palace melts away, and then plunder, plunder &mdash; heaps of corpses, no end to the bodies, people stumbling over them. He calls the city a lions&rsquo; den and asks where it has gone. Nineveh fell in 612 BC to the Babylonians and Medes, was never rebuilt, and was so thoroughly lost that for centuries there was serious doubt it had existed. The final line is a question addressed to the king: who has not felt your endless cruelty?</p>
@@ -4139,6 +4186,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Judah</dd></div>
       <div><dt>Theme</dt><dd>The righteous shall live by faith</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#romans">Romans</a><span class="why"> &mdash; the righteous shall live by faith &mdash; Paul&rsquo;s text, and where he found it</span></span></p>
 
     <div class="prose">
       <p>Habakkuk is structured as an argument, and the prophet is on the wrong side of it twice. He begins by complaining that God is not acting: how long shall I cry for help and you will not hear, the law is paralysed and justice never goes forth. God answers that he is acting &mdash; he is raising up the Chaldeans, a bitter and hasty nation whose horses are swifter than leopards, and they are coming. This is worse than the problem. Habakkuk objects a second time and more sharply: you are of purer eyes than to behold evil, so why do you idly look at traitors and stay silent when the wicked swallows up the man more righteous than he? Then he does something no other prophet does. He says he will stand at his watchpost and wait to see what God will answer, and what he is told is not an explanation but an instruction: write the vision, make it plain on tablets, so that a runner can read it; it is for an appointed time, and if it seems slow, wait for it. In the middle of that reply sits the line Paul will build two letters on &mdash; the righteous shall live by his faith. The book ends with a psalm, and the last verse concedes everything: though the fig tree does not blossom and there is no herd in the stalls, yet I will rejoice.</p>
@@ -4196,6 +4244,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>The day of the LORD</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#kings-2">2 Kings</a><span class="why"> &mdash; Josiah&rsquo;s reform, and the prophet preaching just before it</span></span></p>
 
     <div class="prose">
       <p>Zephaniah opens with the most sweeping threat in the prophets, and it runs in reverse order: I will utterly sweep away everything from the face of the earth &mdash; man and beast, the birds of the air and the fish of the sea. It is Genesis 1 unwound, creation taken back in the order it was given. What follows narrows to Jerusalem, and the target is a specific complacency: men who are settled on their lees like wine left too long, who say in their hearts that the LORD will do neither good nor ill. The day of the LORD is described as near and hastening fast, a day of wrath and distress, of trumpet blast and battle cry &mdash; the passage the medieval hymn <em>Dies Irae</em> is built on. Then the oracles turn outward to the neighbours and to Assyria, whose capital is promised flocks lying down in the middle of it and an owl hooting in the window. And then the last twenty verses turn again, further than seems warranted by anything before them. The remnant is left, the proud removed, and a people described as humble and lowly who seek refuge in the name of the LORD. The book ends with an image found nowhere else in scripture: God in the midst of his people, quieting them with his love, and rejoicing over them with singing.</p>
@@ -4251,6 +4300,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem, under Persian rule</dd></div>
       <div><dt>Theme</dt><dd>Build the house</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ezra">Ezra</a><span class="why"> &mdash; the prophet who got the temple built in Ezra 5&ndash;6</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#zechariah">Zechariah</a><span class="why"> &mdash; the same two months in 520 BC</span></span></p>
 
     <div class="prose">
       <p>Haggai is the shortest prophetic career on record and the most successful. Eighteen years after the first exiles came home, the temple foundation is still a foundation: the work stalled under opposition and then simply stayed stalled, and people got on with their lives. Haggai&rsquo;s argument is almost entirely practical. Is it a time for you to dwell in your panelled houses while this house lies in ruins? Consider your ways: you have sown much and harvested little, you eat but never have enough, and the one who earns wages puts them into a bag with holes. Three weeks after the first message the governor, the high priest and the people begin work &mdash; which makes Haggai the only prophet in the Bible whose audience does what he asks, on the timetable he asks for. The rest of the book handles the disappointment that follows. The older men who had seen the first temple say this one is nothing by comparison, and Haggai does not argue: he tells them to work anyway, promises that the glory of the latter house will be greater than the former, and adds the line the whole book turns on &mdash; my Spirit remains among you, do not fear. Every oracle in it is dated to the day, which is why its bar on the spine is the narrowest of any book on the chart.</p>
@@ -4310,6 +4360,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem, under Persian rule</dd></div>
       <div><dt>Theme</dt><dd>Not by might, nor by power</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ezra">Ezra</a><span class="why"> &mdash; the prophet who got the temple built in Ezra 5&ndash;6</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#haggai">Haggai</a><span class="why"> &mdash; the same two months in 520 BC</span></span></p>
 
     <div class="prose">
       <p>Zechariah starts two months after Haggai and with the same immediate goal &mdash; get the temple built &mdash; but goes somewhere very different. The first six chapters are eight visions received in one night, each stranger than the last and each explained, at Zechariah&rsquo;s repeated asking, by an interpreting angel: horsemen patrolling the earth, four horns and four craftsmen, a man with a measuring line, the high priest standing in filthy clothes while an accuser objects and is overruled, a lampstand fed by two olive trees, a flying scroll, a woman named Wickedness sealed in a basket and carried to Babylon, and four chariots going out to the four winds. Out of the middle of them comes the line the book is known for: not by might, nor by power, but by my Spirit. The second half drops the visions and turns to a future the New Testament reaches for constantly &mdash; a king coming humble and riding on a donkey, thirty pieces of silver thrown to the potter, a shepherd struck and the sheep scattered, and one they will look on whom they have pierced. Matthew, Mark, John and Revelation all quote it. For a book written to persuade a discouraged building crew, it casts an extraordinarily long shadow.</p>
@@ -4370,6 +4421,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem, a century after the return</dd></div>
       <div><dt>Theme</dt><dd>Where is the God of justice?</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#nehemiah">Nehemiah</a><span class="why"> &mdash; the same abuses, found on Nehemiah&rsquo;s second visit</span></span></p>
 
     <div class="prose">
       <p>Malachi is written in a form used nowhere else at this length: six disputations, each of which states a claim, quotes the audience objecting to it, and then answers the objection. The effect is a transcript of an argument with a congregation that has stopped expecting anything. A century after the return the temple is standing, the sacrifices are running, and the enthusiasm has entirely drained out: priests are offering blind and lame animals because nobody is checking, and Malachi suggests they try presenting one to the governor and see how that goes. Men are divorcing the wives of their youth, and the book says God hates it in a sentence that has been argued over ever since. Tithes are being withheld. And underneath all of it is the complaint that gives the book its energy &mdash; it is vain to serve God, the arrogant are the ones who prosper, and where is the God of justice? Malachi does not soften this. He says the day is coming, that it will burn like an oven, and that it will be preceded by a messenger sent to prepare the way. The Old Testament then ends on a family reconciliation: the hearts of the fathers turned to their children, and the children to their fathers. Nothing more is heard for four hundred years.</p>
@@ -4441,6 +4493,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Galilee, Judea, Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>The promised king has come</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#mark">Mark</a><span class="why"> &mdash; nine tenths of Mark is in Matthew</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#luke">Luke</a><span class="why"> &mdash; the sayings the two share that Mark does not have</span></span></p>
 
     <div class="prose">
       <p>Matthew opens with a genealogy and a birth, and it is writing for people who know the Hebrew scriptures well enough to catch what it is doing. Jesus comes out of Egypt, passes through water, goes into the wilderness for forty days and then up a mountain to give the law &mdash; the nation&rsquo;s whole story replayed by one person, correctly this time. The book is arranged around five long blocks of teaching, each closed with the same formula, and the number is not an accident: this is a gospel shaped like the Torah. The first block is the Sermon on the Mount, which takes the law and pushes it inward, from murder to anger and from adultery to the look. The others cover how to go out, what the kingdom is like, what to do when someone in the community sins, and what the end will involve. Between the blocks the narrative moves toward a collision with the religious authorities that Matthew reports at length and with very little sympathy. It ends with an execution, an empty tomb, and eleven men on a Galilean hillside being told to go and make disciples of every nation &mdash; the promise made to Abraham back in Genesis, finally pointed outward.</p>
@@ -4501,6 +4554,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Galilee, the road, Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>Who is this, and what kind of king</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#matthew">Matthew</a><span class="why"> &mdash; nine tenths of Mark is in Matthew</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#luke">Luke</a><span class="why"> &mdash; half of Mark is in Luke</span></span></p>
 
     <div class="prose">
       <p>Mark is the shortest gospel and reads like it was written in a hurry &mdash; no genealogy, no nativity, the word &ldquo;immediately&rdquo; more than forty times, and a flat opening sentence that tells you exactly what the book thinks it is. It divides almost in half. The first eight chapters pile up miracles and exorcisms while nobody can work out who Jesus is: the demons know and are told to be quiet, the crowds do not, and the disciples keep missing it. Then at Caesarea Philippi he asks them directly, Peter gets the answer right &mdash; you are the Messiah &mdash; and immediately gets the meaning wrong, because Jesus starts explaining that this involves being killed, and Peter takes him aside to talk him out of it. Everything after that hinge walks toward Jerusalem. Three times Jesus predicts his death; three times the disciples respond by misunderstanding or arguing about who is most important; three times he answers with the same point about whoever wants to be first. The passion account then takes up a disproportionate share of an already short book. The oldest manuscripts end at 16:8, with the women running from the tomb and saying nothing to anyone because they were afraid &mdash; an ending abrupt enough that later scribes wrote two different replacements for it.</p>
@@ -4556,6 +4610,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Galilee, Samaria, the road, Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>Good news, starting at the edges</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#matthew">Matthew</a><span class="why"> &mdash; the sayings the two share that Mark does not have</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#mark">Mark</a><span class="why"> &mdash; half of Mark is in Luke</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#acts">Acts</a><span class="why"> &mdash; volume two: same author, same addressee, same first sentence</span></span></p>
 
     <div class="prose">
       <p>Luke is the only gospel that opens by explaining its method: the author has investigated everything carefully from the beginning and is writing an orderly account for a man named Theophilus, so that he can know how reliable the things he has been taught actually are. It is the longest of the four and the one most interested in people at the edges &mdash; shepherds hear the announcement first, a Samaritan is the hero of its most famous parable, women fund and follow the movement and are named for it, and tax collectors and the notoriously disreputable keep turning out to be the ones who understand. Its structural oddity is enormous: nearly ten chapters, roughly two fifths of the book, are a single journey to Jerusalem that begins when Jesus &ldquo;set his face&rdquo; to go there and then proceeds at the pace of a man in no hurry to arrive. Much of the best-known material sits inside that stretch, including the prodigal son and the good Samaritan, neither of which appears anywhere else. It ends with two disillusioned people walking to Emmaus, being talked through their own scriptures by a stranger, and recognising him only when he breaks the bread &mdash; then a instruction to wait in the city, which is exactly where the sequel picks up.</p>
@@ -4615,6 +4670,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Judea, Galilee, Jerusalem</dd></div>
       <div><dt>Theme</dt><dd>That you may believe</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#john-1">1 John</a><span class="why"> &mdash; the same voice and the same vocabulary, in a letter</span></span></p>
 
     <div class="prose">
       <p>John is the odd one out and knows it. Something like nine tenths of its material appears in no other gospel: no parables, no exorcisms, no transfiguration, no institution of the bread and cup, and only a handful of miracles, which it insists on calling signs. It begins not with a birth but before the opening sentence of Genesis &mdash; in the beginning was the Word &mdash; and it is organised around seven of those signs and seven statements beginning &ldquo;I am&rdquo;, which is also the name God gives himself at the burning bush, a point the hostile crowd in chapter 8 grasps immediately and picks up stones over. The pace is unlike the others: long conversations running whole chapters, with Nicodemus at night, with a Samaritan woman at a well at noon, and five uninterrupted chapters of farewell in an upstairs room while the arrest is being arranged outside. The author states his purpose plainly near the end &mdash; these are written so that you may believe &mdash; and mentions twice that there was a great deal more to tell and he has left most of it out.</p>
@@ -4707,6 +4763,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem to Rome</dd></div>
       <div><dt>Theme</dt><dd>The witness spreads outward</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#joel">Joel</a><span class="why"> &mdash; the passage Peter quoted at Pentecost</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#luke">Luke</a><span class="why"> &mdash; volume two: same author, same addressee, same first sentence</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#galatians">Galatians</a><span class="why"> &mdash; Acts 15 and Galatians 2: the same meeting, from two chairs</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#philippians">Philippians</a><span class="why"> &mdash; the jail in Acts 16, and the church that came out of it</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -4772,6 +4829,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in Corinth, addressed to Rome</dd></div>
       <div><dt>Theme</dt><dd>The righteousness of God, offered to everyone on the same terms</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#habakkuk">Habakkuk</a><span class="why"> &mdash; the righteous shall live by faith &mdash; Paul&rsquo;s text, and where he found it</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#galatians">Galatians</a><span class="why"> &mdash; the same argument, once in a hurry and once at leisure</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#james">James</a><span class="why"> &mdash; faith and works: two answers to two different questions</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -4830,6 +4888,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in Ephesus to Corinth, a Roman colony and port</dd></div>
       <div><dt>Theme</dt><dd>A cross-shaped community in a status-obsessed city</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#corinthians-2">2 Corinthians</a><span class="why"> &mdash; a painful visit and a lost letter between them</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -4885,6 +4944,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in Macedonia after meeting Titus with news from Corinth</dd></div>
       <div><dt>Theme</dt><dd>Strength that only shows up inside weakness</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#corinthians-1">1 Corinthians</a><span class="why"> &mdash; a painful visit and a lost letter between them</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -4940,6 +5000,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To the churches of Galatia in central Asia Minor</dd></div>
       <div><dt>Theme</dt><dd>Whether gentile believers must become Jews first</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#acts">Acts</a><span class="why"> &mdash; Acts 15 and Galatians 2: the same meeting, from two chairs</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#romans">Romans</a><span class="why"> &mdash; the same argument, once in a hurry and once at leisure</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -4995,6 +5056,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in custody, probably in Rome, to churches in Asia Minor</dd></div>
       <div><dt>Theme</dt><dd>The church as the place where the divided world is put back together</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#colossians">Colossians</a><span class="why"> &mdash; twin letters; a third of Ephesians is in Colossians</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5050,6 +5112,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in custody to Philippi, a Roman colony in Macedonia</dd></div>
       <div><dt>Theme</dt><dd>Joy that is not dependent on circumstances</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#acts">Acts</a><span class="why"> &mdash; the jail in Acts 16, and the church that came out of it</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5105,6 +5168,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in custody to Colossae in the Lycus valley</dd></div>
       <div><dt>Theme</dt><dd>Christ as sufficient, with nothing needing to be added</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ephesians">Ephesians</a><span class="why"> &mdash; twin letters; a third of Ephesians is in Colossians</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#philemon">Philemon</a><span class="why"> &mdash; carried in the same bag to the same town</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5160,6 +5224,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in Corinth to Thessalonica, capital of Macedonia</dd></div>
       <div><dt>Theme</dt><dd>Holding on under pressure, and what happens to those who die first</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#thessalonians-2">2 Thessalonians</a><span class="why"> &mdash; the second corrects what the first was taken to mean</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5215,6 +5280,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in Corinth to Thessalonica</dd></div>
       <div><dt>Theme</dt><dd>The day has not already come, so go back to work</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#thessalonians-1">1 Thessalonians</a><span class="why"> &mdash; the second corrects what the first was taken to mean</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5270,6 +5336,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To Timothy in Ephesus</dd></div>
       <div><dt>Theme</dt><dd>How a household of God is supposed to conduct itself</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#timothy-2">2 Timothy</a><span class="why"> &mdash; the first is a handover; the second is a farewell</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#titus">Titus</a><span class="why"> &mdash; the same instructions for two men in two places</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5325,6 +5392,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in Rome, in chains, to Timothy in Ephesus</dd></div>
       <div><dt>Theme</dt><dd>Hold the line, and hand it on</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#timothy-1">1 Timothy</a><span class="why"> &mdash; the first is a handover; the second is a farewell</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5380,6 +5448,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To Titus on Crete</dd></div>
       <div><dt>Theme</dt><dd>Sound teaching that shows up as ordinary decency</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#timothy-1">1 Timothy</a><span class="why"> &mdash; the same instructions for two men in two places</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5435,6 +5504,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written in custody to Philemon, a householder in Colossae</dd></div>
       <div><dt>Theme</dt><dd>What the gospel does to a relationship it has not abolished</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#colossians">Colossians</a><span class="why"> &mdash; carried in the same bag to the same town</span></span></p>
 
     <div class="book-body">
     <div class="prose">
@@ -5490,6 +5560,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To Jewish believers under pressure to return to the synagogue</dd></div>
       <div><dt>Theme</dt><dd>Better &mdash; a better priest, a better covenant, a better sacrifice</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#leviticus">Leviticus</a><span class="why"> &mdash; the sacrificial system, and the letter that reads it as a sketch</span></span></p>
 
     <div class="prose">
       <p>Hebrews does not open like a letter. There is no author, no addressee, no greeting &mdash; it begins with a sentence of formal Greek rhetoric about God having spoken in many ways through the prophets and now speaking through a Son, and it ends, thirteen chapters later, with a note that reads like a postscript stapled on. In between is a sermon, and its argument is comparative. The Son is better than the angels; Moses was faithful in the house, but Jesus is the Son over it. The priesthood is better, because it belongs to the order of Melchizedek, who appears for three verses in Genesis without genealogy and is used here to argue for a priest whose qualification is not descent but an indestructible life. The covenant is better, on the authority of Jeremiah, who said God would make a new one. And the sacrifice is better, because the old one had to be repeated &mdash; the very repetition being the proof that it never finished anything &mdash; while this one was made once. Cutting across the argument are five warnings, sharp enough that the church spent centuries arguing about them, urging readers not to drift, not to fall away, not to give up meeting together. Then chapter eleven, the roll call of people who lived by faith without receiving what was promised, and chapter twelve&rsquo;s image of that crowd as spectators in a stadium while the reader runs.</p>
@@ -5538,6 +5609,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Jerusalem, written to the diaspora</dd></div>
       <div><dt>Theme</dt><dd>Faith that shows up in behaviour</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#romans">Romans</a><span class="why"> &mdash; faith and works: two answers to two different questions</span></span></p>
 
     <div class="prose">
       <p>James writes from Jerusalem to Jewish believers scattered outside Palestine, and the result reads less like Paul's careful arguments than like the Sermon on the Mount broken into hard, short instructions. There is almost no theology in the abstract; instead the letter keeps asking what faith actually looks like on an ordinary Tuesday. Endure trials, because they are producing something. Ask for wisdom and expect to be given it. Do not seat the man with the gold ring at the front and leave the poor man standing at the back. Watch your tongue, which is a small thing that sets whole forests alight. Do not announce that you will do business in such-and-such a city next year, as though tomorrow belonged to you. Its most contested line &mdash; that faith without works is dead &mdash; has been read as a rebuttal of Paul for centuries, though James is arguing against a claimed faith that changes nothing rather than against grace, and the two are answering different questions. The letter stops abruptly, with instructions about prayer, confession and anointing the sick, and no closing greeting of any kind.</p>
@@ -5601,6 +5673,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written from Rome to scattered believers in Asia Minor</dd></div>
       <div><dt>Theme</dt><dd>Living well as a permanent minority</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#peter-2">2 Peter</a><span class="why"> &mdash; the same name, a very different letter</span></span></p>
 
     <div class="prose">
       <p>Peter writes to believers spread across five Roman provinces and calls them exiles and resident aliens &mdash; legal terms for people living somewhere they do not belong, with no civic standing and no protection from the crowd. That is his diagnosis of their situation and also his instruction for handling it. They are not being executed; they are being talked about, excluded, insulted for no longer joining in, and the letter takes that ordinary social pain entirely seriously. His answer runs on two tracks at once. On one, the language of enormous privilege: a chosen race, a royal priesthood, a holy nation, a people for God&rsquo;s own possession &mdash; every phrase lifted from what was said to Israel at Sinai and applied to a scattered gentile minority. On the other, a strategy of conspicuous decency: live such good lives among the pagans that the accusations fail on inspection, honour the emperor, do good and suffer for it if you must, and always be ready to give a reason for the hope you have &mdash; but with gentleness and respect. Running underneath is the example of Jesus, who when insulted did not retaliate, and the promise that the suffering is brief. It closes with greetings from &ldquo;she who is in Babylon&rdquo; and from Mark, whom Peter calls his son.</p>
@@ -5649,6 +5722,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Written knowing his death is close</dd></div>
       <div><dt>Theme</dt><dd>The promise has not failed; it is being patient</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#peter-1">1 Peter</a><span class="why"> &mdash; the same name, a very different letter</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#jude">Jude</a><span class="why"> &mdash; share most of a chapter</span></span></p>
 
     <div class="prose">
       <p>Peter writes as a man putting his affairs in order &mdash; he says he knows the putting off of his body is imminent, and wants this on record so it can be recalled after he is gone. The threat he is addressing is teachers inside the community who deny the coming judgement, and whose argument is straightforward and rather good: everything has carried on exactly as it always has since the ancestors died, so where is this promised arrival? Peter answers on three fronts. First, testimony: he was on the mountain, he heard the voice, this is not a cleverly devised myth. Second, precedent: the flood is proof that the world is not in fact a closed system that carries on regardless. Third, and most memorably, a change of scale &mdash; with the Lord one day is like a thousand years and a thousand years like one day, and what looks like slowness is patience, God not wanting anyone to be lost. The central chapter is a sustained assault on the teachers themselves, in language of real disgust, comparing them to irrational animals, waterless springs, and a dog returning to its vomit. At the very end comes an aside of enormous consequence: our brother Paul writes about these things in all his letters, in which there are some things hard to understand, which the ignorant twist as they do the other scriptures.</p>
@@ -5697,6 +5771,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To the churches around Ephesus, after a schism</dd></div>
       <div><dt>Theme</dt><dd>How to tell whether it is real</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#john">John</a><span class="why"> &mdash; the same voice and the same vocabulary, in a letter</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#john-2">2 John</a><span class="why"> &mdash; the same hand, one sheet</span></span></p>
 
     <div class="prose">
       <p>Something has already happened before this letter starts: a group has left. &ldquo;They went out from us, but they were not of us&rdquo; is the wound the whole thing is written around, and what they took with them was a teaching that Christ did not truly come in the flesh. The letter never argues the point in a systematic way. Instead it circles, repeating a small set of words &mdash; light, darkness, love, truth, life, know, abide &mdash; in a Greek so simple it is the passage beginning readers are usually given first, and so slippery that its pronouns have defeated commentators for two thousand years. What it offers the people who stayed is a set of tests they can apply to themselves without needing to win an argument. Do you keep his commands. Do you love your brother, or only say you do &mdash; because anyone who claims to love the God he has not seen while hating the brother he has seen is lying. Do you confess that Jesus came in the flesh. The letter is unsparing about self-deception and then unexpectedly gentle: if we confess our sins he is faithful and just to forgive them, and if our own heart condemns us, God is greater than our heart. It contains the flattest statement about God in the New Testament &mdash; God is love &mdash; and immediately defines the word by pointing at a specific death rather than at a feeling.</p>
@@ -5745,6 +5820,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To &ldquo;the elect lady and her children&rdquo;</dd></div>
       <div><dt>Theme</dt><dd>Hospitality has a limit</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#john-1">1 John</a><span class="why"> &mdash; the same hand, one sheet</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#john-3">3 John</a><span class="why"> &mdash; the same hand, one sheet each</span></span></p>
 
     <div class="prose">
       <p>This is a real letter of the ordinary ancient kind &mdash; one sheet of papyrus, thirteen verses, about as long as a page would allow &mdash; addressed to &ldquo;the elect lady and her children&rdquo;, almost certainly a church and its members rather than an individual. The elder is glad to have found some of them walking in the truth, and repeats the commandment that was there from the beginning, which is to love one another. Then he comes to the point. Travelling teachers are circulating who do not confess that Jesus Christ has come in the flesh, and because early Christian mission ran entirely on hospitality &mdash; a visiting teacher stayed in a member&rsquo;s house and was fed and sent on with supplies &mdash; taking such a person in was not a private courtesy but a public endorsement, and funded the next stop. So: do not receive him into the house or give him any greeting. It is a hard instruction from the letters most associated with love, and it is aimed narrowly, at teachers on a circuit rather than at neighbours. He ends by saying he has much more to write but would rather not use paper and ink, and hopes to come and talk face to face.</p>
@@ -5793,6 +5869,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To Gaius, a member of one of the churches</dd></div>
       <div><dt>Theme</dt><dd>A local power struggle, preserved</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#john-2">2 John</a><span class="why"> &mdash; the same hand, one sheet each</span></span></p>
 
     <div class="prose">
       <p>The companion piece to 2 John, and its mirror image: where that letter says refuse hospitality to the wrong teachers, this one says extend it to the right ones. It is written to a man named Gaius, praised for looking after travelling brothers who were strangers to him, and asked to send them on their way in a manner worthy of God, since they set out for the sake of the Name and accept nothing from non-believers. Then the letter turns to the actual problem, and it is startlingly small and startlingly familiar. A man named Diotrephes, who likes to put himself first, refuses to acknowledge the elder&rsquo;s authority, spreads malicious talk about him, will not welcome the travelling brothers, and throws out of the church anyone who does. The elder says that if he comes he will bring it up. Set against him is Demetrius, who is well spoken of by everyone. That is the whole letter &mdash; a first-century congregational dispute over who controls the guest room &mdash; and it survived because someone in that community thought it was worth copying.</p>
@@ -5841,6 +5918,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>To an unnamed church that has been infiltrated</dd></div>
       <div><dt>Theme</dt><dd>Contend for the faith, and pity the doubters</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#peter-2">2 Peter</a><span class="why"> &mdash; share most of a chapter</span></span></p>
 
     <div class="prose">
       <p>Jude says outright that he meant to write a different letter. He had been intending something warm about their common salvation and found he had to write this instead, urging them to contend for the faith once for all entrusted to God&rsquo;s people, because certain people have slipped in among them &mdash; turning grace into licence and denying the master. What follows is twenty-five verses of accumulating examples, delivered in threes: the wilderness generation, the angels who left their proper place, Sodom and Gomorrah; Cain, Balaam, Korah. He calls the intruders blemishes at the love feasts, shepherds feeding only themselves, waterless clouds, autumn trees without fruit and twice dead, wild waves foaming up their own shame, wandering stars for whom the deepest darkness has been reserved. It is the most concentrated invective in the New Testament. And then, having spent the whole letter condemning, he turns at the last moment to the congregation itself with something completely different in tone: build yourselves up, pray, keep yourselves in the love of God &mdash; and have mercy on those who doubt, snatch others out of the fire, and show mercy to still others mixed with fear. The closing doxology, to him who is able to keep you from stumbling, is read at the end of services to this day.</p>
@@ -5889,6 +5967,7 @@ html { scroll-behavior: smooth; }
       <div><dt>Setting</dt><dd>Patmos, and seven cities in Asia Minor</dd></div>
       <div><dt>Theme</dt><dd>The Lamb wins &mdash; so endure</dd></div>
     </dl>
+    <p class="reads"><span class="reads-lab">Reads with</span> <span class="rw"><a href="#ezekiel">Ezekiel</a><span class="why"> &mdash; the throne, the scroll, the measured city &mdash; Revelation&rsquo;s furniture</span></span> <span class="sep">&middot;</span> <span class="rw"><a href="#daniel">Daniel</a><span class="why"> &mdash; the visions Revelation reuses</span></span></p>
 
     <div class="book-body">
     <div class="prose">
