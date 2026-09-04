@@ -63,7 +63,7 @@ content. These are ordered by value per hour.
 | 2.2 | **One "Paul's world" map** — Aegean and eastern Mediterranean, same baked-SVG pipeline as the ten existing maps — reused across all thirteen Pauline letters with the destination lit, the origin marked, and the route drawn between. `_paulmap.py`, idempotent, 3.5KB a plate | 13 | Thirteen more books have a map, from one drawing | ✅ 23 of 66 books mapped |
 | 2.3 | "Reads with" line under each spec block, from a `PAIRS` table in `books.py`: Kings ↔ Chronicles, Luke ↔ Acts, Jeremiah ↔ Lamentations, Ezra ↔ Nehemiah ↔ Haggai ↔ Zechariah, Colossians ↔ Philemon, 1 Timothy ↔ Titus, 2 Peter ↔ Jude, 1–3 John | 14 | Every pair links both ways; `verify.py` checks symmetry | ✅ 54 edges, all 66 books, symmetry checked |
 | 2.4 | Divided-kingdom map — serves Kings, Chronicles, Hosea, Amos, Micah and most of the minor prophets | 13 | ~14 more books mapped | ✅ 11 books (2 Kings, both Chronicles, Hosea, Joel, Amos, Obadiah, Micah, Nahum, Habakkuk, Zephaniah); 34 of 66 mapped |
-| 2.5 | Empires map (Assyria → Babylon → Persia) for Isaiah, Jeremiah, Ezekiel, Daniel, Esther, Nehemiah; Galilee and Judea for the four gospels | 13 | Under ten books left unmapped; decide whether those need one at all |
+| 2.5 | Empires map (Assyria → Babylon → Persia) for Isaiah, Jeremiah, Ezekiel, Daniel, Esther, Nehemiah; Galilee and Judea for the four gospels | 13 | Under ten books left unmapped; decide whether those need one at all | ✅ empires plate ×6, gospels on the land plate ×4; 44 of 66 mapped. The 22 left are law, wisdom, psalms and short letters — no map wanted |
 
 **Acceptance:** the link previews well, and a first-time reader has a map on
 most pages. Three sittings; 2.1–2.3 are the first one.

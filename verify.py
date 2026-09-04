@@ -100,14 +100,16 @@ for bid in PAUL:
           '%s: expected exactly one Paul map' % bid)
     check(sec.count('<div class="book-body">') == 1, '%s: map is not laid out beside the prose' % bid)
 LAND = ('kings-2', 'chronicles-1', 'chronicles-2', 'hosea', 'joel', 'amos', 'obadiah', 'micah',
-        'nahum', 'habakkuk', 'zephaniah')
-for bid in LAND:
-    sec = section(bid)
-    check('data-map="land"' in sec and sec.count('<figure class="mapfig"') == 1,
-          '%s: expected exactly one land map' % bid)
-    check(sec.count('<div class="book-body">') == 1, '%s: map is not laid out beside the prose' % bid)
+        'nahum', 'habakkuk', 'zephaniah', 'matthew', 'mark', 'luke', 'john')
+EMPIRE = ('isaiah', 'jeremiah', 'ezekiel', 'daniel', 'esther', 'nehemiah')
+for kind, books in (('land', LAND), ('empire', EMPIRE)):
+    for bid in books:
+        sec = section(bid)
+        check(('data-map="%s"' % kind) in sec and sec.count('<figure class="mapfig"') == 1,
+              '%s: expected exactly one %s map' % (bid, kind))
+        check(sec.count('<div class="book-body">') == 1, '%s: map is not laid out beside the prose' % bid)
 mapped = len(re.findall(r'<figure class="mapfig"', s))
-want_maps = 10 + len(PAUL) + len(LAND)
+want_maps = 10 + len(PAUL) + len(LAND) + len(EMPIRE)
 check(mapped == want_maps, 'expected %d map figures, found %d' % (want_maps, mapped))
 
 # ------------------------------------------------------- reads with

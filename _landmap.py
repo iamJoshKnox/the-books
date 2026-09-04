@@ -30,6 +30,10 @@ BASE = [
 # regions as translucent shapes, drawn only when a book lights them
 REGIONS = {
     'israel':    'M119,0 C128,57 119,115 102,172 L218,170 L236,96 L238,64 L238,0 Z',
+    # the same ground under New Testament names
+    'galilee':   'M119,0 C128,57 124,88 122,110 L236,110 L236,96 L238,64 L238,0 Z',
+    'samaria':   'M122,110 C120,136 112,156 104,172 L218,170 L226,140 L236,110 Z',
+    'judea':     'M104,172 L218,170 L206,192 L203,252 L196,300 L112,300 L82,258 C94,232 100,204 104,172 Z',
     'judah':     'M104,172 L218,170 L206,192 L203,252 L196,300 L112,300 L82,258 C94,232 100,204 104,172 Z',
     'philistia': 'M34,253 L0,287 L0,332 L112,300 L82,258 Z',
     'moab':      'M224,196 C250,188 280,190 304,198 C306,230 300,262 292,288 C268,292 240,280 219,252 Z',
@@ -58,9 +62,10 @@ CITIES = {
     'hebron':    (168, 236, 'Hebron',    'end',   -7,   4),
 }
 # arrivals from off the map: where the arrow starts, and the label that names it
-OFFMAP = {   # arrow start, title, sub-label; the labels sit in the corner above the start
-    'nineveh': ((334, 36), 'Assyria', 'from Nineveh'),
-    'babylon': ((334, 158), 'Babylon', 'from the east'),
+OFFMAP = {   # arrow start, title, sub-label, label anchor; the labels sit above the start
+    'nineveh': ((334, 36), 'Assyria', 'from Nineveh', 'end'),
+    'babylon': ((334, 158), 'Babylon', 'from the east', 'end'),
+    'egypt':   ((8, 322), 'Egypt', 'the flight, and back', 'start'),
 }
 
 # book: dict(regions=[lit], cities=[lit], marked=[cities], arrows=[(from, to)],
@@ -103,6 +108,47 @@ BOOKS = {
 }
 
 
+# ------------------------------------------------ the same land, AD 30
+NT_CITIES = {
+    'caesarea-philippi': (250, 18, 'Caesarea Philippi', 'start', 8, 4),
+    'capernaum': (228, 62,  'Capernaum', 'end',   -8,  -4),
+    'cana':      (208, 80,  'Cana',      'end',   -7,  -2),
+    'nazareth':  (204, 98,  'Nazareth',  'end',   -8,   4),
+    'sychar':    (172, 140, 'Sychar',    'start',  9,   4),
+    'jericho':   (206, 176, 'Jericho',   'start',  9,  -3),
+    'jerusalem': (175, 198, 'Jerusalem', 'end',   -7,  10),
+    'bethany':   (186, 200, 'Bethany',   'start',  9,  -2),
+    'bethlehem': (178, 214, 'Bethlehem', 'end',   -8,  20),
+}
+NT_LABELS = {
+    'galilee': (252, 50, 'GALILEE'), 'samaria': (124, 112, 'SAMARIA'), 'judea': (118, 252, 'JUDEA'),
+    'decapolis': (262, 130, 'DECAPOLIS'), 'perea': (262, 210, 'PEREA'), 'idumea': (140, 330, 'IDUMEA'),
+}
+GOSPELS = {
+    'matthew': dict(era='nt', regions=['galilee'], cities=['bethlehem', 'jerusalem'], marked=['nazareth', 'capernaum'],
+        arrows=[('bethlehem', 'egypt')],
+        lead='Bethlehem, Egypt, Nazareth, Galilee, Jerusalem.',
+        caption='Matthew&rsquo;s geography is a chain of fulfilments: born in Bethlehem as Micah said, called out of Egypt as Hosea said, settled in Nazareth, teaching in Galilee of the nations, and going up to Jerusalem to die.'),
+    'mark': dict(era='nt', regions=['galilee'], cities=['capernaum', 'jerusalem'], marked=[],
+        arrows=[('capernaum', 'jerusalem')],
+        lead='One road.',
+        caption='Half the book happens around Capernaum and the lake. Then in chapter ten Jesus turns south, and the road to Jerusalem is the other half. He goes to the city once and does not come back.'),
+    'luke': dict(era='nt', regions=['galilee', 'samaria'], cities=['nazareth', 'jerusalem'], marked=['bethlehem'],
+        arrows=[('nazareth', 'jerusalem')],
+        lead='The long way to Jerusalem.',
+        caption='Luke opens and closes in the temple. In between, from 9:51, Jesus sets his face toward Jerusalem and takes ten chapters to arrive &mdash; through Samaria, which the other gospels go around.'),
+    'john': dict(era='nt', regions=[], cities=['jerusalem'], marked=['cana', 'sychar', 'bethany'], arrows=[],
+        lead='Mostly Jerusalem.',
+        caption='The other three keep Jesus in Galilee until the last week. John has him in Jerusalem for feast after feast, with excursions: water into wine at Cana, the well at Sychar, Lazarus at Bethany.'),
+}
+# what each era draws
+LABELS = {'ot': REGION_LABEL, 'nt': NT_LABELS}
+CITY_SETS = {'ot': CITIES, 'nt': NT_CITIES}
+BEARINGS = {'ot': ('samaria', 'jerusalem'), 'nt': ('jerusalem',)}   # always there, faintly
+ALT_PLACE = {'ot': 'Israel and Judah between the Mediterranean and the Jordan',
+             'nt': 'Galilee, Samaria and Judea in the first century'}
+
+
 def text(x, y, s, anchor='start', size=13, fill=INK, italic=False, sans=False, weight=None, spacing=None):
     fam = 'Helvetica,Arial,sans-serif' if sans else 'Georgia,serif'
     extra = ''
@@ -116,7 +162,7 @@ def text(x, y, s, anchor='start', size=13, fill=INK, italic=False, sans=False, w
 def point(name):
     if name in OFFMAP:
         return OFFMAP[name][0]
-    return CITIES[name][:2]
+    return (CITIES.get(name) or NT_CITIES[name])[:2]
 
 
 def arrow(a, b, hot=True):
@@ -131,7 +177,7 @@ def arrow(a, b, hot=True):
     cx, cy = mx + px * k, my + py * k
     tx, ty = x1 - cx, y1 - cy
     t = math.hypot(tx, ty) or 1
-    gap = 13 if b in CITIES else 6
+    gap = 6 if b in OFFMAP else 13
     ex, ey = x1 - tx / t * gap, y1 - ty / t * gap
     ang = math.atan2(ey - cy, ex - cx)
     h = 7
@@ -147,11 +193,15 @@ def svg(cfg):
     out = ['<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 340 460" width="340" height="460">'] + BASE[:]
     for rid in cfg['regions']:
         out.append('<path d="%s" fill="%s" fill-opacity=".2"/>' % (REGIONS[rid], HOT))
-    out.append(BORDER % ORIGIN)
+    era = cfg.get('era', 'ot')
+    if era == 'ot':
+        out.append(BORDER % ORIGIN)
     for x, y, s, anchor, size, fill, italic in FIXED_LABELS:
+        if era == 'nt' and s in ('GALILEE', 'AMMON'):
+            continue      # the era's own region names cover these
         out.append(text(x, y, s, anchor, size, fill, italic=bool(italic), sans=italic is not True,
                         weight=700 if italic is False else None, spacing=1.6 if italic is False else None))
-    for rid, (x, y, s) in REGION_LABEL.items():
+    for rid, (x, y, s) in LABELS[era].items():
         lit = rid in cfg['regions']
         out.append(text(x, y, s, 'start', 10, HOT if lit else FAINT, sans=True, weight=700, spacing=1.6))
     # arrivals from off the map, named at the edge
@@ -161,10 +211,11 @@ def svg(cfg):
         for n in (a, b):
             if n in OFFMAP and n not in named:
                 named.add(n)
-                (x, y), title, sub = OFFMAP[n]
-                out.append(text(x - 2, y - 20, title, 'end', 12.5, INK, weight=700))
-                out.append(text(x - 2, y - 8, sub, 'end', 10, MUTED, sans=True))
-    for cid, (x, y, label, anchor, dx, dy) in CITIES.items():
+                (x, y), title, sub, anchor = OFFMAP[n]
+                lx = x - 2 if anchor == 'end' else x + 2
+                out.append(text(lx, y - 20, title, anchor, 12.5, INK, weight=700))
+                out.append(text(lx, y - 8, sub, anchor, 10, MUTED, sans=True))
+    for cid, (x, y, label, anchor, dx, dy) in CITY_SETS[era].items():
         if cid in cfg['cities']:
             out.append('<circle cx="%s" cy="%s" r="11" fill="none" stroke="%s" stroke-opacity=".45" stroke-width="2"/>' % (x, y, HOT))
             out.append('<circle cx="%s" cy="%s" r="6" fill="%s" stroke="#F2EAD9" stroke-width="2"/>' % (x, y, HOT))
@@ -172,7 +223,7 @@ def svg(cfg):
         elif cid in cfg['marked']:
             out.append('<circle cx="%s" cy="%s" r="5" fill="%s" stroke="#F2EAD9" stroke-width="2"/>' % (x, y, ORIGIN))
             out.append(text(x + dx, y + dy, label, anchor, 13, INK))
-        elif cid in ('samaria', 'jerusalem'):
+        elif cid in BEARINGS[era]:
             # the two capitals are always there, faintly, for bearings
             out.append('<circle cx="%s" cy="%s" r="3" fill="%s"/>' % (x, y, DIM))
             out.append(text(x + dx, y + dy, label, anchor, 11, FAINT))
@@ -182,14 +233,18 @@ def svg(cfg):
 
 def figure(bid):
     cfg = BOOKS[bid]
-    alt = 'Schematic map of Israel and Judah between the Mediterranean and the Jordan, with %s marked.' % (
-        ', '.join([REGION_LABEL[r][2].title() for r in cfg['regions']] + [CITIES[c][2] for c in cfg['cities']]) or 'the two kingdoms')
+    era = cfg.get('era', 'ot')
+    alt = ('Schematic map of ' + ALT_PLACE[era] + ', with %s marked.') % (
+        ', '.join([LABELS[era][r][2].title() for r in cfg['regions']]
+                  + [CITY_SETS[era][c][2] for c in cfg['cities']]) or 'the two kingdoms')
     uri = 'data:image/svg+xml;base64,' + base64.b64encode(svg(cfg).encode('utf-8')).decode('ascii')
     return ('<figure class="mapfig" data-map="land">\n'
             '      <img class="mapimg" loading="lazy" width="340" height="460" alt="%s" src="%s">\n'
             '      <figcaption><b>%s</b> %s</figcaption>\n'
             '    </figure>' % (alt, uri, cfg['lead'], cfg['caption']))
 
+
+BOOKS.update(GOSPELS)
 
 s = io.open(P, encoding='utf-8').read()
 placed = replaced = 0
