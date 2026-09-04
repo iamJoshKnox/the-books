@@ -46,6 +46,15 @@ check('<meta charset="utf-8">' in s, 'missing <meta charset="utf-8">')
 check('<meta name="viewport"' in s, 'missing viewport meta')
 check(s.count('<body>') == 1 and s.count('</body>') == 1, 'body must open and close exactly once')
 check('�' not in s, 'contains U+FFFD replacement characters (mojibake)')
+for tag in ('name="description"', 'property="og:image"', 'rel="icon"', 'rel="canonical"'):
+    check(tag in s, 'head is missing <meta/link %s>' % tag)
+try:
+    with open('og.png', 'rb') as fh:
+        head = fh.read(24)
+    check(head[:8] == b'\x89PNG\r\n\x1a\n' and int.from_bytes(head[16:20], 'big') == 1200
+          and int.from_bytes(head[20:24], 'big') == 630, 'og.png is not a 1200x630 PNG')
+except OSError:
+    check(False, 'og.png is missing')
 
 # ------------------------------------------------------------ chapters
 ids = re.findall(r'<section class="chapter" id="([^"]+)"', s)
