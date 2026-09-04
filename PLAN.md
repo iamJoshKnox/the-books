@@ -60,7 +60,7 @@ content. These are ordered by value per hour.
 | # | Task | Backlog | Done when |
 |---|------|---------|-----------|
 | 2.1 | Sharing metadata: `<meta name="description">`, Open Graph title / description / image (a cropped screenshot of the spine, baked as a data URI or committed PNG), favicon | 18 | Pasting the link into a chat shows a card with the spine on it | ✅ `og.png` 1200×630 committed; favicon is the ten era colours as an SVG bookshelf |
-| 2.2 | **One "Paul's world" map** — Aegean and eastern Mediterranean, same baked-SVG pipeline as the ten existing maps — reused across all thirteen Pauline letters with the destination city lit per letter via a CSS variable | 13 | Thirteen more books have a map, from one drawing |
+| 2.2 | **One "Paul's world" map** — Aegean and eastern Mediterranean, same baked-SVG pipeline as the ten existing maps — reused across all thirteen Pauline letters with the destination lit, the origin marked, and the route drawn between. `_paulmap.py`, idempotent, 3.5KB a plate | 13 | Thirteen more books have a map, from one drawing | ✅ 23 of 66 books mapped |
 | 2.3 | "Reads with" line under each spec block, from a `PAIRS` table in `books.py`: Kings ↔ Chronicles, Luke ↔ Acts, Jeremiah ↔ Lamentations, Ezra ↔ Nehemiah ↔ Haggai ↔ Zechariah, Colossians ↔ Philemon, 1 Timothy ↔ Titus, 2 Peter ↔ Jude, 1–3 John | 14 | Every pair links both ways; `verify.py` checks symmetry |
 | 2.4 | Divided-kingdom map — serves Kings, Chronicles, Hosea, Amos, Micah and most of the minor prophets | 13 | ~14 more books mapped |
 | 2.5 | Empires map (Assyria → Babylon → Persia) for Isaiah, Jeremiah, Ezekiel, Daniel, Esther, Nehemiah; Galilee and Judea for the four gospels | 13 | Under ten books left unmapped; decide whether those need one at all |
