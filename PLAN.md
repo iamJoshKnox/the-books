@@ -41,8 +41,8 @@ then fixing what is broken, not redesigning.
 
 | # | Task | Backlog | Done when |
 |---|------|---------|-----------|
-| 1.1 | Open the Pages URL on an actual phone. Walk Genesis → Revelation. Screenshot every breakage. Fix layout breakages only — no new features | 8 | A list of what broke, and it is fixed |
-| 1.2 | Chip strip on narrow screens: horizontal scroll (`overflow-x: auto; flex-wrap: nowrap; scroll-snap`) with the current chip scrolled into view, instead of wrapping to five rows | 8 | On a 390px screen the header is ≤ 110px tall in every division |
+| 1.1 | Open the Pages URL on an actual phone. Walk Genesis → Revelation. Screenshot every breakage. Fix layout breakages only — no new features | 8 | A list of what broke, and it is fixed | ⬜ first pass reported: the floating header; fixed below. Keep walking |
+| 1.2 | ~~Chip strip on narrow screens: horizontal scroll~~ **Done differently, and further:** below 720px the whole floating stack collapses to one 44px bar reading *division › book*, coloured by division, that drops the order controls, division row and chip row down on tap — each a single scrolling line with the current item scrolled into view — overlaying the page. Tap a chip, a link, outside, or Escape to close. The per-book locator now fits the width with only the book's own era labelled; the orphan fifth spec cell spans its row | 8 | On a 390px screen the header is ≤ 110px tall in every division | ✅ 44px collapsed, 189px open, in every division |
 | 1.3 | Tooltips on touch: switch the three mouse listeners to pointer events; on `pointerType === "touch"`, first tap shows the tooltip, second tap follows the link; for lane-split pairs, taps cycle top → bottom → navigate | 5 | You can discover Philemon behind Colossians on a phone |
 | 1.4 | Tooltips on focus: `focusin` / `focusout` mirror `mouseover` / `mouseout` | 6 | Tab to a bar, the tooltip appears |
 | 1.5 | Roving tabindex on the spine: one tab stop enters it, arrow keys move between bars, Escape leaves | 7 | Tab from the masthead reaches the first paragraph in under ten presses |

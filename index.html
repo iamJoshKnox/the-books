@@ -822,6 +822,70 @@ main { display: flex; flex-direction: column; }
 :root[data-order="events"] .bn-books a { order: var(--o-events); }
 :root[data-order="written"] .bn-books a { order: var(--o-written); }
 
+/* ---------- the floating header on a phone ----------
+   On desktop the order controls, division row and chip row stack to as much
+   as 187px, which is fine on a 900px-tall window and is most of a phone.
+   Below 720px the whole stack collapses to one bar that reads as the running
+   title — division › book — and drops the rest down on tap. Each row inside
+   the drop-down is a single horizontally scrolling line, with the current
+   division and book scrolled into view when it opens. */
+.tb-mobile { display: none; }
+@media (max-width: 720px) {
+  .tb-mobile {
+    display: flex; align-items: center; gap: .55rem; min-height: 44px;
+    padding: .3rem var(--pad); background: var(--surface);
+    border-bottom: 1px solid var(--line);
+  }
+  .tbm-spine {
+    flex: 0 0 auto; color: var(--accent); text-decoration: none; font-size: .95rem;
+    line-height: 1; padding: .3rem .55rem; border: 1px solid var(--line); border-radius: 999px;
+  }
+  .tbm-title {
+    flex: 1 1 auto; min-width: 0; display: flex; align-items: baseline; gap: .4rem;
+    font: inherit; font-size: .84rem; background: none; border: 0; padding: .3rem 0;
+    color: var(--ink-2); text-align: left; cursor: pointer;
+  }
+  .tbm-div {
+    flex: 0 1 auto; min-width: 0; font-weight: 600; color: var(--div, var(--ink));
+    white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .tbm-sep { flex: 0 0 auto; opacity: .45; }
+  .tbm-book {
+    flex: 1 1 auto; min-width: 0; white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
+  }
+  .tbm-book .n {
+    font-family: var(--f-display); font-size: .64rem; font-weight: 700;
+    color: var(--faint); letter-spacing: .04em; margin-right: .3rem;
+  }
+  .tbm-chev { flex: 0 0 auto; margin-left: auto; opacity: .7; transition: transform .15s; }
+  .topbar[data-open] .tbm-chev { transform: rotate(180deg); }
+
+  /* the drop-down overlays the page rather than pushing it down */
+  .tb-panel { display: none; }
+  .topbar[data-open] .tb-panel {
+    display: block; position: absolute; left: 0; right: 0; top: 100%;
+    max-height: calc(100vh - 44px); overflow-y: auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,.22);
+  }
+  .controls { padding: .5rem var(--pad); }
+  .controls-inner, .booknav-row, .bn-books {
+    flex-wrap: nowrap; overflow-x: auto; scrollbar-width: none;
+    -webkit-overflow-scrolling: touch;
+  }
+  .controls-inner::-webkit-scrollbar, .booknav-row::-webkit-scrollbar,
+  .bn-books::-webkit-scrollbar { height: 0; }
+  .ctl-label, .order-note { display: none; }
+  .themebtn { margin-left: 0; }
+  .bn-books { margin-top: .4rem; padding-top: .45rem; }
+  .bn-books a, .bn-spine, .bn-div, .segctl button, .themebtn { flex: 0 0 auto; }
+
+  /* anchors land under a 44px bar now, not a 165px one */
+  :target { scroll-margin-top: 60px; }
+
+  /* five spec cells in two columns leave one alone; let it take the row */
+  .spec > div:last-child:nth-child(odd) { grid-column: 1 / -1; }
+}
+
 /* ============================================================
    CHAPTER — full-bleed, themed by family
    ============================================================ */
@@ -905,6 +969,18 @@ main { display: flex; flex-direction: column; }
 .loc-cap { margin: .45rem 0 0; font-size: .8rem; color: var(--k-muted); }
 .loc-cap b { color: var(--k-ink); font-weight: 600; }
 .loc-cap .sep { opacity: .45; padding: 0 .45rem; }
+/* On a phone the locator fits the width. Ten era labels cannot, so only the
+   era the book sits in keeps its name; the rest keep their tick marks and
+   colour, and the caption below already carries the dates. (Placed after the
+   base rules above so it wins the cascade at equal specificity.) */
+@media (max-width: 720px) {
+  .loc-inner { min-width: 0; }
+  .loc-scroll { overflow-x: hidden; }     /* nothing to scroll now; and no 5px scrollbar from a label */
+  .loc-era { color: transparent; padding: 0; font-size: .52rem; letter-spacing: .04em; }
+  .loc-era.on { color: var(--k-ink); overflow: visible; white-space: nowrap; padding-left: .25rem; }
+  .loc-era.on ~ .loc-era.on { color: transparent; }   /* a second on-era would overprint the first */
+  .loc-name { display: none; }
+}
 
 /* ---------- spec card ---------- */
 .spec {
@@ -1749,6 +1825,16 @@ html { scroll-behavior: smooth; }
 
 <!-- ============ CONTROLS ============ -->
 <div class="topbar">
+<!-- Phones only. One 44px bar that is the running title — division › book —
+     and opens the full controls as a drop-down. Desktop never shows it. -->
+<div class="tb-mobile">
+  <a class="tbm-spine" href="#spine" aria-label="Back to the spine">&uarr;</a>
+  <button type="button" class="tbm-title" id="tbm-title" aria-expanded="false" aria-controls="tbm-panel">
+    <span class="tbm-div">The Books</span><span class="tbm-sep" hidden>&rsaquo;</span><span class="tbm-book"></span>
+    <span class="tbm-chev" aria-hidden="true">&#9662;</span>
+  </button>
+</div>
+<div class="tb-panel" id="tbm-panel">
 <div class="controls">
   <div class="controls-inner">
     <span class="ctl-label">Order</span>
@@ -1850,6 +1936,7 @@ html { scroll-behavior: smooth; }
       </div>
   </div>
 </nav>
+</div><!-- /tb-panel -->
 </div>
 
 <main>
@@ -5938,9 +6025,19 @@ html { scroll-behavior: smooth; }
      bottom padding is still on screen — wins by a hair. Reading 20px lower
      puts the test in the blank space above the incoming book's title. */
   var ANCHOR_TOP = 165;
+  var phone = window.matchMedia("(max-width: 720px)");
+  /* On a phone the header is the one 44px bar, so the anchor line moves up
+     with it — read live, since the viewport can rotate. */
+  function anchorTop() { return phone.matches ? 60 : ANCHOR_TOP; }
+
+  var tbTitle = document.getElementById("tbm-title");
+  var tbDiv = tbTitle && tbTitle.querySelector(".tbm-div");
+  var tbSep = tbTitle && tbTitle.querySelector(".tbm-sep");
+  var tbBook = tbTitle && tbTitle.querySelector(".tbm-book");
+  var tbBar = document.querySelector(".tb-mobile");
 
   function runningTitle() {
-    var line = ANCHOR_TOP + 20;
+    var line = anchorTop() + 20;
     var here = null;
     for (var i = 0; i < sections.length; i++) {
       var r = sections[i].getBoundingClientRect();
@@ -5967,6 +6064,17 @@ html { scroll-behavior: smooth; }
       var chip = document.querySelector('.bn-books a[href="#' + book + '"]');
       if (chip) chip.setAttribute("data-current", "");
     }
+
+    /* the phone bar says the same thing in words */
+    if (tbTitle) {
+      var btn = null;
+      navBtns.forEach(function (b) { if (b.dataset.div === div) btn = b; });
+      tbDiv.textContent = btn ? btn.firstChild.textContent.trim() : "The Books";
+      if (btn) { tbBar.setAttribute("data-div", div); } else { tbBar.removeAttribute("data-div"); }
+      var cur = book && document.querySelector('.bn-books a[href="#' + book + '"]');
+      tbBook.innerHTML = cur ? cur.innerHTML : "";
+      tbSep.hidden = !cur;
+    }
   }
 
   /* Called straight from the scroll event rather than through
@@ -5990,7 +6098,7 @@ html { scroll-behavior: smooth; }
     if (!id) return;
     var el = document.getElementById(id);
     if (!el) return;
-    var want = ANCHOR_TOP;
+    var want = anchorTop();
     var delta = el.getBoundingClientRect().top - want;
     if (Math.abs(delta) < 3 || tries <= 0) { refreshTitle(); return; }
     window.scrollBy({ top: delta, behavior: "instant" });
@@ -6031,8 +6139,36 @@ html { scroll-behavior: smooth; }
   window.addEventListener("hashchange", beginNav);
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#"]');
-    if (a) beginNav();
+    if (a) { beginNav(); closePanel(); }
   }, true);
+
+  /* --- the phone drop-down --- */
+  function closePanel() {
+    if (!topbar.hasAttribute("data-open")) return;
+    topbar.removeAttribute("data-open");
+    if (tbTitle) tbTitle.setAttribute("aria-expanded", "false");
+  }
+  function openPanel() {
+    topbar.setAttribute("data-open", "");
+    tbTitle.setAttribute("aria-expanded", "true");
+    /* bring the current division and book into view in their rows */
+    var d = document.querySelector(".bn-div[data-current]");
+    var c = document.querySelector(".bn-books a[data-current]");
+    [d, c].forEach(function (el) {
+      if (el) el.scrollIntoView({ block: "nearest", inline: "center" });
+    });
+  }
+  if (tbTitle) {
+    tbTitle.addEventListener("click", function () {
+      if (topbar.hasAttribute("data-open")) closePanel(); else openPanel();
+    });
+    document.addEventListener("keydown", function (e) { if (e.key === "Escape") closePanel(); });
+    /* a tap outside the header closes it */
+    document.addEventListener("click", function (e) {
+      if (!topbar.contains(e.target)) closePanel();
+    });
+    phone.addEventListener("change", function () { closePanel(); refreshTitle(); });
+  }
 
   window.addEventListener("scroll", function () {
     if (navigating) { armSettle(); return; }

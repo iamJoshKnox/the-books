@@ -135,13 +135,11 @@ all the content. Tabbing into the page is currently a punishment. Wants either
 a roving `tabindex` (one stop for the spine, arrow keys within it) or a
 skip-link, and probably both.
 
-**8. Mobile pass on the floating header.** (M)
-Half-addressed: at desktop width the 23-book strip is now two rows, a 187px
-header and 62px of clearance. But item 3 has landed, so the real breakpoints
-now engage on a phone for the first time and none of them has ever been seen.
-Twenty-three chips at 390px will wrap far past two rows. Options: scroll the
-chip strip horizontally instead of wrapping, or collapse it to the current book
-plus a count. Needs a real handset, or at least a device-emulation pass.
+**8. Mobile pass on the floating header.** &mdash; done (plan 1.2)
+Reported from a real phone: the header took most of the screen. Below 720px
+the whole stack is now a single 44px bar &mdash; *division › book* &mdash;
+with the controls in a drop-down. Desktop is untouched. What remains of this
+item is the rest of the walk-through on the handset (plan 1.1).
 
 ---
 
