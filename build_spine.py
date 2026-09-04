@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Generate every timeline coordinate in the-books.html from dates.
+"""Generate every timeline coordinate in index.html from dates.
 
 Positions used to be worked out by hand against era boundaries, which is fine
 for five books and a liability for sixty-six: the spine has now been
@@ -7,7 +7,7 @@ re-proportioned twice, and each time every book's numbers had to be redone.
 The era table and the book dates live in books.py; this computes the rest and
 rewrites the file. Re-proportioning is now a one-line edit to ERAS.
 
-The prose is not generated. It lives in the-books.html and only there; this
+The prose is not generated. It lives in index.html and only there; this
 script rewrites the coordinates around it and never touches it.
 
 Run from the bible/ directory: python build_spine.py, then python _accents.py
@@ -78,7 +78,7 @@ for d in DIVISIONS:
         max(canon[b[0]] for b in BOOKS if b[3] < d) + 5)
 
 # =====================================================================
-P = 'the-books.html'
+P = 'index.html'
 s = io.open(P, encoding='utf-8').read()
 edits = 0
 

@@ -2,7 +2,7 @@
 """The data: eras, books, divisions, and the few chip labels that contract.
 
 Everything build_spine.py computes, it computes from this file. The prose
-lives in the-books.html and nowhere else; this holds only what has a
+lives in index.html and nowhere else; this holds only what has a
 coordinate or a count. Change a date here and rerun build_spine.py.
 
 Years are signed: -1406 is 1406 BC, 30 is AD 30.

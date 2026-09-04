@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Check the-books.html against books.py and against itself.
+"""Check index.html against books.py and against itself.
 
 Every audit that used to be run by hand in a browser console, in one place,
 with one exit code. Run it after every build:
@@ -20,7 +20,7 @@ import urllib.request
 from books import BOOKS, DIVISIONS, ERAS
 
 # an explicit path lets a deliberately broken copy prove the checks bite
-P = next((a for a in sys.argv[1:] if not a.startswith('--')), 'the-books.html')
+P = next((a for a in sys.argv[1:] if not a.startswith('--')), 'index.html')
 s = io.open(P, encoding='utf-8').read()
 
 fails = []

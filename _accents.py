@@ -22,7 +22,7 @@ from _coords import G
 HUE_SPAN = 14.0     # degrees, total, across a family
 LIT_SPAN = 0.11     # lightness, total, across a family
 
-P = 'the-books.html'
+P = 'index.html'
 s = io.open(P, encoding='utf-8').read()
 
 
