@@ -91,6 +91,17 @@ for bid, num, name, div, fam, ev, wrote, flag in BOOKS:
     check('<div class="track"></div>' not in sec, '%s: locator track was never filled' % bid)
     check(re.search(r'<div class="prose">\s*<p>', sec) is not None, '%s: no prose paragraph' % bid)
 
+# ------------------------------------------------------------ the maps
+PAUL = ('romans', 'corinthians-1', 'corinthians-2', 'galatians', 'ephesians', 'philippians',
+        'colossians', 'thessalonians-1', 'thessalonians-2', 'timothy-1', 'timothy-2', 'titus', 'philemon')
+for bid in PAUL:
+    sec = section(bid)
+    check('data-map="paul"' in sec and sec.count('<figure class="mapfig"') == 1,
+          '%s: expected exactly one Paul map' % bid)
+    check(sec.count('<div class="book-body">') == 1, '%s: map is not laid out beside the prose' % bid)
+mapped = len(re.findall(r'<figure class="mapfig"', s))
+check(mapped == 10 + len(PAUL), 'expected %d map figures, found %d' % (10 + len(PAUL), mapped))
+
 # ---------------------------------------------------------- front matter
 for stale in ('46 of 66', 'Built so far', 'slice-note', 'design slice', 'none built yet',
               'in progress</span>'):
