@@ -117,6 +117,9 @@ follow; a doubled lane lists both books as links.
 
 **6. Tooltips do not appear on focus.** &mdash; done (plan 1.4).
 
+**7. ~130 tab stops before the first paragraph.** &mdash; done (plan 1.5): 17 now,
+one with the skip link.
+
 *(original text kept below)*
 
 **5. Tooltips are mouse-only.** (M)
