@@ -99,8 +99,16 @@ for bid in PAUL:
     check('data-map="paul"' in sec and sec.count('<figure class="mapfig"') == 1,
           '%s: expected exactly one Paul map' % bid)
     check(sec.count('<div class="book-body">') == 1, '%s: map is not laid out beside the prose' % bid)
+LAND = ('kings-2', 'chronicles-1', 'chronicles-2', 'hosea', 'joel', 'amos', 'obadiah', 'micah',
+        'nahum', 'habakkuk', 'zephaniah')
+for bid in LAND:
+    sec = section(bid)
+    check('data-map="land"' in sec and sec.count('<figure class="mapfig"') == 1,
+          '%s: expected exactly one land map' % bid)
+    check(sec.count('<div class="book-body">') == 1, '%s: map is not laid out beside the prose' % bid)
 mapped = len(re.findall(r'<figure class="mapfig"', s))
-check(mapped == 10 + len(PAUL), 'expected %d map figures, found %d' % (10 + len(PAUL), mapped))
+want_maps = 10 + len(PAUL) + len(LAND)
+check(mapped == want_maps, 'expected %d map figures, found %d' % (want_maps, mapped))
 
 # ------------------------------------------------------- reads with
 # every book has a line, and every link on it has its mirror on the other book
