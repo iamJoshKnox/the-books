@@ -112,6 +112,13 @@ geometry can still be checked by converging by hand with instant scrolls
 &mdash; all eight books tested land at exactly `top: 165`. Chip behaviour
 cannot be checked this way at all and needs a human with a mouse.
 
+**5. Tooltips are mouse-only.** &mdash; done (plan 1.3): tap to peek, tap again to
+follow; a doubled lane lists both books as links.
+
+**6. Tooltips do not appear on focus.** &mdash; done (plan 1.4).
+
+*(original text kept below)*
+
 **5. Tooltips are mouse-only.** (M)
 Wiring is `mouseover` / `mousemove` / `mouseout` and nothing else. Two
 consequences:

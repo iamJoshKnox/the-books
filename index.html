@@ -777,6 +777,13 @@ main { display: flex; flex-direction: column; }
 }
 .tip b { color: #F6EDE0; font-weight: 600; }
 .tip[hidden] { display: none; }
+/* opened by a tap rather than a hover: it stays, and its names are links */
+.tip.touch { pointer-events: auto; padding: .5rem .75rem .45rem; }
+.tip .tip-row { display: block; }
+.tip .tip-row + .tip-row { margin-top: .32rem; padding-top: .32rem; border-top: 1px solid rgba(255,255,255,.14); }
+.tip a.tip-row { color: inherit; text-decoration: none; }
+.tip a.tip-row b { text-decoration: underline; text-decoration-color: var(--accent); text-underline-offset: 2px; }
+.tip .hint { display: block; margin-top: .3rem; font-size: .66rem; letter-spacing: .04em; text-transform: uppercase; opacity: .55; }
 
 .sgroup-books { display: none; }
 .sgroup[data-open] .sgroup-books { display: block; }
@@ -5941,7 +5948,12 @@ html { scroll-behavior: smooth; }
 
 
 
-  /* --- one tooltip for the combined division timelines --- */
+  /* --- one tooltip for every timeline mark ---
+     Three ways in. A mouse hovers and the tip follows it. A keyboard focuses a
+     mark and the tip sits under it. A finger taps: the first tap opens the tip
+     instead of the link and the second follows it — and on a doubled lane,
+     where two books share a bar and a 4px lane is not something a thumb can
+     choose, the tip lists both books as links and the finger picks. */
   var tip = document.createElement("div");
   tip.className = "tip";
   tip.hidden = true;
@@ -5952,31 +5964,118 @@ html { scroll-behavior: smooth; }
        bars and their composition dots carry tooltips too */
     return e.target && e.target.closest ? e.target.closest("[data-tip]") : null;
   }
-  document.addEventListener("mouseover", function (e) {
-    var bar = tipTarget(e);
-    if (!bar) return;
-    var parts = bar.dataset.tip.split("|");
-    tip.innerHTML = "";
+  /* one line of the tip: the name, then the span or date */
+  function tipRow(mark, linked) {
+    var parts = mark.dataset.tip.split("|");
+    var href = linked && mark.getAttribute("href");
+    var row = document.createElement(href ? "a" : "span");
+    row.className = "tip-row";
+    if (href) row.href = href;
     var b = document.createElement("b");
     b.textContent = parts[0];
-    tip.appendChild(b);
-    if (parts[1]) tip.appendChild(document.createTextNode("  " + parts[1]));
+    row.appendChild(b);
+    if (parts[1]) row.appendChild(document.createTextNode("  " + parts[1]));
+    return row;
+  }
+  function showTip(marks, linked, hint) {
+    tip.innerHTML = "";
+    marks.forEach(function (m) { tip.appendChild(tipRow(m, linked)); });
+    if (hint) {
+      var h = document.createElement("span");
+      h.className = "hint";
+      h.textContent = hint;
+      tip.appendChild(h);
+    }
+    tip.classList.toggle("touch", !!linked);
     tip.hidden = false;
-    place(e);
-  });
-  document.addEventListener("mouseout", function (e) {
-    if (tipTarget(e)) tip.hidden = true;
-  });
+  }
+  function hideTip() {
+    tip.hidden = true;
+    tip.classList.remove("touch");
+    armed = null;
+  }
+  function placeAt(x, y) {
+    tip.style.left = Math.max(8, Math.min(x, window.innerWidth - tip.offsetWidth - 8)) + "px";
+    tip.style.top = Math.max(8, Math.min(y, window.innerHeight - tip.offsetHeight - 8)) + "px";
+  }
+  /* beside the pointer */
   function place(e) {
     var x = e.clientX + 14, y = e.clientY + 18;
     if (x + tip.offsetWidth > window.innerWidth - 8) x = e.clientX - tip.offsetWidth - 14;
     if (y + tip.offsetHeight > window.innerHeight - 8) y = e.clientY - tip.offsetHeight - 14;
-    tip.style.left = x + "px";
-    tip.style.top = y + "px";
+    placeAt(x, y);
   }
-  document.addEventListener("mousemove", function (e) {
-    if (!tip.hidden) place(e);
+  /* under the mark, centred; above it if there is no room below */
+  function placeUnder(el) {
+    var r = el.getBoundingClientRect();
+    var x = r.left + r.width / 2 - tip.offsetWidth / 2;
+    var y = r.bottom + 10;
+    if (y + tip.offsetHeight > window.innerHeight - 8) y = r.top - tip.offsetHeight - 10;
+    placeAt(x, y);
+  }
+
+  /* mouse and pen: hover, as before */
+  document.addEventListener("pointerover", function (e) {
+    if (e.pointerType === "touch") return;
+    var m = tipTarget(e);
+    if (!m) return;
+    showTip([m], false);
+    place(e);
   });
+  document.addEventListener("pointerout", function (e) {
+    if (e.pointerType === "touch") return;
+    if (tipTarget(e)) hideTip();
+  });
+  document.addEventListener("pointermove", function (e) {
+    if (e.pointerType === "touch" || tip.hidden || tip.classList.contains("touch")) return;
+    place(e);
+  });
+
+  /* keyboard: a focused mark shows its tip beneath itself */
+  document.addEventListener("focusin", function (e) {
+    var m = tipTarget(e);
+    if (m) { showTip([m], false); placeUnder(m); }
+  });
+  document.addEventListener("focusout", function (e) {
+    if (tipTarget(e)) hideTip();
+  });
+
+  /* touch */
+  var armed = null;          /* the marks a first tap opened, awaiting a second */
+  var lastPointer = "mouse";
+  document.addEventListener("pointerdown", function (e) {
+    lastPointer = e.pointerType || "mouse";
+  }, true);
+  function lanesAt(mark, x) {
+    if (!mark.classList.contains("laned")) return [mark];
+    var track = mark.closest(".track");
+    var lanes = Array.prototype.slice.call(track.querySelectorAll(".laned")).filter(function (a) {
+      var r = a.getBoundingClientRect();
+      return r.left - 4 <= x && x <= r.right + 4;
+    });
+    lanes.sort(function (a, b) {
+      return a.getBoundingClientRect().top - b.getBoundingClientRect().top;
+    });
+    return lanes.length ? lanes : [mark];
+  }
+  document.addEventListener("click", function (e) {
+    if (lastPointer !== "touch") return;
+    if (tip.contains(e.target)) { hideTip(); return; }       /* a name in the tip: let it navigate */
+    var m = tipTarget(e);
+    if (!m) { hideTip(); return; }                            /* a tap elsewhere closes it */
+    if (armed && armed.length === 1 && armed[0] === m) { hideTip(); return; }   /* second tap: follow */
+    e.preventDefault();
+    /* a peek is not a navigation: keep the anchor-click listener below from
+       arming a settle that would re-align to the previous hash */
+    e.stopImmediatePropagation();
+    var marks = lanesAt(m, e.clientX);
+    showTip(marks, true, marks.length > 1 ? "two books share this bar — tap a name" : "tap again to open");
+    armed = marks;
+    placeUnder(m);
+  }, true);
+  window.addEventListener("scroll", function () {
+    if (tip.classList.contains("touch")) hideTip();
+  }, { passive: true });
 
   /* --- spine: collapsed to one density row per division by default --- */
   document.querySelectorAll(".sgroup-lab").forEach(function (btn) {
