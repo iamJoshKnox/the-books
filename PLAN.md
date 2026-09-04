@@ -18,14 +18,14 @@ cannot diff or verify is how the accent block got duplicated.
 rebuilds the HTML from scripts; without history and a verifier, each rebuild
 is a bet.
 
-| # | Task | Backlog | Done when |
-|---|------|---------|-----------|
-| 0.1 | `git init`, `.gitignore` for `__pycache__`, first commit of everything as it stands | 9 | `git log` shows one commit; `git status` clean |
-| 0.2 | Push to a GitHub repo and turn on Pages from `main` (or Netlify drop, if you'd rather not have a repo be public) | — | A URL you can open on your phone |
-| 0.3 | Fold the ad-hoc audits into `verify.py`: 66 chapters, no duplicate ids, five division counts, no unfilled locator tracks, no `46 of 66`, every `data-yt` present, every section has a Wikipedia link, no horizontal overflow markers | 11 | `python verify.py` prints PASS and exits 0; a deliberately broken copy fails |
-| 0.4 | `verify.py --net`: oEmbed every video id, MediaWiki-resolve every Wikipedia slug, fail on a redirect or a 404 | 11 | Runs clean once; then leave it for the month-later check |
-| 0.5 | One `books.py` holding the 66-row table; `build_spine.py` imports it; delete `_letters_a/b/c.py` and `_lettertpl.py` (their output is in the HTML and in git now) | 10 | `build_spine.py` produces a byte-identical page from `books.py`; the folder has no one-shot scripts |
-| 0.6 | Fix 4a: `alignToHash` waits for the settle timer, then corrects with `behavior: "instant"`. Keep the smooth travel from native anchor navigation | 4a | You click ten chips on a real machine and every one lands with the right chip lit and no visible hop |
+| # | Task | Backlog | Done when | |
+|---|------|---------|-----------|---|
+| 0.1 | `git init`, `.gitignore` for `__pycache__`, first commit of everything as it stands | 9 | `git log` shows one commit; `git status` clean | ✅ |
+| 0.2 | Push to a GitHub repo and turn on Pages from `main` (or Netlify drop, if you'd rather not have a repo be public) | — | A URL you can open on your phone | ⬜ needs you |
+| 0.3 | Fold the ad-hoc audits into `verify.py`: 66 chapters, no duplicate ids, five division counts, no unfilled locator tracks, no `46 of 66`, every `data-yt` present, every section has a Wikipedia link, no horizontal overflow markers | 11 | `python verify.py` prints PASS and exits 0; a deliberately broken copy fails | ✅ |
+| 0.4 | `verify.py --net`: oEmbed every video id, MediaWiki-resolve every Wikipedia slug, fail on a redirect or a 404 | 11 | Runs clean once; then leave it for the month-later check | ✅ |
+| 0.5 | One `books.py` holding the 66-row table; `build_spine.py` imports it; delete `_letters_a/b/c.py` and `_lettertpl.py` (their output is in the HTML and in git now) | 10 | `build_spine.py` produces a byte-identical page from `books.py`; the folder has no one-shot scripts | ✅ |
+| 0.6 | Fix 4a: `alignToHash` waits for the settle timer, then corrects with `behavior: "instant"`. Keep the smooth travel from native anchor navigation | 4a | You click ten chips on a real machine and every one lands with the right chip lit and no visible hop | ✅ in a throttled tab; your eyes on a real one still wanted |
 
 **Acceptance:** a public URL, a green `verify.py`, one source of truth, and
 a git history. About two hours.

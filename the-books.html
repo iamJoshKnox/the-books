@@ -5977,6 +5977,14 @@ html { scroll-behavior: smooth; }
      cold load the browser's jump to #james is computed against estimates and
      lands somewhere else entirely. Each correction resolves more real heights,
      so nudging repeatedly converges within a few frames. */
+  /* The nudges are instant on purpose. They used to say behavior: "auto",
+     which reads as "don't animate" and means the opposite: "auto" defers to
+     the stylesheet's scroll-behavior, and that is smooth. Ten smooth scrolls
+     sixty milliseconds apart each cancel the last and never arrive, which is
+     how a jump could end a hair short and light the previous book's chip.
+     An instant nudge would just as happily cancel the browser's own smooth
+     travel to the anchor — the part worth keeping — so this runs only from
+     the settle timer below, once that travel has actually stopped. */
   function alignToHash(tries) {
     var id = location.hash.slice(1);
     if (!id) return;
@@ -5985,18 +5993,15 @@ html { scroll-behavior: smooth; }
     var want = ANCHOR_TOP;
     var delta = el.getBoundingClientRect().top - want;
     if (Math.abs(delta) < 3 || tries <= 0) { refreshTitle(); return; }
-    window.scrollBy({ top: delta, behavior: "auto" });
+    window.scrollBy({ top: delta, behavior: "instant" });
     setTimeout(function () { alignToHash(tries - 1); }, 60);
   }
-  alignToHash(10);                       /* DOM is parsed; script is at body end */
-  window.addEventListener("load", function () { alignToHash(10); });
-  window.addEventListener("hashchange", function () { alignToHash(10); });
-  document.addEventListener("DOMContentLoaded", function () { alignToHash(10); });
 
   /* Hold the title still while a jump is in flight. A smooth scroll across
      forty books fires a scroll event the whole way down, and letting the spy
      run turns the chip strip into a flickbook of every book passed over.
-     Freeze on navigation, release once the scrolling has actually stopped. */
+     Freeze on navigation; release once the scrolling has actually stopped,
+     and only then correct the landing and read the title. */
   var navigating = false, settle = null;
 
   /* Force a fresh read. runningTitle() short-circuits when the answer has not
@@ -6011,17 +6016,23 @@ html { scroll-behavior: smooth; }
     clearTimeout(settle);
     settle = setTimeout(function () {
       navigating = false;
-      refreshTitle();
+      alignToHash(10);                 /* ends in refreshTitle() when it lands */
+      refreshTitle();                  /* and now, for the no-hash case */
       setTimeout(refreshTitle, 200);   /* once more, after any late reflow */
     }, 150);
   }
   function beginNav() { navigating = true; armSettle(); }
 
+  /* A cold load with a hash is a jump too: the browser's own fragment scroll
+     is computed against content-visibility estimates and lands short. */
+  beginNav();                            /* DOM is parsed; script is at body end */
+  window.addEventListener("load", beginNav);
+  document.addEventListener("DOMContentLoaded", beginNav);
+  window.addEventListener("hashchange", beginNav);
   document.addEventListener("click", function (e) {
     var a = e.target.closest && e.target.closest('a[href^="#"]');
     if (a) beginNav();
   }, true);
-  window.addEventListener("hashchange", beginNav);
 
   window.addEventListener("scroll", function () {
     if (navigating) { armSettle(); return; }

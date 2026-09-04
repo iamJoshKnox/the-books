@@ -20,7 +20,22 @@ three:** the header goes 220px → 187px and clearance above an anchored book's
 title goes **29px → 62px**. Writings and Prophets (22 books) rides along at the
 same two rows. The single-row divisions are unchanged at 96px of clearance.
 
-Original text of items 1–4 is in git — or would be, if item 9 were done.
+**9, 10, 11 and 4a — Phase 0 of the plan, same day.** The folder is a git
+repo. `books.py` holds the tables and `build_spine.py` produces a
+byte-identical page from it; the five one-shot scripts are gone. `verify.py`
+runs every audit offline in about a second and, with `--net`, confirms all
+71 video ids are BibleProject uploads and all 63 Wikipedia articles resolve
+without a redirect — it caught all five breaks in a deliberately damaged
+copy. And `alignToHash` now waits for the settle timer and corrects with
+`behavior: "instant"`: a cold load at `#philemon` that used to land 57,000px
+short lands at exactly `top: 165` with the right chip lit, and five chips
+clicked in a row all land the same way.
+
+The earlier note about smooth scrolling being "a no-op" in the test browser
+had the wrong cause. The tab was **hidden** (`document.visibilityState`),
+which means no compositor frames — so smooth scrolls never advance — and
+timers throttled to one a second. The old code was timing-dependent on both;
+the new code only needs the timers to fire eventually.
 
 ---
 
@@ -66,7 +81,7 @@ hyphenation of the long prose paragraphs.
 
 ## P1 — the site is unusable in ways we have not tested
 
-**4a. `alignToHash` corrects with `behavior: "auto"`.** (S, but verify carefully)
+**4a. `alignToHash` corrects with `behavior: "auto"`.** (S) &mdash; done, see above
 Found while verifying the P0 block. The stylesheet sets
 `html { scroll-behavior: smooth }`, and per spec `behavior: "auto"` means *use
 the element's CSS scroll-behavior* &mdash; so it resolves to **smooth**, not to
@@ -131,6 +146,14 @@ plus a count. Needs a real handset, or at least a device-emulation pass.
 ---
 
 ## P2 — process, and the risk of losing the thing
+
+**9. The project is not under version control.** &mdash; done
+
+**10. Split-brain source of truth.** &mdash; done
+
+**11. No automated verification.** &mdash; done (`verify.py`, `verify.py --net`)
+
+*(original text kept below for the record)*
 
 **9. The project is not under version control.** (S to fix, large to regret)
 `git rev-parse` says no. There is a 489KB hand-tuned artifact here, eight
