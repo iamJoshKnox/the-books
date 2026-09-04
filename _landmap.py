@@ -60,6 +60,11 @@ CITIES = {
     'tekoa':     (188, 218, 'Tekoa',     'start',  9,  13),
     'moresheth': (138, 212, 'Moresheth', 'end',   -6,  16),
     'hebron':    (168, 236, 'Hebron',    'end',   -7,   4),
+    'shiloh':    (184, 158, 'Shiloh',    'start',  9,   4),
+    'gilboa':    (214, 120, 'Gilboa',    'end',   -9,   7),
+    'gath':      (108, 206, 'Gath',      'end',   -7,  -3),
+    'bethlehem': (178, 214, 'Bethlehem', 'end',   -8,  14),
+    'moab-fields': (262, 214, 'fields of Moab', 'end', -9, -7),
 }
 # arrivals from off the map: where the arrow starts, and the label that names it
 OFFMAP = {   # arrow start, title, sub-label, label anchor; the labels sit above the start
@@ -105,6 +110,28 @@ BOOKS = {
     'zephaniah': dict(regions=['philistia', 'moab', 'edom'], cities=['jerusalem'], marked=[], arrows=[],
         lead='Jerusalem first, then the neighbours.',
         caption='The day of the Lord lands on Judah in chapter one and works outward in chapter two &mdash; Philistia, Moab and Ammon, Cush, Assyria &mdash; before the book turns, at the last, to singing.'),
+    # before the kingdom, and after it
+    'judges': dict(regions=['philistia', 'moab'], cities=['shiloh'], marked=[], arrows=[],
+        lead='No capital, no centre.',
+        caption='The ark sits at Shiloh and the tribes sit in their own hills. The judges are local &mdash; Deborah in the north, Gideon in the Jezreel valley, Jephthah across the Jordan, Samson on the Philistine border &mdash; and the pressure comes from the edges, Moab and Philistia most of all.'),
+    'ruth': dict(regions=['moab'], cities=['bethlehem'], marked=['moab-fields'], arrows=[('moab-fields', 'bethlehem')],
+        lead='From the fields of Moab to Bethlehem.',
+        caption='A famine sends a family east across the Dead Sea; ten years later two widows walk back. Everything after that happens in one town and one barley field, and ends with the name of David.'),
+    'samuel-1': dict(regions=['philistia'], cities=['gilboa'], marked=['shiloh', 'bethlehem', 'gath'], arrows=[],
+        lead='Shiloh, Bethlehem, Gath, Gilboa.',
+        caption='The ark is lost at Shiloh; a boy is anointed at Bethlehem; the fugitive David hides among the Philistines at Gath; and Saul dies on Mount Gilboa. The book&rsquo;s stations, north to south and back.'),
+    'samuel-2': dict(regions=[], cities=['jerusalem'], marked=['hebron'], arrows=[('hebron', 'jerusalem')],
+        lead='From Hebron to Jerusalem.',
+        caption='Seven years king of Judah alone at Hebron, then king of all Israel from a city that had belonged to nobody &mdash; taken, in one verse, from the Jebusites.'),
+    'haggai': dict(regions=['judah'], cities=['jerusalem'], marked=[], arrows=[],
+        lead='Jerusalem, 520 BC.',
+        caption='Judah is now Yehud, a small Persian province, and the temple site has stood empty for eighteen years while people built their own houses. Four dated speeches over four months get the work restarted.'),
+    'zechariah': dict(regions=['judah'], cities=['jerusalem'], marked=[], arrows=[],
+        lead='Jerusalem, 520 BC, and a Jerusalem to come.',
+        caption='The same year and the same building site as Haggai. But the night visions look past the province to a city without walls, because it will not need them.'),
+    'malachi': dict(regions=['judah'], cities=['jerusalem'], marked=[], arrows=[],
+        lead='Jerusalem, a century on.',
+        caption='The temple is built and has been for decades, and the argument is about what goes on inside it: blemished animals, bored priests, withheld tithes. The last voice of the Old Testament, from the same small province.'),
 }
 
 

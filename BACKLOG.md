@@ -202,8 +202,9 @@ jitter and makes the scrollbar honest.
 ## P3 — content the structure is already asking for
 
 **13. Maps for the other 56 books.** &mdash; done as far as it should go (plan
-2.2, 2.4, 2.5): 44 of 66 mapped from four generated plates. The 22 without are
-the ones where a map adds nothing &mdash; law, wisdom, psalms, the short letters.
+2.2, 2.4, 2.5): 51 of 66 mapped from four generated plates. The 15 without are
+the ones where a map adds nothing &mdash; Leviticus, the wisdom books, Psalms,
+Lamentations, and the short letters.
 
 *(original text kept below)*
 

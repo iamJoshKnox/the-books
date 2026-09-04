@@ -100,7 +100,8 @@ for bid in PAUL:
           '%s: expected exactly one Paul map' % bid)
     check(sec.count('<div class="book-body">') == 1, '%s: map is not laid out beside the prose' % bid)
 LAND = ('kings-2', 'chronicles-1', 'chronicles-2', 'hosea', 'joel', 'amos', 'obadiah', 'micah',
-        'nahum', 'habakkuk', 'zephaniah', 'matthew', 'mark', 'luke', 'john')
+        'nahum', 'habakkuk', 'zephaniah', 'matthew', 'mark', 'luke', 'john',
+        'judges', 'ruth', 'samuel-1', 'samuel-2', 'haggai', 'zechariah', 'malachi')
 EMPIRE = ('isaiah', 'jeremiah', 'ezekiel', 'daniel', 'esther', 'nehemiah')
 for kind, books in (('land', LAND), ('empire', EMPIRE)):
     for bid in books:
