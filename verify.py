@@ -113,6 +113,15 @@ mapped = len(re.findall(r'<figure class="mapfig"', s))
 want_maps = 10 + len(PAUL) + len(LAND) + len(EMPIRE)
 check(mapped == want_maps, 'expected %d map figures, found %d' % (want_maps, mapped))
 
+# --------------------------------------------------------- read it
+from books import USFM, ESV
+for bid in want:
+    sec = section(bid)
+    href = 'https://www.bible.com/bible/%d/%s.1.ESV' % (ESV, USFM.get(bid, '???'))
+    n = sec.count('<a class="read" href="%s">' % href)
+    check(n == 1, '%s: expected one ESV link to %s, found %d' % (bid, href, n))
+check(len(set(USFM.values())) == 66, 'USFM codes are not 66 distinct values')
+
 # ------------------------------------------------------- reads with
 # every book has a line, and every link on it has its mirror on the other book
 links = {}
@@ -183,6 +192,15 @@ def net():
                   'video %s is not a BibleProject upload (%r)' % (v, j.get('author_name')))
         except Exception as e:
             check(False, 'video %s: %s' % (v, e))
+
+    for bid, code in USFM.items():
+        url = 'https://www.bible.com/bible/%d/%s.1.ESV' % (ESV, code)
+        req = urllib.request.Request(url, method='HEAD', headers={'User-Agent': 'Mozilla/5.0 the-books verify.py'})
+        try:
+            with urllib.request.urlopen(req, timeout=20) as r:
+                check(r.status == 200 and r.geturl() == url, 'bible.com: %s now %s -> %s' % (bid, r.status, r.geturl()))
+        except Exception as e:
+            check(False, 'bible.com: %s: %s' % (bid, e))
 
     titles = [urllib.parse.unquote(w).replace('_', ' ') for w in wikis]
     for i in range(0, len(titles), 50):

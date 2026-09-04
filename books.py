@@ -190,3 +190,25 @@ PAIRS = [
     ('john-1',       'john-2',        'the same hand, one sheet'),
     ('john-2',       'john-3',        'the same hand, one sheet each'),
 ]
+
+# ------------------------------------------------------------ read it
+# USFM book codes, as bible.com uses them: https://www.bible.com/bible/59/GEN.1.ESV
+# is Genesis 1 in the ESV (version 59). The same https link is a universal
+# link, so on a phone with the YouVersion app installed it opens there.
+USFM = {
+    'genesis': 'GEN', 'exodus': 'EXO', 'leviticus': 'LEV', 'numbers': 'NUM', 'deuteronomy': 'DEU',
+    'joshua': 'JOS', 'judges': 'JDG', 'ruth': 'RUT', 'samuel-1': '1SA', 'samuel-2': '2SA',
+    'kings-1': '1KI', 'kings-2': '2KI', 'chronicles-1': '1CH', 'chronicles-2': '2CH',
+    'ezra': 'EZR', 'nehemiah': 'NEH', 'esther': 'EST', 'job': 'JOB', 'psalms': 'PSA',
+    'proverbs': 'PRO', 'ecclesiastes': 'ECC', 'song-of-songs': 'SNG', 'isaiah': 'ISA',
+    'jeremiah': 'JER', 'lamentations': 'LAM', 'ezekiel': 'EZK', 'daniel': 'DAN', 'hosea': 'HOS',
+    'joel': 'JOL', 'amos': 'AMO', 'obadiah': 'OBA', 'jonah': 'JON', 'micah': 'MIC', 'nahum': 'NAM',
+    'habakkuk': 'HAB', 'zephaniah': 'ZEP', 'haggai': 'HAG', 'zechariah': 'ZEC', 'malachi': 'MAL',
+    'matthew': 'MAT', 'mark': 'MRK', 'luke': 'LUK', 'john': 'JHN', 'acts': 'ACT', 'romans': 'ROM',
+    'corinthians-1': '1CO', 'corinthians-2': '2CO', 'galatians': 'GAL', 'ephesians': 'EPH',
+    'philippians': 'PHP', 'colossians': 'COL', 'thessalonians-1': '1TH', 'thessalonians-2': '2TH',
+    'timothy-1': '1TI', 'timothy-2': '2TI', 'titus': 'TIT', 'philemon': 'PHM', 'hebrews': 'HEB',
+    'james': 'JAS', 'peter-1': '1PE', 'peter-2': '2PE', 'john-1': '1JN', 'john-2': '2JN',
+    'john-3': '3JN', 'jude': 'JUD', 'revelation': 'REV',
+}
+ESV = 59

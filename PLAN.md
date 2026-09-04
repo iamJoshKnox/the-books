@@ -93,6 +93,12 @@ most pages. Three sittings; 2.1–2.3 are the first one.
 
 ---
 
+## Added along the way
+
+| # | Task | Done when | |
+|---|------|-----------|---|
+| 2.6 | **Read it** — a bible.com link to the ESV, first in every book's links row. `https://www.bible.com/bible/59/CODE.1.ESV`; the same https URL is a universal link, so with YouVersion installed it opens in the app | 66 links, all 200, `verify.py --net` checks them | ✅ |
+
 ## Deliberately deferred
 
 - **Splitting the single file** — still a feature.

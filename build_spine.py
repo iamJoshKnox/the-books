@@ -356,6 +356,18 @@ for bid in NAME:
     s = s[:m.start()] + m.group(1) + line + '\n' + s[m.end():]
     edits += 1
 
+# ---- "Read it": the book itself, in the ESV, first in each section's links
+from books import USFM, ESV
+for bid in NAME:
+    assert bid in USFM, 'no USFM code for %s' % bid
+    link = ('      <a class="read" href="https://www.bible.com/bible/%d/%s.1.ESV">'
+            '<span class="ico">&#10070;</span>Read it &middot; ESV</a>' % (ESV, USFM[bid]))
+    m = re.search(r'(<section class="chapter" id="%s".*?<div class="links">\n)(      <a class="read".*?</a>\n)?'
+                  % re.escape(bid), s, re.S)
+    assert m, 'no links block in %s' % bid
+    s = s[:m.start()] + m.group(1) + link + '\n' + s[m.end():]
+    edits += 1
+
 print('eras: %d bands, boundaries %s' % (len(ERAS), [b[0] for b in BOUNDS] + [100]))
 print('books: %d of %d written' % (len(built), len(BOOKS)))
 for bid in ('genesis', 'joshua', 'kings-2', 'psalms', 'matthew', 'revelation'):
