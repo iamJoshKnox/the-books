@@ -1,0 +1,1559 @@
+# The Books — every editable block on the page, as plain text.
+#
+# Edit the text under each [id] and run:  python voice.py merge
+# Then rebuild and check:                 python build_spine.py && python verify.py
+#
+# Rules
+#   * Lines starting with # are comments. [id] lines are anchors — never edit one.
+#   * A block is every line under its [id] until the next [id]. Wrap however you
+#     like; the lines are joined with a single space, and blank lines are ignored.
+#   * Type real characters — an em dash is —, a curly apostrophe is ’. They are
+#     turned back into HTML entities for you.
+#   * Inline tags are shown as-is and passed straight through. You will see
+#     <b>, <em>, <a href="#book"> and <span class="sep">·</span>. Leave them
+#     balanced. Do not add tags the stylesheet does not know about.
+#   * A block you do not touch is left exactly as it was in the page.
+#
+# 514 blocks, 25008 words.
+
+[genesis.sub.1]
+A world spoken into order, and then a promise made to one childless couple that the editors insist is for everybody.
+
+[genesis.loccap.1]
+<b>Events</b> creation to c. 1805 BC<span class="sep">·</span><b>Written</b> c. 1440 BC<span class="sep">·</span>Moses writing the deep past from the far side of the Exodus
+
+[genesis.prose.1]
+Genesis opens with God speaking a world into order out of formless darkness and closes with a coffin in Egypt. Between those two points it tells its story twice over: first in eleven chapters of primeval history — creation, the garden and the fruit, Cain's murder of Abel, a flood that unmakes and remakes the world, and the tower at Babel where human ambition is scattered into nations — and then in thirty-nine chapters that narrow from all of humanity down to a single family. God calls Abram out of Ur with a promise of land, offspring and blessing for every nation on earth, and the rest of the book is that promise surviving everything that should have killed it: Sarah's barrenness, Abraham's near-sacrifice of Isaac, Jacob's theft of his brother's blessing and the twenty years of exile it costs him, and finally Joseph, sold into slavery by his own brothers, rising to run Egypt's grain supply and saving the family that betrayed him. The book ends with the promise intact but unfulfilled — seventy people living as guests in Egypt, a long way from a land of their own.
+
+[genesis.figcaption.1]
+<b>Schematic, not survey.</b> Abraham’s family arrives from the northeast, and the book works its way south through Canaan and then into Egypt, which is where it ends — with the promise of the land still unkept.
+
+[genesis.h3.1]
+The first week, read across
+
+[genesis.figcaption.2]
+<b>The account is built in two columns, not seven steps.</b> Days one to three separate and shape three empty realms; days four to six fill each of them in the same order. Read down and it is a week. Read across — day 1 to day 4, day 2 to day 5, day 3 to day 6 — and it is a deliberate pairing, which is why the seventh day sits outside the pattern with no closing formula.
+
+[genesis.note.1]
+The seam worth knowing about
+
+[genesis.note.2]
+Genesis divides itself. Eleven times it says <em>"these are the generations of…"</em> — the Hebrew <em>toledot</em> — and each one hands the story down a narrower channel: from the heavens and the earth, to Adam, to Noah, to Shem, to Terah, and on to Jacob's sons. The book is structured as a genealogy that keeps zooming in.
+
+[genesis.h3.2]
+Watch first
+
+[genesis.vidcap.1]
+<b>Part 1</b> · Genesis 1–11, the primeval history
+
+[genesis.vidcap.2]
+<b>Part 2</b> · Genesis 12–50, Abraham to Joseph
+
+[exodus.sub.1]
+A slave nation walks out of the strongest empire on earth, and then spends the rest of the book learning to live with the God who got them out.
+
+[exodus.loccap.1]
+<b>Events</b> c. 1876 – 1445 BC<span class="sep">·</span><b>Written</b> c. 1440 BC<span class="sep">·</span>Four centuries of silence, then two years that change everything
+
+[exodus.prose.1]
+Exodus opens four centuries after Genesis closes, with Jacob's seventy descendants grown into a population large enough to frighten a Pharaoh who does not remember Joseph. The state's answer is forced labour and then infanticide, and the book's answer to that is a baby floated down the Nile in a basket and raised in the household of the man trying to kill him. Moses grows up, kills an Egyptian, runs to Midian, and forty years later meets God in a bush that burns without being consumed and is sent back with a demand: let my people go. What follows is a contest between two claims to power, worked out through ten plagues that dismantle Egypt's gods one at a time and settled on the night of the Passover, when the nation walks out with the wealth of its captors and crosses a sea that opens ahead of them and closes on the army behind. That is the first half. The second half is stranger and slower. Three months out, the people are camped at Sinai, and God comes down on the mountain in fire and smoke to make a covenant with them — the ten commandments, then the law, and then thirteen chapters specifying the construction of a tent. They break the covenant almost immediately with a golden calf while Moses is still up the mountain collecting the terms, he smashes the tablets at the sight of it, and the rest of the book is the repair. It ends with no battle and no border, just a cloud filling the finished tabernacle: the God who was on the mountain now living in the middle of the camp.
+
+[exodus.figcaption.1]
+<b>The route is disputed; the shape of it is not.</b> Out of Goshen, east to the water, across, then south into the wilderness to a mountain. Both the crossing point and the identity of Sinai are argued over. What the book is certain about is the direction — away from Egypt, and not yet toward Canaan.
+
+[exodus.h3.1]
+The tent, from the outside in
+
+[exodus.figcaption.2]
+<b>Schematic, not to scale.</b> The courtyard was 100 by 50 cubits — roughly 150 by 75 feet — with the tent itself only 30 by 10, standing in the western half. What the plan gets right is the gradient: access narrows at every step, the materials get more precious as you move in (bronze, then silver, then gold), and the whole thing is a portable Sinai. The mountain had the same three zones, and the same rules about who could climb how far.
+
+[exodus.note.1]
+Why the tent gets thirteen chapters
+
+[exodus.note.2]
+Modern readers tend to skim Exodus 25–40 and wonder why the instructions are given twice — once as a command, once as a report that it was done exactly so. The repetition is the point. The nation has just proved it cannot be trusted with a covenant, and the second telling is the text insisting, item by item, that this time they did what they were told.
+
+[exodus.h3.2]
+Watch first
+
+[exodus.vidcap.1]
+<b>Part 1</b> · Exodus 1–18, slavery to the sea
+
+[exodus.vidcap.2]
+<b>Part 2</b> · Exodus 19–40, Sinai, the calf and the tent
+
+[leviticus.sub.1]
+Twenty-seven chapters of instruction, folded in half, with the Day of Atonement at the exact centre.
+
+[leviticus.loccap.1]
+<b>Events</b> about one month, 1445 BC<span class="sep">·</span><b>Written</b> c. 1440 BC<span class="sep">·</span>The camp has not moved since Exodus ended — the shortest bar on the spine
+
+[leviticus.prose.1]
+Almost nothing happens in Leviticus. Nobody travels; the whole book takes place at the foot of the same mountain across roughly a month, and it is mostly God speaking to Moses out of the tent that was finished on the last page of Exodus. The question it answers is the one Exodus leaves hanging — if God is now living in the middle of the camp, how does the camp survive it? The answer arrives in movements: a manual of five offerings and who eats which parts, the ordination of Aaron and his sons, and a long section on what makes a person or a garment or a house unclean and what is done about it. The narrative stops twice, both times abruptly. Once for Nadab and Abihu, Aaron's own sons, who offer unauthorised fire and are killed where they stand while their father is told not to mourn. Once for a blasphemer, who is stoned. At the centre of the book sits chapter 16, the Day of Atonement, when the high priest goes behind the curtain once a year with blood and a second goat carries the nation's sin out into the wilderness. Everything after that turns outward, from ritual to ordinary conduct: wages paid the same day, the deaf not cursed, no stumbling block in front of the blind, the immigrant loved as yourself. It closes with a calendar of feasts, a sabbath year for the land itself, and a jubilee that cancels debt and hands property back every fiftieth year.
+
+[leviticus.h3.1]
+The book folded in half
+
+[leviticus.figcaption.1]
+<b>Leviticus is built as a mirror, and chapter 16 is the fold.</b> Read outward from the centre and the halves answer each other: purity rules before it, holiness rules after; the priests installed before, the priests regulated after; offerings at one end, sacred seasons at the other. The structure is doing an argument — everything in the book runs toward, or away from, the one day a year the curtain is crossed.
+
+[leviticus.h3.2]
+Watch first
+
+[leviticus.vidcap.1]
+<b>Overview</b> · the mirror structure, and what the offerings are for
+
+[numbers.sub.1]
+Two censuses, thirty-eight years apart, with an entire generation missing in between.
+
+[numbers.loccap.1]
+<b>Events</b> 1445 – 1406 BC<span class="sep">·</span><b>Written</b> c. 1406 BC<span class="sep">·</span>Sinai to the plains of Moab, taking the long way round
+
+[numbers.prose.1]
+Numbers takes its English name from the two censuses that bracket it, and the gap between those two figures is the story. The book opens with the nation organised to an almost military standard — counted, arranged by tribe around the tabernacle, the camp given a marching order — and sets off from Sinai toward the land they were promised, a journey of about eleven days. They reach the border, send twelve scouts in, and ten come back reporting fortified cities and giants. The nation believes the ten, refuses to go up, and gets as far as proposing they elect a leader to take them back to Egypt. The sentence for that refusal is forty years in the wilderness, one year for each day the scouts were gone, until everyone of fighting age at the border has died — and most of the book is that sentence being served. Korah leads a rebellion and the ground opens under it. Moses, out of patience after four decades of complaint, strikes a rock instead of speaking to it and is told he will not enter either. Snakes come, and a bronze serpent is raised on a pole. A foreign prophet named Balaam is hired to curse Israel, is out-argued by his own donkey, and blesses them four times against his employer's explicit and increasingly expensive instructions. Then the second census closes the book: 601,730 fighting men, against the 603,550 counted at the start — nearly the same number, almost none of them the same people. Of the generation that stood at the border, only Joshua and Caleb are still standing.
+
+[numbers.figcaption.1]
+<b>Eleven days out, and then thirty-eight years sideways.</b> Sinai to Kadesh-barnea is the short leg. What follows is not a journey toward anything but four decades of circling the same wilderness, ending on the plains of Moab — a river’s width from the land they had refused to enter.
+
+[numbers.h3.1]
+Eleven days, and then thirty-eight years
+
+[numbers.figcaption.2]
+<b>This diagram is to scale, which the journey was not.</b> The distance from Sinai to the edge of the land was about eleven days' walk. What sits between the two censuses is not distance but consequence — and the arithmetic is deliberate: forty years, one for each of the forty days the scouts spent looking at a land the nation then declined to enter.
+
+[numbers.note.1]
+The two numbers are the argument
+
+[numbers.note.2]
+The censuses come out almost identical, which is the point of putting them at either end. God's promise about the size of the nation survives intact; what does not survive is the particular generation that heard it. The book is not about attrition but about substitution — the promise keeps, the people are replaced.
+
+[numbers.h3.2]
+Watch first
+
+[numbers.vidcap.1]
+<b>Overview</b> · the two censuses, and the shape of the wandering
+
+[deuteronomy.sub.1]
+Moses' last three speeches, laid out in the exact form of a treaty between a great king and a subject people.
+
+[deuteronomy.loccap.1]
+<b>Events</b> about one month, 1406 BC<span class="sep">·</span><b>Written</b> c. 1406 BC<span class="sep">·</span>East of the Jordan, in sight of a land the speaker will not enter
+
+[deuteronomy.prose.1]
+Deuteronomy is Moses talking. The nation is camped east of the Jordan, the forty years are over, and the man who brought them out is not going in — so he spends his last month giving three long speeches to a generation that was too young to remember Egypt. The first retells the journey, including the refusal at the border and his own disqualification, so that people who did not live the history own it anyway. The second restates the law: the ten commandments a second time, then the Shema — hear, O Israel, the LORD our God, the LORD is one — and then chapter after chapter of specifics on courts, kings, warfare, gleaning, runaway slaves, widows and immigrants. The third lays out terms: blessings if they keep the covenant, curses if they do not, spelled out at a length that is genuinely hard to read and impossible to misunderstand. The whole document is shaped like a treaty of a kind the surrounding empires actually used, and it turns on one repeated demand that no treaty ever made — love the LORD your God with all your heart. Moses appoints Joshua, teaches the nation a song so they will not be able to forget the terms, blesses the tribes, and climbs Mount Nebo to look across at the land. He dies there, and the book says nobody knows where he is buried.
+
+[deuteronomy.figcaption.1]
+<b>The whole book happens at one dot.</b> Moses never crosses. He speaks on the plains of Moab, climbs Nebo to look west over the Jordan at ground he has walked toward for forty years, and is buried somewhere on the wrong side of the river.
+
+[deuteronomy.h3.1]
+Read against the form it borrows
+
+[deuteronomy.figcaption.2]
+<b>The form was standard; the content was not.</b> Vassal treaties of the second millennium BC follow this sequence closely enough that Deuteronomy's shape would have been immediately legible to anyone in the ancient Near East. What has no parallel in the treaties is the demand at the centre of the stipulations — that the subject party <em>love</em> the king — and the fact that the terms are read aloud to the whole population, women, children and immigrants included, rather than filed in a palace.
+
+[deuteronomy.h3.2]
+Watch first
+
+[deuteronomy.vidcap.1]
+<b>Overview</b> · the treaty structure, and Moses' final speeches
+
+[joshua.sub.1]
+The land taken in twelve chapters and divided in twelve more — and the dividing is the half the book cares about.
+
+[joshua.loccap.1]
+<b>Events</b> c. 1406 – 1375 BC<span class="sep">·</span><b>Written</b> c. 1375 BC<span class="sep">·</span>One generation, immediately after Deuteronomy ends
+
+[joshua.prose.1]
+Joshua opens the morning after Deuteronomy closes, with a new commander being told three times to be strong and courageous, which suggests he was neither. The river is in flood; the priests carry the ark into it and it stops. Jericho falls to a march and a shout rather than a siege, and the first thing that goes wrong is not military but internal — a man named Achan keeps plunder he was told to destroy, and the next assault fails until it is dealt with. After that the campaigns move quickly: a coalition of southern kings defeated in a single long day, a northern coalition broken at the waters of Merom, and a summary list of thirty-one defeated kings that reads like an inventory. Then the book changes gear entirely. Twelve chapters of borders, towns and tribal allotments follow, dense with place names, and the tedium is the point: this is the deed of title, the promise made to Abraham written out in surveyors’ language. It ends with Joshua old, gathering the nation at Shechem, reciting their history back to them and asking them to choose whom they will serve — and warning them, flatly, that he does not think they are capable of it.
+
+[joshua.figcaption.1]
+<b>Schematic, not survey.</b> The crossing is at Jericho, opposite the plains of Moab where Deuteronomy ended. From there the campaigns run central, then south, then north. The book gives no timeline for any of it, and the summaries in Judges make clear the conquest was far less complete than the list of thirty-one kings implies.
+
+[joshua.h3.1]
+Take it, then divide it
+
+[joshua.figcaption.2]
+<b>Half the book is a land registry.</b> The conquest gets twelve chapters and the survey gets twelve, which modern readers almost always skip and ancient readers would have found the more consequential half. A promise about land is not kept by winning battles; it is kept by writing down whose field is whose.
+
+[joshua.h3.2]
+Watch first
+
+[joshua.vidcap.1]
+<b>Overview</b> · the conquest, and the allotment
+
+[judges.sub.1]
+The same five steps, six times over, and the nation is worse at the end of each round than it was at the start.
+
+[judges.loccap.1]
+<b>Events</b> c. 1375 – 1050 BC<span class="sep">·</span><b>Written</b> c. 1043 BC<span class="sep">·</span>Three centuries with no king and no capital
+
+[judges.prose.1]
+Judges covers roughly three centuries in which there is no king, no capital and very little unity — the tribes act separately, and the book is a set of regional stories rather than a national history. It runs on a cycle stated plainly in chapter 2 and then repeated: the people abandon the covenant, God hands them to a neighbouring power, they are oppressed until they cry out, God raises up a deliverer, and the land has rest until that deliverer dies, at which point it begins again. The deliverers get less impressive each time. Othniel is exemplary and gets six verses. Deborah has to lead because Barak will not go without her. Gideon needs three separate signs before he will act and ends up making an object the nation worships. Jephthah wins a battle and loses his daughter to a vow he did not have to make. Samson, who gets four chapters, breaks every term of his own consecration and accomplishes most of what he accomplishes out of personal grievance. The book then closes with two appendices — a stolen shrine and a civil war that begins with a gang rape and nearly wipes out a tribe — and repeats its refrain: in those days there was no king in Israel, and everyone did what was right in his own eyes.
+
+[judges.figcaption.1]
+<b>No capital, no centre.</b> The ark sits at Shiloh and the tribes sit in their own hills. The judges are local — Deborah in the north, Gideon in the Jezreel valley, Jephthah across the Jordan, Samson on the Philistine border — and the pressure comes from the edges, Moab and Philistia most of all.
+
+[judges.h3.1]
+The cycle, six times
+
+[judges.figcaption.2]
+<b>It is a spiral, not a circle.</b> The book states the pattern outright in chapter 2 before running it six times, so the reader is never in suspense about what happens next — only about how much worse it will get. By the closing appendices the cycle has broken down entirely: no oppressor, no deliverer, and the tribes making war on each other.
+
+[judges.h3.2]
+Watch first
+
+[judges.vidcap.1]
+<b>Overview</b> · the cycle, and the spiral
+
+[ruth.sub.1]
+Four chapters set during the worst period in the book before it, and almost nothing bad happens in them.
+
+[ruth.loccap.1]
+<b>Events</b> c. 1100 BC<span class="sep">·</span><b>Written</b> c. 1000 BC<span class="sep">·</span>“In the days when the judges ruled” — the same years as the book before it
+
+[ruth.prose.1]
+Ruth is set in the same period as Judges and is its deliberate opposite: no armies, no atrocities, four chapters in which ordinary people behave decently. A famine drives an Israelite family into Moab, where the father and both sons die, leaving three widows. Naomi tells her Moabite daughters-in-law to go home; one does, and Ruth refuses in the book’s best-known lines, binding herself to a woman with nothing to offer and to a God not her own. They return to Bethlehem at barley harvest, destitute, and Ruth goes out to glean — a provision written into Leviticus, the corners of the field left unharvested for the poor and the immigrant, here shown working exactly as intended. She gleans in the field of Boaz, a relative, who notices her, protects her and feeds her. Naomi then engineers a proposal, Boaz navigates a nearer kinsman with a legal manoeuvre at the town gate, and they marry. The child is handed to Naomi, and the women of the town tell her that her daughter-in-law, a foreigner, is worth more to her than seven sons. Then the book does the thing it has been building to all along and gives four generations of genealogy, ending on a name nobody in the story could have known was coming.
+
+[ruth.figcaption.1]
+<b>From the fields of Moab to Bethlehem.</b> A famine sends a family east across the Dead Sea; ten years later two widows walk back. Everything after that happens in one town and one barley field, and ends with the name of David.
+
+[ruth.h3.1]
+The last four words
+
+[ruth.figcaption.2]
+<b>The genealogy is the punchline.</b> A Moabite widow, from the nation Deuteronomy explicitly bars from the assembly, turns out to be the great-grandmother of Israel’s greatest king — and, the New Testament will point out twice, an ancestor of Jesus. The story reads as a quiet domestic idyll until the last four verses reveal it was a royal origin story the whole time.
+
+[ruth.h3.2]
+Watch first
+
+[ruth.vidcap.1]
+<b>Overview</b> · loyalty, gleaning, and the genealogy
+
+[samuel-1.sub.1]
+Israel asks for a king so it can be like the other nations, and gets exactly what it asked for.
+
+[samuel-1.loccap.1]
+<b>Events</b> c. 1105 – 1010 BC<span class="sep">·</span><b>Written</b> c. 1000 BC<span class="sep">·</span>The last judge, the first king, and the next one waiting
+
+[samuel-1.prose.1]
+First Samuel turns on a request. The priesthood at Shiloh is corrupt, the ark is captured by the Philistines and returned because it is more trouble than it is worth, and Samuel — prophet, judge, and the last of a line that ran back to Moses — grows old with sons who take bribes. So the elders ask for a king, to judge them like all the nations. Samuel takes it as a personal rejection; God tells him it is not personal, and instructs him to warn them exactly what a king will cost: your sons for his army, your daughters for his kitchens, a tenth of everything, and no way back. They ask anyway. Saul is tall, handsome, initially reluctant and briefly impressive, and then unravels over a series of small disobediences that he keeps explaining rather than admitting. Samuel privately anoints a shepherd boy from Bethlehem, and the last two thirds of the book are the two men’s lives running in opposite directions — David rising through a giant, a friendship with Saul’s own son, and years as a fugitive commanding a company of the discontented and indebted, while Saul deteriorates into paranoia, massacres a town of priests, and finally consults a medium the night before dying on Mount Gilboa with his sons.
+
+[samuel-1.figcaption.1]
+<b>Shiloh, Bethlehem, Gath, Gilboa.</b> The ark is lost at Shiloh; a boy is anointed at Bethlehem; the fugitive David hides among the Philistines at Gath; and Saul dies on Mount Gilboa. The book’s stations, north to south and back.
+
+[samuel-1.h3.1]
+Three lives, overlapping
+
+[samuel-1.figcaption.2]
+<b>The book is structured by the overlaps, not the reigns.</b> Samuel anoints Saul and then outlives his usefulness to him; Saul is still king through the whole of David’s rise; David is anointed roughly halfway through the book and spends the rest of it running. Two men are the anointed king at the same time for about fifteen years, and the book never resolves the tension — it just kills Saul offstage on a hill.
+
+[samuel-1.h3.2]
+Watch first
+
+[samuel-1.vidcap.1]
+<b>Overview</b> · the request for a king, and its cost
+
+[samuel-2.sub.1]
+David’s reign, hinged in the middle on an afternoon he should have spent at war.
+
+[samuel-2.loccap.1]
+<b>Events</b> c. 1010 – 970 BC<span class="sep">·</span><b>Written</b> c. 960 BC<span class="sep">·</span>Forty years, and the second half pays for the first
+
+[samuel-2.prose.1]
+Second Samuel is one reign, and it divides cleanly in half. In the first, everything works: David is made king over Judah and then over all Israel, takes the Jebusite fortress that becomes Jerusalem, brings the ark into the city dancing in front of it, beats every neighbouring army, and is given a promise through the prophet Nathan that his house and his kingdom will endure — the covenant the rest of the Old Testament keeps returning to. Then, in the spring, at the time when kings go out to war, David stays home. What follows is adultery, a pregnancy, a failed cover-up, and the arranged death of the husband, a man loyal enough that the plan only works because he refuses to sleep in his own house while the army is in the field. Nathan tells him a story about a stolen lamb, David convicts himself, and the sentence is that the sword will not depart from his house. It does not: his eldest son rapes his daughter, another son murders that son and then raises a rebellion that drives David barefoot out of his own city, and the king ends the book as an old man taking a census he was warned not to take.
+
+[samuel-2.figcaption.1]
+<b>From Hebron to Jerusalem.</b> Seven years king of Judah alone at Hebron, then king of all Israel from a city that had belonged to nobody — taken, in one verse, from the Jebusites.
+
+[samuel-2.h3.1]
+The afternoon the book turns on
+
+[samuel-2.figcaption.2]
+<b>The structure is the judgement.</b> Nathan’s sentence in chapter 12 is not a mood or a metaphor — it is the table of contents for the rest of the book. Every disaster in the second half is a family disaster, and the narrator lets the symmetry do the arguing without ever moralising about it.
+
+[samuel-2.h3.2]
+Watch first
+
+[samuel-2.vidcap.1]
+<b>Overview</b> · the covenant, and the consequences
+
+[kings-1.sub.1]
+A temple, a golden age, and then the kingdom splits in two over a tax question.
+
+[kings-1.loccap.1]
+<b>Events</b> c. 970 – 853 BC<span class="sep">·</span><b>Written</b> c. 560 BC<span class="sep">·</span>Written from exile, four centuries after it begins
+
+[kings-1.prose.1]
+First Kings opens with a succession fight at David’s deathbed and settles into Solomon, who asks for wisdom rather than wealth and is given both, builds the temple over seven years and his own palace over thirteen, and turns Jerusalem into the sort of place foreign monarchs travel to see. The account is admiring and then, quietly, is not: the same king accumulates horses from Egypt, silver, and seven hundred wives with political attachments, and by the end of his reign there are shrines to their gods on the hills outside the city, item by item against the specific warnings in Deuteronomy about what a king must not do. His son Rehoboam inherits the kingdom, is asked at his coronation to lighten the forced labour his father imposed, takes advice from his contemporaries instead of his father’s counsellors, and promises to make it heavier. Ten tribes walk out. From that point the book runs on two tracks at once, north and south, cutting between them reign by reign, and the northern track goes bad immediately: Jeroboam sets up two golden calves so his people will not travel to Jerusalem to worship, and every northern king after him is measured against that. The last third belongs to Elijah, Ahab and Jezebel, and the contest on Mount Carmel.
+
+[kings-1.figcaption.1]
+<b>Two kingdoms, one border.</b> After 930 BC the ten northern tribes are Israel, with Samaria as capital; Judah and Benjamin remain in the south around Jerusalem. Jeroboam’s two golden calves are placed at Dan and Bethel — the far north and the southern edge of his territory — precisely so that no one in his kingdom needs to cross the border to worship.
+
+[kings-1.h3.1]
+Two rails, running at once
+
+[kings-1.figcaption.2]
+<b>From chapter 12 the narrative cuts between two kingdoms.</b> It is why Kings is hard to read straight through: the story alternates by reign rather than running in one line, and the reader has to hold two chronologies at once. The two rails also carry the book’s argument — the north has no dynasty and no temple and lasts two hundred years; the south has both and lasts almost three hundred and fifty.
+
+[kings-1.h3.2]
+Watch first
+
+[kings-1.vidcap.1]
+<b>Overview</b> · BibleProject covers both books in one video
+
+[kings-2.sub.1]
+Both kingdoms fall, a hundred and thirty-five years apart, and the book explains at length why neither was a surprise.
+
+[kings-2.loccap.1]
+<b>Events</b> c. 853 – 586 BC<span class="sep">·</span><b>Written</b> c. 560 BC<span class="sep">·</span>Ends with the temple burned and the people deported
+
+[kings-2.prose.1]
+Second Kings continues the two-track narrative and takes both tracks to their ends. It opens with Elijah going up in a whirlwind and Elisha inheriting a double portion of his spirit, and the Elisha cycle that follows is the most miracle-dense stretch in the Old Testament outside Exodus — a widow’s oil, a poisoned stew, a floating axe head, a Syrian general cured of leprosy after being told to wash in a river he considers beneath him. Then the political narrative closes in. Assyria takes tribute, then territory, and in 722 BC the northern kingdom ends: Samaria falls after a three-year siege, the population is deported and replaced, and the narrator stops the story to explain in a long, unusually direct passage that this happened because of everything the book has been documenting since Jeroboam. Judah survives, and produces two of its best kings in Hezekiah and Josiah — Josiah finds a lost scroll of the law during temple repairs, reads it aloud, tears his clothes and launches the most thorough reform in the book. It is not enough, and the narrator says so. Babylon comes in three waves, and in 586 BC the walls are breached, the temple burned, the last king blinded after watching his sons killed, and the population marched east. The book ends on a small strange note of hope: thirty-seven years later, an exiled Judean king is released from prison in Babylon and given a seat at the royal table.
+
+[kings-2.figcaption.1]
+<b>Two capitals, two falls.</b> Samaria to Assyria in 722 BC, Jerusalem to Babylon in 586. The book ends with both kingdoms gone and the land under other flags.
+
+[kings-2.h3.1]
+Two endings, a hundred and thirty-five years apart
+
+[kings-2.figcaption.2]
+<b>The book is a long answer to one question.</b> Written from exile, it is explaining to people who have lost everything how the promise to David and the promise about the land could both appear to have failed. Its answer is neither that God broke the covenant nor that the disaster was arbitrary — it is that the terms were published in Deuteronomy, read aloud repeatedly, and ignored for four hundred years.
+
+[kings-2.h3.2]
+Watch first
+
+[kings-2.vidcap.1]
+<b>Overview</b> · BibleProject covers both books in one video
+
+[chronicles-1.sub.1]
+Nine chapters of names, and then David again — the same king, retold for people who have just come home from exile.
+
+[chronicles-1.loccap.1]
+<b>Events</b> c. 1010 – 970 BC, with genealogies reaching back to Adam<span class="sep">·</span><b>Written</b> c. 430 BC<span class="sep">·</span>The faded bar is the genealogy, running back off the left edge
+
+[chronicles-1.prose.1]
+First Chronicles opens with nine chapters that are almost entirely names — Adam, Seth, Enosh, on through Noah and Abraham and Judah to David, then the tribes, then the priests, then the families who came back from Babylon. Modern readers skip it; those last families were the point of it. This is a history written for people who have just returned from exile to a small province with no king, a half-built temple and a reasonable suspicion that they have become a footnote. The genealogy is the answer to that suspicion: you are the same people, the line is unbroken, and it runs from the first man to the person holding this scroll. The narrative proper starts at chapter 10, disposes of Saul in a single paragraph, and gives everything after it to David — but a different David from the one in Samuel. There is no Bathsheba, no Absalom, no civil war, no deathbed score-settling. What there is instead is David organising: the ark brought up to Jerusalem with three chapters of Levites and singers, the threshing floor bought that will become the temple site, and then the plans, the materials, the courses of priests, the gatekeepers and the treasurers, all arranged in advance for a building he is told plainly he will not construct. It ends with him handing his son a finished blueprint and a national fundraising campaign.
+
+[chronicles-1.figcaption.1]
+<b>From Hebron to Jerusalem.</b> David reigns seven years in Hebron before taking Jerusalem. The north is here only as the tribes who came south to crown him.
+
+[chronicles-1.h3.1]
+Nine chapters of names, and why
+
+[chronicles-1.figcaption.2]
+<b>Widths are proportional to chapters.</b> Almost a third of the book is a list, and it is the part doing the heaviest lifting. A returned exile reading his own family name at the end of a line that starts with Adam is being told something the narrative could not say as economically.
+
+[chronicles-1.h3.2]
+Watch first
+
+[chronicles-1.vidcap.1]
+<b>Overview</b> · BibleProject covers both books in one video
+
+[chronicles-2.sub.1]
+The same four centuries as Kings, with the northern kingdom almost entirely left out and a different question being asked.
+
+[chronicles-2.loccap.1]
+<b>Events</b> c. 970 – 538 BC<span class="sep">·</span><b>Written</b> c. 430 BC<span class="sep">·</span>Retells the ground already covered by 1–2 Kings
+
+[chronicles-2.prose.1]
+Second Chronicles covers the same four centuries as First and Second Kings and tells them very differently. Solomon gets nine chapters, almost all of it temple: the construction, the dedication, the prayer, the glory filling the house. Then the kingdom divides, and the northern ten tribes essentially disappear from the account — no Elijah cycle, no Elisha, no Ahab and Jezebel, no fall of Samaria except as background noise. The book follows the line of David alone, king by king, and measures each one against a single question: what did he do about the temple. Hezekiah, who gets three verses of reform in Kings, gets four chapters here, because he reopened the doors and kept the Passover. Josiah’s repairs and the scroll found during them get the same weight. And Manasseh, who in Kings is simply the worst king Judah ever had, is given something Kings never mentions: a deportation to Babylon in chains, a prayer of repentance, and a restoration — because this book is written for people who have themselves been deported and need to know whether coming back is possible. It ends not with the temple burning, which it reports in a handful of verses, but with Cyrus of Persia decreeing that the house in Jerusalem be rebuilt. The last sentence is an invitation: whoever is among you of all his people, let him go up.
+
+[chronicles-2.figcaption.1]
+<b>Judah only.</b> The northern kingdom appears when Judah’s kings marry into it, fight it, or take its refugees; its own story is not told.
+
+[chronicles-2.h3.1]
+The same events, a different book
+
+[chronicles-2.figcaption.2]
+<b>Neither book is hiding anything from its readers.</b> Kings was written in exile and is explaining how the disaster happened; Chronicles was written after the return and is explaining what is still standing. Same events, different question — which is why the spine shows two bars covering the same years, and why they are worth reading against each other rather than merging.
+
+[chronicles-2.h3.2]
+Watch first
+
+[chronicles-2.vidcap.1]
+<b>Overview</b> · BibleProject covers both books in one video
+
+[ezra.sub.1]
+Two returns sixty years apart, a temple finished under protest, and a scribe who is horrified by what he finds.
+
+[ezra.loccap.1]
+<b>Events</b> 538 – 457 BC<span class="sep">·</span><b>Written</b> c. 440 BC<span class="sep">·</span>Picks up on the decree that ends Chronicles
+
+[ezra.prose.1]
+Ezra picks up on the decree that ends Chronicles and follows two waves of return, sixty years apart. The first, under Zerubbabel in 538 BC, brings something like fifty thousand people back to a ruined city with imperial authorisation to rebuild the temple. They lay the foundation, and the account records the crowd doing two things at once: younger people shouting for joy, and older people who had seen the first temple weeping so loudly that nobody could tell the two sounds apart. Then the work stops. Local officials write to the Persian court, construction is halted by imperial order for about sixteen years, and it restarts only when the prophets Haggai and Zechariah begin preaching and a search of the archives at Ecbatana turns up Cyrus’s original decree, still on file. The temple is finished in 516. The second half of the book jumps almost sixty years to Ezra himself, a priest and scribe who arrives in 458 with royal backing, a substantial treasury and a commission to teach the law — and discovers that the returned community has been intermarrying with the surrounding peoples on a scale he regards as an existential threat to its survival as a distinct people. His response is to tear his clothes, sit in public until evening, and pray a confession that never once says <em>they</em>. The book ends in a rainstorm with a painful mass separation of families, and no comment at all from the narrator about whether it was right.
+
+[ezra.figcaption.1]
+<b>Nine hundred miles, the long way round.</b> The direct line from Babylon to Jerusalem crosses the Syrian desert and nobody took it. The return followed the Euphrates north and then came down through Syria — the same arc, in reverse, that Abraham had walked out of Ur at the start of Genesis.
+
+[ezra.h3.1]
+Eighty years, mostly waiting
+
+[ezra.figcaption.2]
+<b>The book skips more time than it narrates.</b> Between the temple’s completion and Ezra’s arrival there is a gap of nearly sixty years that the book passes over in a chapter break — and Esther happens inside it, several hundred miles east, among the Jews who never came back.
+
+[ezra.h3.2]
+Watch first
+
+[ezra.vidcap.1]
+<b>Overview</b> · BibleProject covers both books in one video
+
+[nehemiah.sub.1]
+A wall in fifty-two days, and then the much harder work of rebuilding the people behind it.
+
+[nehemiah.loccap.1]
+<b>Events</b> 445 – c. 430 BC<span class="sep">·</span><b>Written</b> c. 430 BC<span class="sep">·</span>The only Old Testament book written as a memoir
+
+[nehemiah.prose.1]
+Nehemiah is the only book in the Old Testament that reads like a memoir, and it opens with its author holding a job in the Persian palace: cupbearer to Artaxerxes, a post that means daily access to the king. News reaches him that Jerusalem’s wall is broken down and its gates burned, and he weeps and fasts and then does something extremely practical — waits for an opening, asks for letters and timber, and gets both. What follows is a construction project narrated by its project manager. He inspects the wall at night without telling anyone, assigns families to the sections in front of their own houses, and handles opposition that escalates from mockery to threatened assault to an assassination plot dressed up as a friendly meeting in a village on the plain. The wall goes up in fifty-two days. Then the book changes register completely: with the perimeter secure, Ezra reads the law aloud from a wooden platform from early morning until midday while Levites move through the crowd explaining it, and the people weep, are told to stop weeping and celebrate instead, and then sign a written covenant. The last chapter is the deflating one. Nehemiah goes back to Persia, returns some years later, and finds the temple storerooms rented out to a man he had specifically excluded, the Levites unpaid and back working their fields, the sabbath being traded straight through, and the intermarriage problem returned. He reacts with physical violence and a short prayer to be remembered, and the book simply stops there.
+
+[nehemiah.figcaption.1]
+<b>From Susa to Jerusalem.</b> Cupbearer to the Persian king, Nehemiah asks for leave and a letter, rides west with an escort, and rebuilds the wall in fifty-two days. Nine hundred miles, in the other direction from the exile.
+
+[nehemiah.h3.1]
+The wall, and then the harder half
+
+[nehemiah.figcaption.2]
+<b>The famous half is the first one.</b> Fifty-two days of masonry get seven chapters and every retelling; the covenant that follows gets six and is what the book actually cares about. Ending on the backsliding rather than the ribbon-cutting is a deliberate choice, and it is why Nehemiah reads less like a triumph than like an unfinished argument.
+
+[nehemiah.h3.2]
+Watch first
+
+[nehemiah.vidcap.1]
+<b>Overview</b> · BibleProject covers both books in one video
+
+[esther.sub.1]
+God is never mentioned, and the whole plot turns on coincidences the book pointedly refuses to explain.
+
+[esther.loccap.1]
+<b>Events</b> 483 – 473 BC<span class="sep">·</span><b>Written</b> c. 460 BC<span class="sep">·</span>Set among the Jews who never went back, several hundred miles east
+
+[esther.prose.1]
+Esther is set in the Persian capital of Susa among the Jews who did not return, and it is the only book in the Bible that never mentions God. It never mentions prayer, the law, the temple or Jerusalem either. What it has instead is a chain of coincidences so pointed that the omission starts to look like the argument. A king deposes his queen at a drunken banquet. A Jewish orphan raised by her older cousin wins the replacement contest without disclosing her people. That cousin happens to overhear an assassination plot, reports it, and the credit is written into the royal record and then forgotten. A courtier named Haman, enraged that one man will not bow to him, obtains a sealed edict to destroy every Jew in a hundred and twenty-seven provinces on a date chosen by casting lots. Mordecai’s response is the closest the book comes to theology, and it is a question rather than a claim: who knows whether you have come to the kingdom for such a time as this. Esther approaches the king uninvited, a capital offence, and then does not ask for anything — she invites him to dinner, twice. In between the two dinners the king cannot sleep, calls for the records to be read to him, and hears the one entry nobody ever acted on. Everything after that inverts, mechanically and completely: Haman hanged on the gallows he had built for someone else, his edict countered rather than revoked because Persian law could not be unmade, and a two-day festival established that Jews keep to this day.
+
+[esther.figcaption.1]
+<b>Susa, and nowhere else.</b> The whole book is inside the Persian winter palace; Jerusalem is never mentioned. The empire the decrees go out to ran from India to Cush, and this map shows the western half of it.
+
+[esther.h3.1]
+The night the book turns over
+
+[esther.figcaption.2]
+<b>The pivot is an accident, and the book knows it.</b> A sleepless night, a bored king, a clerk reading the archive aloud, and the one unrewarded entry surfacing on the one night it could matter. Esther never claims this was arranged. It just builds the whole structure so that the reader cannot avoid the question — which is what a book with God’s name deliberately left out is for.
+
+[esther.h3.2]
+Watch first
+
+[esther.vidcap.1]
+<b>Overview</b> · the reversal, and the absence
+
+[job.sub.1]
+The oldest question there is, argued for thirty-nine chapters, and answered with a whirlwind full of ostriches.
+
+[job.loccap.1]
+<b>Events</b> undated, patriarchal in setting<span class="sep">·</span><b>Written</b> c. 1400 BC<span class="sep">·</span>Its date is the most disputed in the canon — estimates run from Moses to the exile
+
+[job.prose.1]
+Job is set outside Israel, mentions no covenant, no law, no temple and no Jewish history, and is written in some of the hardest Hebrew in the Bible. It opens with a wager. A man of exemplary integrity loses his livestock, his servants, his ten children and finally his health inside two chapters — and the reader is told exactly why, through a challenge in the divine court about whether anyone is good for nothing, whether Job fears God for God or for the herds. Job himself is never told. Three friends arrive and sit with him on the ground for seven days without speaking, which is the wisest thing anyone does in the book. Then they open their mouths, and thirty-five chapters of increasingly heated poetry follow in three cycles: the friends argue with mounting confidence that suffering follows sin and that Job should confess, and Job insists he has nothing to confess and demands a hearing. He is not asking for comfort. He is asking for a trial. A fourth speaker, Elihu, appears from nowhere, is never properly introduced and is never answered afterwards. Then God arrives in a whirlwind, never mentions the wager, never explains, and never answers the question — instead asking about seventy of his own. Where were you when I laid the foundations. Do you know when the mountain goats give birth. Did you give the horse his strength. Look at the ostrich, who is spectacularly stupid and outruns you anyway. Job withdraws his case. And then the friends, who spent the whole book defending God, are told they have not spoken rightly of him, and that Job — who accused him to his face — has.
+
+[job.h3.1]
+A folk tale wrapped around a legal argument
+
+[job.figcaption.1]
+<b>The frame is prose; everything inside it is poetry.</b> The opening and closing chapters read like a folk tale — a good man, a test, a restoration — and the thirty-nine chapters they enclose read like a court transcript. Readers who find the ending too neat are noticing a real seam: the frame answers the question the poetry spends the whole book refusing to answer.
+
+[job.h3.2]
+Watch first
+
+[job.vidcap.1]
+<b>Overview</b> · the wager, the cycles, and the whirlwind
+
+[psalms.sub.1]
+A thousand years of prayer, edited into five books — and roughly a third of it is complaint the editors chose not to soften.
+
+[psalms.loccap.1]
+<b>Events</b> c. 1440 – c. 430 BC<span class="sep">·</span><b>Compiled</b> c. 430 BC<span class="sep">·</span>The bar is the span it was written across, not a story it tells
+
+[psalms.prose.1]
+Psalms is not a narrative but a collection — 150 poems gathered across roughly a thousand years and arranged into five books, each closing with a doxology, in deliberate echo of the five books of Moses. The voices in it run the full range of what people say to God: victory songs and coronation hymns, tightly argued meditations on the law, liturgies for pilgrims climbing the road to Jerusalem, and a great deal of complaint. Something like a third of the collection is lament — psalms that accuse God of sleeping, of forgetting, of hiding his face — and whoever assembled the book left them in without softening them. The arc of the whole is visible if you read it straight through as a book rather than dipping in: it opens with the confident promise that the righteous prosper like a tree planted by water, spends its middle in the wreckage of a monarchy that failed and a temple that burned, and climbs out through the final book into five uninterrupted hymns of praise. Book III ends with the covenant with David apparently broken and God asked, flatly, where his old faithfulness went. Book IV answers by changing the subject: the LORD reigns anyway, and reigned before there was a king in Jerusalem to lose.
+
+[psalms.h3.1]
+Five books, like the five of Moses
+
+[psalms.figcaption.1]
+<b>Widths are proportional to the number of psalms in each book.</b> The five-part division is not a modern convenience — it is in the Hebrew text, marked by a doxology at the end of each part (41:13, 72:18–19, 89:52, 106:48), with the whole of Psalm 150 serving as the doxology for Book V and for the collection entire.
+
+[psalms.h3.2]
+Watch first
+
+[psalms.vidcap.1]
+<b>Overview</b> · the design of the collection, and why the order matters
+
+[proverbs.sub.1]
+Not one book but seven collections, with the first nine chapters as the instruction manual for reading the other twenty-two.
+
+[proverbs.loccap.1]
+<b>Compiled</b> c. 950 – 700 BC<span class="sep">·</span><b>Written</b> c. 700 BC<span class="sep">·</span>Solomon’s sayings, copied out two centuries later by Hezekiah’s men
+
+[proverbs.prose.1]
+Proverbs is an anthology and says so out loud, naming its own sources as it goes — including one collection introduced as sayings of Solomon that the men of Hezekiah copied out, two centuries after Solomon died. The first nine chapters are not proverbs at all but a sustained address from a father to a son, and they are the key to everything that follows: wisdom is personified as a woman calling in the street, folly as a rival woman with a competing invitation, and the choice between them is presented as the choice that organises a life. Only then do the one-line sayings begin, and they are not promises. A proverb is a observation about how things generally go — the diligent get rich, the lazy go hungry, a soft answer turns away wrath — and the book is perfectly aware that life supplies exceptions, which is why Job and Ecclesiastes sit next to it in the canon arguing the other side. Its range is startlingly practical: debt, gossip, drink, table manners, business weights, how long to stay at a neighbour’s house, how not to greet someone too loudly early in the morning. It closes with two chapters by writers nobody can identify, and then an acrostic poem about a woman running an estate, trading in real property and laughing at the future, which the book offers as wisdom made visible rather than as a job description.
+
+[proverbs.h3.1]
+Seven collections, and who is credited
+
+[proverbs.figcaption.1]
+<b>The book documents its own assembly.</b> Most biblical books leave their editing invisible; Proverbs prints the seams, including a note that one collection was copied out under Hezekiah around 700 BC. That single line is why its bar spans two and a half centuries rather than sitting on Solomon’s reign.
+
+[proverbs.h3.2]
+Watch first
+
+[proverbs.vidcap.1]
+<b>Overview</b> · the two women, and how to read a proverb
+
+[ecclesiastes.sub.1]
+The same sentence opens and closes it, and the twelve chapters in between are spent testing whether it is true.
+
+[ecclesiastes.loccap.1]
+<b>Events</b> none narrated<span class="sep">·</span><b>Written</b> c. 935 BC<span class="sep">·</span>Traditionally Solomon, late, looking back
+
+[ecclesiastes.prose.1]
+Ecclesiastes is the strangest book in the Old Testament and the one most people are surprised to find in it. Its key word, <em>hevel</em>, appears nearly forty times and is usually translated “vanity” or “meaningless”, but it literally means vapour or breath — something real that you cannot hold. The Preacher applies it to everything in turn, and he does not argue the case abstractly; he runs experiments. He tries pleasure, wine, great works, houses, vineyards, pools, singers, silver and gold, and reports that he denied himself nothing his eyes desired. He tries wisdom, and finds that the wise man and the fool meet the same end and are forgotten equally. He tries work, and observes that everything he built will pass to a successor who may well be an idiot. He notices that the righteous perish and the wicked prosper, that the courts are corrupt, that the oppressed have no comforter, and that a living dog is better than a dead lion. What he keeps returning to, without ever resolving the tension, is a small recurring instruction: eat your bread, drink your wine, enjoy your work and the person you live with, because these are given and today is what you have. The book closes with an epilogue in a different voice, and the last word is not despair but limit — fear God and keep his commandments, because God will bring every deed into judgement, including every hidden thing.
+
+[ecclesiastes.h3.1]
+The book inside its own bookends
+
+[ecclesiastes.figcaption.1]
+<b>The frame is identical at both ends, and that is the argument.</b> Nothing the Preacher tests changes the verdict he began with. What changes is the reader, who has now watched pleasure, wisdom, wealth and work each fail to bear the weight put on them. Only after the frame closes does a second voice add the epilogue, in the third person, about fearing God — which is why some readers hear it as an answer and others as a later hand tidying up.
+
+[ecclesiastes.h3.2]
+Watch first
+
+[ecclesiastes.vidcap.1]
+<b>Overview</b> · hevel, the experiments, and the epilogue
+
+[song-of-songs.sub.1]
+Eight chapters of love poetry with no narrator, no plot to speak of, no moral, and no mention of God.
+
+[song-of-songs.loccap.1]
+<b>Events</b> none narrated<span class="sep">·</span><b>Written</b> c. 965 BC<span class="sep">·</span>Attributed to Solomon, who is named in it but is not obviously the speaker
+
+[song-of-songs.prose.1]
+The Song of Songs is a sequence of love poems exchanged between a woman and a man, with occasional interjections from a chorus described as the daughters of Jerusalem. There is no narrator, no story that resolves, no law, no covenant, no Israel, and no God — the divine name appears nowhere, unless you count a single possible compound in the last chapter. What there is instead is desire described without apology and largely from the woman’s side: she speaks the first words and the last, she initiates, she searches the city at night for him, and she has more lines than he does, which is true of no other woman in the Bible. The imagery is agricultural and unembarrassed — vineyards, gardens, spices, a locked garden and its fountain, flocks of goats, a tower of ivory — and it is applied to bodies in ways that have made translators nervous for two thousand years. Because of that, the book was read allegorically almost from the start: Israel and the LORD in Jewish tradition, the church and Christ in Christian, and it earned its place in the canon partly on those readings. Rabbi Akiva called it the holy of holies. It is worth noticing that the plain sense and the allegory only conflict if you assume the plain sense needs excusing — the book itself never suggests it does.
+
+[song-of-songs.h3.1]
+A refrain that stops the poem three times
+
+[song-of-songs.figcaption.1]
+<b>“Do not stir up or awaken love until it pleases.”</b> The same line closes three sections of the poem, at 2:7, 3:5 and 8:4, and it is the nearest thing the book has to a structure or a thesis. In a collection with no plot and no narrator, a sentence repeated at intervals is how a reader is told where the seams are.
+
+[song-of-songs.h3.2]
+Watch first
+
+[song-of-songs.vidcap.1]
+<b>Overview</b> · the dialogue, and the reading history
+
+[isaiah.sub.1]
+Sixty-six chapters that turn on a hinge in the middle — from a court prophet warning Jerusalem to a voice comforting exiles not yet born.
+
+[isaiah.loccap.1]
+<b>Events</b> c. 740 – 681 BC<span class="sep">·</span><b>Written</b> c. 681 BC<span class="sep">·</span>Four kings of Judah, and a book that looks two centuries past them
+
+[isaiah.prose.1]
+Isaiah is the longest prophetic book and the one most quoted in the New Testament. It opens in the year King Uzziah died with a call vision — the temple filled with smoke, seraphim calling to each other, and a prophet who says he is a man of unclean lips and is then handed a message he is told outright nobody will listen to. The first thirty-nine chapters belong to that world: Assyria is the threat, Ahaz is offered a sign and refuses it, Hezekiah is besieged by Sennacherib and survives, and the poetry alternates between blistering indictment of a nation that keeps its festivals scrupulously while ignoring the widow and the orphan, and promises of a child born, a shoot from the stump of Jesse, a government on his shoulders. Then at chapter 40 the book changes voice entirely. Assyria is gone, Babylon has come and gone, and the addressee is a people already in exile: comfort, comfort my people. What follows is the most sustained argument in the Old Testament that the God of one small defeated nation is the only God there is — the idols are inventoried and mocked, Cyrus of Persia is named as an instrument two centuries early, and four poems appear about a servant who is despised, silent, wounded for the transgressions of others, and somehow vindicated. The last chapters go further out still, to new heavens and a new earth.
+
+[isaiah.figcaption.1]
+<b>Assyria at the gates.</b> Sennacherib’s army reaches Jerusalem in 701 BC and, in chapters 36–37, leaves without taking it. Babylon, still faint on the horizon, is where the second half of the book is addressed.
+
+[isaiah.h3.1]
+The hinge at chapter 40
+
+[isaiah.figcaption.2]
+<b>The seam is real, whoever you think wrote it.</b> The setting, the vocabulary and the addressee all change at chapter 40, and the book never explains the jump. Traditional reading takes it as one prophet seeing far ahead; critical scholarship divides the book between two or three authors writing across two centuries. This site follows the traditional reading, but the hinge is a feature of the text either way, and it is the single most useful thing to know before starting.
+
+[isaiah.h3.2]
+Watch first
+
+[isaiah.vidcap.1]
+<b>Part 1</b> · Isaiah 1–39
+
+[isaiah.vidcap.2]
+<b>Part 2</b> · Isaiah 40–66
+
+[jeremiah.sub.1]
+Forty years of being ignored, and the only prophet whose book records what a king did with the scroll.
+
+[jeremiah.loccap.1]
+<b>Events</b> c. 627 – 580 BC<span class="sep">·</span><b>Written</b> c. 580 BC<span class="sep">·</span>From Josiah’s reform to the fall, and then Egypt
+
+[jeremiah.prose.1]
+Jeremiah is called as a young man, told he was appointed before he was formed, and objects that he does not know how to speak — which turns out to be the least of his problems. He preaches for forty years across the reigns of five kings and the destruction of the city, and almost nobody listens to any of it. He stands in the temple gate and tells worshippers that the building they are trusting is no safe-conduct and will go the way of Shiloh, and is nearly lynched. He buys a clay jar and smashes it in front of the elders. He wears a wooden yoke around the city to argue for surrender, and a rival prophet breaks it off his neck. He is beaten and put in the stocks, accused of desertion, and lowered into a cistern with no water in it, where he sinks into the mud. He is also the most interior of the prophets: the book preserves his complaints to God, which are not pious — you deceived me, why does the way of the wicked prosper, cursed be the day I was born. Its arrangement is famously not chronological, which frustrates readers who expect a narrative. And in the middle of the wreckage it contains the passage that gets quoted more than any other, about a new covenant that will not be written on tablets at all but put inside people and written on their hearts. After the city falls, the survivors ask his advice, ignore it, and drag him to Egypt.
+
+[jeremiah.figcaption.1]
+<b>Babylon comes; Jeremiah goes to Egypt.</b> Forty years of telling Jerusalem not to resist, then the city falls anyway. The survivors flee to Egypt against his advice and take him with them; the book loses him at Tahpanhes.
+
+[jeremiah.h3.1]
+What a king did with the scroll
+
+[jeremiah.figcaption.2]
+<b>A book describing its own destruction and replacement.</b> Chapter 36 is the closest thing in the Bible to an account of how a prophetic book came to exist — dictated, copied, destroyed by a head of state, and rewritten longer than before. It is also why Baruch is named: the scribe is part of the story rather than invisible behind it.
+
+[jeremiah.h3.2]
+Watch first
+
+[jeremiah.vidcap.1]
+<b>Overview</b> · the call, the scroll, and the new covenant
+
+[lamentations.sub.1]
+Five poems on the fall of one city, held together by the alphabet — until the last one lets go of it.
+
+[lamentations.loccap.1]
+<b>Events</b> 586 BC<span class="sep">·</span><b>Written</b> c. 586 BC<span class="sep">·</span>Written in the ruins, not in retrospect
+
+[lamentations.prose.1]
+Lamentations is five poems about the destruction of Jerusalem, written close enough to the event that the details are specific and unbearable: the roads to Zion mourn because nobody comes to the festivals, the young women are dragged off, the priests and elders die looking for food, children ask for bread and there is none, and the book twice reports that women boiled and ate their own children during the siege — a horror it states flatly and does not soften. It is not a book about grief in general. It is about one city, in one year, and it refuses every consolation on offer. What holds it together is form. Four of the five poems are alphabetic acrostics: twenty-two verses, each beginning with the next letter of the Hebrew alphabet in order, so that the suffering is walked through from A to Z rather than allowed to spill. The middle poem triples that, sixty-six verses in threes, and it is exactly there, at the structural centre of the book, that the one turn toward hope appears — the steadfast love of the LORD never ceases, his mercies are new every morning. Then the form starts to come apart. The fifth poem still has twenty-two verses but is not an acrostic at all, and it ends not with restoration but with a question left open: restore us, unless you have utterly rejected us and are angry with us beyond measure.
+
+[lamentations.h3.1]
+The alphabet, and where it gives out
+
+[lamentations.figcaption.1]
+<b>Widths are proportional to verses.</b> The alphabet is a container: grief walked from one end of the letters to the other, in order, four times. The middle poem intensifies it threefold and puts the mercies-new-every-morning passage at the exact centre of the book. And then the last poem keeps the count and abandons the form — twenty-two verses, no acrostic — which is a structural way of saying that the shape did not finally hold.
+
+[lamentations.h3.2]
+Watch first
+
+[lamentations.vidcap.1]
+<b>Overview</b> · the acrostics, and the centre
+
+[ezekiel.sub.1]
+A priest deported before the city fell, handed the strangest visions in the Bible and told to act most of them out.
+
+[ezekiel.loccap.1]
+<b>Events</b> 593 – 571 BC<span class="sep">·</span><b>Written</b> c. 571 BC<span class="sep">·</span>Written in Babylon, by the Kebar canal, among the first deportation
+
+[ezekiel.prose.1]
+Ezekiel was a priest, deported to Babylon in 597 BC with the first wave, eleven years before the city fell. He never serves in the temple. Instead, at thirty — the age a priest would have begun — the sky opens over a canal in Babylonia and he sees a storm out of the north carrying four living creatures with four faces each, wheels within wheels rimmed with eyes, and above it all a figure like a man on a throne of sapphire. He falls on his face, and the rest of the book is what that figure tells him. Much of it he is required to perform rather than say: he lies on his left side for three hundred and ninety days and his right for forty, builds a model siege of Jerusalem out of a brick, shaves his head with a sword and divides the hair three ways, cooks his food over dung, digs through a wall with his hands in the dark, and when his wife dies is told not to mourn her, as a sign. The central vision is the one that explains the exile: he is carried to Jerusalem and shown what is happening inside the temple, and then watches the glory of God get up and leave it — from the holy place, to the threshold, to the east gate, to the mountain outside the city. After the news of the fall arrives, the book turns. He is set down in a valley of dry bones and asked whether they can live, and the last nine chapters are a meticulous architectural vision of a new temple with a river running out from under its threshold, getting deeper the further it goes, and a city whose name is: the LORD is there.
+
+[ezekiel.figcaption.1]
+<b>Deported, 597 BC.</b> Ezekiel is taken to Babylonia in the first deportation, ten years before the city falls, and prophesies from a settlement of exiles on the Chebar canal — the temple he describes at the end, he never sees again.
+
+[ezekiel.h3.1]
+Four movements, and a departure
+
+[ezekiel.figcaption.2]
+<b>The hinge is the news, not a chapter.</b> The book pivots when a survivor reaches Babylon and says the city has fallen — before that Ezekiel argues that it will, after it he argues that this is not the end. The glory departing in chapters 10 and 11 and returning in chapter 43 are the same movement in reverse, and they are the frame the whole book hangs on.
+
+[ezekiel.h3.2]
+Watch first
+
+[ezekiel.vidcap.1]
+<b>Part 1</b> · Ezekiel 1–33
+
+[ezekiel.vidcap.2]
+<b>Part 2</b> · Ezekiel 34–48
+
+[daniel.sub.1]
+Six court tales and six visions, written in two languages, about how to live under an empire that is not going to last.
+
+[daniel.loccap.1]
+<b>Events</b> 605 – 536 BC<span class="sep">·</span><b>Written</b> c. 530 BC<span class="sep">·</span>Seventy years, under Babylon and then Persia
+
+[daniel.prose.1]
+Daniel divides cleanly in half and is written in two languages. The first six chapters are stories about four young men deported into the Babylonian civil service and educated for it, who keep finding that competence and conscience pull in different directions. They decline the king’s food. Daniel interprets a dream the professional interpreters cannot even be told, because the king demands they describe it first. Three of them refuse to bow to a statue and say, before they are thrown into the furnace, that God can save them and that if he does not they still will not bow — which is the sharpest sentence in the book. A hand writes on a wall during a feast and a kingdom changes hands that night. Daniel, by then an old man serving his third empire, keeps praying at an open window under a law designed specifically to catch him, and spends a night with lions. The second half turns from stories to visions, and they are strange in a different way: four beasts out of the sea, a ram and a goat, a figure like a son of man given an everlasting kingdom, and seventy weeks counted out. The same conviction runs under both halves — the empire on top at the moment is not permanent, and behaving as though it were is the actual danger.
+
+[daniel.figcaption.1]
+<b>Babylon, then Persia.</b> Taken as a boy in 605 BC, Daniel serves under three empires in one city. One vision places him at Susa, the Persian capital — the same palace where Esther’s story is set two generations later.
+
+[daniel.h3.1]
+The statue, and the stone
+
+[daniel.figcaption.2]
+<b>The dream is a chronology of empires, told downward.</b> Each metal is worth less and harder than the one above it — value falling while strength rises — until the feet, which are strong and brittle at once. Which kingdoms the metals map onto has been argued for two thousand years; what the vision is certain about is the direction of travel and the ending, in which the thing that outlasts them all arrives from outside the statue entirely.
+
+[daniel.h3.2]
+Watch first
+
+[daniel.vidcap.1]
+<b>Overview</b> · the tales, the visions, and the two languages
+
+[hosea.sub.1]
+A prophet told to marry a woman who will leave him, and to name his children after the disaster.
+
+[hosea.loccap.1]
+<b>Events</b> c. 755 – 715 BC<span class="sep">·</span><b>Written</b> c. 715 BC<span class="sep">·</span>The last decades of the northern kingdom, before Assyria ends it
+
+[hosea.prose.1]
+Hosea is told to marry a woman who will be unfaithful to him, and the marriage becomes the argument. Gomer bears three children and God names each of them after a piece of the coming catastrophe: Jezreel, after a massacre; Lo-Ruhamah, meaning <em>not pitied</em>; Lo-Ammi, meaning <em>not my people</em> — a reversal of the covenant formula, spoken over an infant. She leaves. Hosea is then told to go and buy her back, which he does, for silver and barley, and the price is recorded like a receipt. The rest of the book prosecutes the northern kingdom for the same pattern: treaties with Assyria and Egypt, altars multiplying, a priesthood that feeds on the people’s sin, and a nation described as a cake not turned, a silly dove, a bow that misfires. What keeps it from being merely a denunciation is that the anger never resolves into rejection. In chapter 11 God speaks as a parent who taught a child to walk and finds he cannot follow through: how can I give you up, my compassion grows warm and tender. And the three ruined names are handed back, inverted — pitied, my people — which is the whole book in three words.
+
+[hosea.figcaption.1]
+<b>The north, in its last thirty years.</b> Hosea preaches in Israel, calls Bethel Beth-aven — house of nothing — and watches Samaria’s kings come and go like twigs on the water.
+
+[hosea.h3.1]
+Three names, and what chapter 2 does with them
+
+[hosea.figcaption.2]
+<b>The children are the sermon.</b> Hosea does not describe the breach and then describe the repair — he names three human beings after the breach and then un-names them. It is the most uncomfortable sign-act in the prophets, and the reason the book can end in tenderness without the tenderness sounding cheap.
+
+[hosea.h3.2]
+Watch first
+
+[hosea.vidcap.1]
+<b>Overview</b> · the marriage, and the three names
+
+[joel.sub.1]
+A locust plague read as a rehearsal, and a promise that the Spirit will be poured out on absolutely everyone.
+
+[joel.loccap.1]
+<b>Events</b> c. 835 BC<span class="sep">·</span><b>Written</b> c. 830 BC<span class="sep">·</span>Undated in the text — placed early here, but estimates span five centuries
+
+[joel.prose.1]
+Joel opens on a disaster with no metaphor attached: locusts have stripped the land in four successive waves, the grain offering has stopped because there is no grain, the cattle wander because there is no pasture, and even the seeds have shrivelled under the clods. He tells the elders to ask whether anything like this has happened in their lifetime or their fathers’, and to make sure their children hear about it. Then he does something unexpected with it. The locusts become a lens: if an army of insects can do this, consider the day of the LORD, which is coming and is not smaller. The call is to return — and specifically to tear your hearts and not your garments, which is the book’s sharpest line about performed repentance. What follows the turn is out of proportion to a three-chapter book. The years the locusts ate will be repaid. And then a promise that goes past the harvest entirely: the Spirit poured out on all flesh, sons and daughters, old and young, and male and female slaves — the categories named deliberately, because the point is that the list has no one left off it. Peter quotes exactly this passage on the morning of Pentecost, and Acts hangs the whole event on it.
+
+[joel.figcaption.1]
+<b>Jerusalem and the land around it.</b> Stripped bare by locusts, then promised rain and the Spirit. No king is named and no date given, which is why the book has been placed anywhere from the ninth century to the fourth.
+
+[joel.h3.1]
+A plague, a warning, and a promise out of scale with both
+
+[joel.figcaption.2]
+<b>The hinge is a single instruction.</b> Everything before 2:12 describes damage; everything after describes reversal; between them sits a call to return that the book insists must be interior. Joel is three chapters long and supplies the New Testament with the text for the day the church begins.
+
+[joel.h3.2]
+Watch first
+
+[joel.vidcap.1]
+<b>Overview</b> · the locusts, and the outpouring
+
+[amos.sub.1]
+A shepherd from the south walks into the northern kingdom at its wealthiest and tells it the party is over.
+
+[amos.loccap.1]
+<b>Events</b> c. 760 – 750 BC<span class="sep">·</span><b>Written</b> c. 750 BC<span class="sep">·</span>Thirty years before Samaria falls, at the height of its prosperity
+
+[amos.prose.1]
+Amos is a herdsman and a dresser of sycamore figs from Tekoa in Judah, with no prophetic training and no interest in claiming any — when challenged he says flatly that he is not a prophet or a prophet’s son. He turns up at Bethel, the royal sanctuary of the northern kingdom, during the long prosperous reign of Jeroboam II, and opens with a sequence of oracles against the neighbours: Damascus, Gaza, Tyre, Edom, Ammon, Moab. Each begins the same way, each names an atrocity, and a Bethel audience would have enjoyed every one of them. Then Judah. Then Israel — and the indictment is longer than all the others combined, and it is not about foreign policy. They sell the righteous for silver and the needy for a pair of sandals. They trample the poor and take levies of grain while building houses of hewn stone. They lie on beds of ivory, invent instruments like David, and are not grieved over the ruin of Joseph. The religion is impeccable and Amos says God cannot stand it: take away from me the noise of your songs, let justice roll down like waters. The priest of Bethel tells him to go home and prophesy in Judah where he can be paid for it, which is as close as the book comes to a response.
+
+[amos.figcaption.1]
+<b>From Tekoa to Bethel.</b> A shepherd from the hills of Judah walks north across the border to preach at the royal sanctuary of the other kingdom — and is told by its priest to go home.
+
+[amos.h3.1]
+The trap, sprung in order
+
+[amos.figcaption.2]
+<b>Seven oracles the audience would have cheered, and then the eighth.</b> Each opens with the same formula — for three transgressions and for four, I will not revoke the punishment — and each moves geographically closer, from Damascus in the far north-east down through the neighbours to Judah next door. By the time Amos reaches Israel his hearers have already agreed with the principle seven times. The oracle against Israel is then longer than the seven put together.
+
+[amos.h3.2]
+Watch first
+
+[amos.vidcap.1]
+<b>Overview</b> · the oracles, and the plumb line
+
+[obadiah.sub.1]
+Twenty-one verses, the shortest book in the Old Testament, and every one of them is about a brother.
+
+[obadiah.loccap.1]
+<b>Events</b> 586 BC<span class="sep">·</span><b>Written</b> c. 585 BC<span class="sep">·</span>Written immediately after the fall, about what Edom did that day
+
+[obadiah.prose.1]
+Obadiah is twenty-one verses long and has one subject. Edom was descended from Esau, Jacob’s twin, which makes the two nations brothers in the book’s own reckoning — and when Babylon breached Jerusalem’s walls in 586, Edom did not intervene. Worse, according to this oracle, they stood at the crossroads and cut off the escaping, handed over survivors, looted the city and gloated in the street. The first half addresses Edom’s confidence: they lived in the rock clefts of a mountain country that looked unassailable, and the prophet tells them that though they build their nest among the stars they will be brought down, and that their allies will be the ones to do it. The second half generalises. The day of the LORD is near upon all nations, and the measure is uncomplicated: as you have done, it shall be done to you. It closes with the exiles returning and possessing the territory, and a final clause that is the only positive note in the book — the kingdom shall be the LORD’s. There is no call to repentance anywhere in it, which makes Obadiah unusual among the prophets and uncomfortable to read straight through.
+
+[obadiah.figcaption.1]
+<b>Edom, across the Dead Sea.</b> Jacob’s brother Esau, in the red hills to the south-east, who stood and watched while Jerusalem fell and then helped himself.
+
+[obadiah.h3.1]
+Three movements in twenty-one verses
+
+[obadiah.figcaption.2]
+<b>The shortest book in the Old Testament, and it never asks anyone to repent.</b> Widths are proportional to verses. Eight of the twenty-one verses in the middle section begin with some form of “you should not have” — a list of things done on one day, itemised, by someone who was there.
+
+[obadiah.h3.2]
+Watch first
+
+[obadiah.vidcap.1]
+<b>Overview</b> · Edom, Esau, and the day
+
+[jonah.sub.1]
+Four chapters, almost every sentence ironic, ending on a question the prophet never answers.
+
+[jonah.loccap.1]
+<b>Events</b> c. 780 BC, under Jeroboam II<span class="sep">·</span><b>Written</b> c. 760 BC<span class="sep">·</span>Assyria is rising, and will destroy the northern kingdom within sixty years
+
+[jonah.prose.1]
+God tells a prophet to go northeast to Nineveh, the capital of Assyria, and preach against it; the prophet immediately boards a ship heading as far west as the known world extends. A storm nearly kills the crew, the pagan sailors pray harder and more sincerely than the prophet does, and Jonah asks to be thrown overboard rather than turn around. Swallowed by a great fish, he prays a psalm of thanksgiving from inside it, is vomited onto dry land, and finally walks into Nineveh to deliver the shortest and least enthusiastic sermon in scripture — five words in Hebrew, with no mention of mercy or of any way out. The entire city repents anyway, from the king down to the livestock. God relents, and Jonah, furious, tells him this is exactly why he ran in the first place: he knew God was merciful, and he did not want Nineveh to have any of it. He goes out to sulk on a hill, God grows a plant to shade him and then kills it, and the book ends not with the prophet's repentance but with an unanswered question put to him by God — about whether God is allowed to care about a city of a hundred and twenty thousand people who cannot tell their right hand from their left, and also about their cattle.
+
+[jonah.figcaption.1]
+<b>Both destinations are off this map, in opposite directions.</b> Nineveh lay about five hundred and fifty miles northeast, up the Tigris. Tarshish was the western edge of the known world, most likely southern Spain — some two and a half thousand miles the other way. Jonah is told to go to one and buys passage to the other.
+
+[jonah.h3.1]
+Down, and down, and down
+
+[jonah.figcaption.2]
+<b>The descent is in the vocabulary, not just the plot.</b> The Hebrew verb <em>yarad</em>, to go down, recurs at every stage of the flight, so that running from God reads on the page as sinking. The turn comes from inside the fish, at the lowest point in the book, and the same story then climbs back out through its own steps.
+
+[jonah.h3.2]
+Watch first
+
+[jonah.vidcap.1]
+<b>Overview</b> · the literary design, and the question at the end
+
+[micah.sub.1]
+A country prophet on the same crisis as Isaiah, alternating between demolition and hope three times over.
+
+[micah.loccap.1]
+<b>Events</b> c. 735 – 700 BC<span class="sep">·</span><b>Written</b> c. 700 BC<span class="sep">·</span>A contemporary of Isaiah, working the same decades from outside the capital
+
+[micah.prose.1]
+Micah is from a small town in the Judean foothills and prophesies through the same decades as Isaiah, on the same crisis, from outside the capital rather than inside it — and the difference in vantage point shows. His indictment is specific and rural: landowners who covet fields and seize them, who take a man’s house and his inheritance, and rulers who he says tear the skin off his people and chop them up like meat for the pot. He is equally hard on the professionals. Prophets who cry peace when they are fed and declare war on anyone who does not fill their mouths; priests who teach for a price; judges who take bribes — and all of them leaning on God and saying, is not the LORD among us, no disaster will come upon us. Micah says Jerusalem will be ploughed like a field, which is quoted a century later in Jeremiah’s trial as the precedent that saved his life. But the book turns three times, and the turns are famous: a ruler from Bethlehem, small among the clans of Judah; swords beaten into ploughshares, every man under his own vine; and the question of what to bring to God — thousands of rams, rivers of oil, a firstborn child — answered by the shortest summary of the prophets there is: do justice, love mercy, walk humbly with your God.
+
+[micah.figcaption.1]
+<b>Both capitals, from the lowlands.</b> Micah comes from Moresheth, a small town toward Philistia, and his first chapter takes Samaria and Jerusalem in turn: the same sins, the same end.
+
+[micah.h3.1]
+Three rounds, each ending better than it starts
+
+[micah.figcaption.2]
+<b>Judgement, then hope, three times.</b> Micah never lets either half stand alone, which is why the book reads as unsettled rather than resolved — and why its two most quoted lines, Bethlehem and 6:8, both sit immediately after some of the harshest material in the minor prophets.
+
+[micah.h3.2]
+Watch first
+
+[micah.vidcap.1]
+<b>Overview</b> · the three cycles, and 6:8
+
+[nahum.sub.1]
+Nineveh again, a hundred and fifty years after Jonah — and this time nobody repents.
+
+[nahum.loccap.1]
+<b>Events</b> c. 663 – 640 BC<span class="sep">·</span><b>Written</b> c. 640 BC<span class="sep">·</span>Written before 612 BC, when everything in it happened
+
+[nahum.prose.1]
+Nahum is the other book about Nineveh, and reading it after Jonah is the point. Assyria had by now been the terror of the region for two centuries: it destroyed the northern kingdom, deported its population, besieged Jerusalem, and its own royal annals boast about flaying prisoners and stacking heads. Nahum announces its end. He opens with a hymn about a God who is slow to anger and great in power and will by no means clear the guilty — quoting the same formula Jonah quoted, and drawing the opposite conclusion from it. Then the poetry turns to the siege itself, and it is written like a battle seen from inside the walls: the shields of the soldiers are red, the chariots flash like torches and rush madly in the streets, the river gates are opened, the palace melts away, and then plunder, plunder — heaps of corpses, no end to the bodies, people stumbling over them. He calls the city a lions’ den and asks where it has gone. Nineveh fell in 612 BC to the Babylonians and Medes, was never rebuilt, and was so thoroughly lost that for centuries there was serious doubt it had existed. The final line is a question addressed to the king: who has not felt your endless cruelty?
+
+[nahum.figcaption.1]
+<b>Nineveh, off this map.</b> Five hundred and fifty miles to the north-east, up the Tigris. The good news for Judah, in the very first chapter, is that the Assyrians will not be coming back down this road.
+
+[nahum.h3.1]
+Two books, one city, a hundred and fifty years apart
+
+[nahum.figcaption.2]
+<b>The pairing is deliberate, and the canon keeps both.</b> Neither book cancels the other: mercy was genuinely offered and genuinely taken, and a century and a half later the same city was genuinely destroyed. Read together they are an argument that patience is not permission — which is exactly the half of the formula Jonah left off.
+
+[nahum.h3.2]
+Watch first
+
+[nahum.vidcap.1]
+<b>Overview</b> · the fall of Nineveh
+
+[habakkuk.sub.1]
+The only prophet who spends his book arguing with God rather than delivering messages for him.
+
+[habakkuk.loccap.1]
+<b>Events</b> c. 610 – 605 BC<span class="sep">·</span><b>Written</b> c. 605 BC<span class="sep">·</span>Babylon is rising, and Judah has about twenty years left
+
+[habakkuk.prose.1]
+Habakkuk is structured as an argument, and the prophet is on the wrong side of it twice. He begins by complaining that God is not acting: how long shall I cry for help and you will not hear, the law is paralysed and justice never goes forth. God answers that he is acting — he is raising up the Chaldeans, a bitter and hasty nation whose horses are swifter than leopards, and they are coming. This is worse than the problem. Habakkuk objects a second time and more sharply: you are of purer eyes than to behold evil, so why do you idly look at traitors and stay silent when the wicked swallows up the man more righteous than he? Then he does something no other prophet does. He says he will stand at his watchpost and wait to see what God will answer, and what he is told is not an explanation but an instruction: write the vision, make it plain on tablets, so that a runner can read it; it is for an appointed time, and if it seems slow, wait for it. In the middle of that reply sits the line Paul will build two letters on — the righteous shall live by his faith. The book ends with a psalm, and the last verse concedes everything: though the fig tree does not blossom and there is no herd in the stalls, yet I will rejoice.
+
+[habakkuk.figcaption.1]
+<b>The Chaldeans, from the east.</b> Habakkuk’s complaint is not that Babylon is coming but that God is the one sending it, against a people who, whatever their faults, are better than their conquerors.
+
+[habakkuk.h3.1]
+Two complaints, two answers, and a song
+
+[habakkuk.figcaption.2]
+<b>The question is never answered, and the book ends well anyway.</b> Habakkuk asks why a just God uses an unjust empire and receives no account of it — only a timetable and a way to live in the meantime. The last chapter is set to music, which is the book’s way of saying the argument closed without being won.
+
+[habakkuk.h3.2]
+Watch first
+
+[habakkuk.vidcap.1]
+<b>Overview</b> · the dialogue, and the waiting
+
+[zephaniah.sub.1]
+Three chapters that begin by threatening to undo creation and end with God singing.
+
+[zephaniah.loccap.1]
+<b>Events</b> c. 640 – 630 BC<span class="sep">·</span><b>Written</b> c. 630 BC<span class="sep">·</span>Under Josiah, and possibly the push behind his reforms
+
+[zephaniah.prose.1]
+Zephaniah opens with the most sweeping threat in the prophets, and it runs in reverse order: I will utterly sweep away everything from the face of the earth — man and beast, the birds of the air and the fish of the sea. It is Genesis 1 unwound, creation taken back in the order it was given. What follows narrows to Jerusalem, and the target is a specific complacency: men who are settled on their lees like wine left too long, who say in their hearts that the LORD will do neither good nor ill. The day of the LORD is described as near and hastening fast, a day of wrath and distress, of trumpet blast and battle cry — the passage the medieval hymn <em>Dies Irae</em> is built on. Then the oracles turn outward to the neighbours and to Assyria, whose capital is promised flocks lying down in the middle of it and an owl hooting in the window. And then the last twenty verses turn again, further than seems warranted by anything before them. The remnant is left, the proud removed, and a people described as humble and lowly who seek refuge in the name of the LORD. The book ends with an image found nowhere else in scripture: God in the midst of his people, quieting them with his love, and rejoicing over them with singing.
+
+[zephaniah.figcaption.1]
+<b>Jerusalem first, then the neighbours.</b> The day of the Lord lands on Judah in chapter one and works outward in chapter two — Philistia, Moab and Ammon, Cush, Assyria — before the book turns, at the last, to singing.
+
+[zephaniah.h3.1]
+Everything swept away, and then a song
+
+[zephaniah.figcaption.2]
+<b>The turn is not argued for.</b> Nothing in the first two and a half chapters prepares for it, and the book offers no mechanism — no repentance scene, no reform, no negotiation. It simply pivots on <em>for then</em>, which is either the weakest join in the prophets or the entire point, depending on how you read the rest.
+
+[zephaniah.h3.2]
+Watch first
+
+[zephaniah.vidcap.1]
+<b>Overview</b> · the day, and the turn
+
+[haggai.sub.1]
+Four months, five dated messages, and the only prophet in the Bible whose audience does exactly what he says.
+
+[haggai.loccap.1]
+<b>Events</b> 520 BC<span class="sep">·</span><b>Written</b> c. 520 BC<span class="sep">·</span>Precisely dated to the day — the shortest span of any book here
+
+[haggai.prose.1]
+Haggai is the shortest prophetic career on record and the most successful. Eighteen years after the first exiles came home, the temple foundation is still a foundation: the work stalled under opposition and then simply stayed stalled, and people got on with their lives. Haggai’s argument is almost entirely practical. Is it a time for you to dwell in your panelled houses while this house lies in ruins? Consider your ways: you have sown much and harvested little, you eat but never have enough, and the one who earns wages puts them into a bag with holes. Three weeks after the first message the governor, the high priest and the people begin work — which makes Haggai the only prophet in the Bible whose audience does what he asks, on the timetable he asks for. The rest of the book handles the disappointment that follows. The older men who had seen the first temple say this one is nothing by comparison, and Haggai does not argue: he tells them to work anyway, promises that the glory of the latter house will be greater than the former, and adds the line the whole book turns on — my Spirit remains among you, do not fear. Every oracle in it is dated to the day, which is why its bar on the spine is the narrowest of any book on the chart.
+
+[haggai.figcaption.1]
+<b>Jerusalem, 520 BC.</b> Judah is now Yehud, a small Persian province, and the temple site has stood empty for eighteen years while people built their own houses. Four dated speeches over four months get the work restarted.
+
+[haggai.h3.1]
+Five messages in four months
+
+[haggai.figcaption.2]
+<b>Dated to the day, in 520 BC.</b> Haggai gives the regnal year, month and day of every oracle, which is why it can be placed on a calendar rather than in a decade — and why its bar here is a sliver. Four months of preaching, and the temple was finished five years later.
+
+[haggai.h3.2]
+Watch first
+
+[haggai.vidcap.1]
+<b>Overview</b> · four months, and a finished temple
+
+[zechariah.sub.1]
+Eight visions in a single night, and then fourteen chapters that the Gospels quote at almost every turn.
+
+[zechariah.loccap.1]
+<b>Events</b> 520 – c. 480 BC<span class="sep">·</span><b>Written</b> c. 480 BC<span class="sep">·</span>Begins two months after Haggai, and runs forty years past him
+
+[zechariah.prose.1]
+Zechariah starts two months after Haggai and with the same immediate goal — get the temple built — but goes somewhere very different. The first six chapters are eight visions received in one night, each stranger than the last and each explained, at Zechariah’s repeated asking, by an interpreting angel: horsemen patrolling the earth, four horns and four craftsmen, a man with a measuring line, the high priest standing in filthy clothes while an accuser objects and is overruled, a lampstand fed by two olive trees, a flying scroll, a woman named Wickedness sealed in a basket and carried to Babylon, and four chariots going out to the four winds. Out of the middle of them comes the line the book is known for: not by might, nor by power, but by my Spirit. The second half drops the visions and turns to a future the New Testament reaches for constantly — a king coming humble and riding on a donkey, thirty pieces of silver thrown to the potter, a shepherd struck and the sheep scattered, and one they will look on whom they have pierced. Matthew, Mark, John and Revelation all quote it. For a book written to persuade a discouraged building crew, it casts an extraordinarily long shadow.
+
+[zechariah.figcaption.1]
+<b>Jerusalem, 520 BC, and a Jerusalem to come.</b> The same year and the same building site as Haggai. But the night visions look past the province to a city without walls, because it will not need them.
+
+[zechariah.h3.1]
+Eight visions, one night
+
+[zechariah.figcaption.2]
+<b>All eight in one night, and every one explained.</b> What makes them readable is that Zechariah keeps asking — what is this, what does it mean — and an interpreting angel keeps answering. It is the same visionary vocabulary as Daniel and Revelation with the footnotes left in.
+
+[zechariah.h3.2]
+Watch first
+
+[zechariah.vidcap.1]
+<b>Overview</b> · the night visions, and the long shadow
+
+[malachi.sub.1]
+The last book of the Old Testament, written as an argument in six rounds — and the people answer back every time.
+
+[malachi.loccap.1]
+<b>Events</b> c. 433 – 430 BC<span class="sep">·</span><b>Written</b> c. 430 BC<span class="sep">·</span>The last prophetic voice before four centuries of silence
+
+[malachi.prose.1]
+Malachi is written in a form used nowhere else at this length: six disputations, each of which states a claim, quotes the audience objecting to it, and then answers the objection. The effect is a transcript of an argument with a congregation that has stopped expecting anything. A century after the return the temple is standing, the sacrifices are running, and the enthusiasm has entirely drained out: priests are offering blind and lame animals because nobody is checking, and Malachi suggests they try presenting one to the governor and see how that goes. Men are divorcing the wives of their youth, and the book says God hates it in a sentence that has been argued over ever since. Tithes are being withheld. And underneath all of it is the complaint that gives the book its energy — it is vain to serve God, the arrogant are the ones who prosper, and where is the God of justice? Malachi does not soften this. He says the day is coming, that it will burn like an oven, and that it will be preceded by a messenger sent to prepare the way. The Old Testament then ends on a family reconciliation: the hearts of the fathers turned to their children, and the children to their fathers. Nothing more is heard for four hundred years.
+
+[malachi.figcaption.1]
+<b>Jerusalem, a century on.</b> The temple is built and has been for decades, and the argument is about what goes on inside it: blemished animals, bored priests, withheld tithes. The last voice of the Old Testament, from the same small province.
+
+[malachi.h3.1]
+Six rounds, and the audience talks back
+
+[malachi.figcaption.2]
+<b>The objections are quoted, not invented.</b> Malachi’s form gives the congregation a voice and lets it sound reasonable — which is what makes the book feel modern. It is the last thing said in the Old Testament, and it ends mid-argument with a promise that a messenger is coming.
+
+[malachi.h3.2]
+Watch first
+
+[malachi.vidcap.1]
+<b>Overview</b> · six disputations, and the silence after
+
+[matthew.sub.1]
+Written for readers who know the Hebrew scriptures cold, and built in five blocks of teaching, like the five books of Moses.
+
+[matthew.loccap.1]
+<b>Events</b> c. 5 BC – AD 30<span class="sep">·</span><b>Written</b> c. AD 60<span class="sep">·</span>Opens at the nativity, so its bar starts earlier than Mark’s or John’s
+
+[matthew.prose.1]
+Matthew opens with a genealogy and a birth, and it is writing for people who know the Hebrew scriptures well enough to catch what it is doing. Jesus comes out of Egypt, passes through water, goes into the wilderness for forty days and then up a mountain to give the law — the nation’s whole story replayed by one person, correctly this time. The book is arranged around five long blocks of teaching, each closed with the same formula, and the number is not an accident: this is a gospel shaped like the Torah. The first block is the Sermon on the Mount, which takes the law and pushes it inward, from murder to anger and from adultery to the look. The others cover how to go out, what the kingdom is like, what to do when someone in the community sins, and what the end will involve. Between the blocks the narrative moves toward a collision with the religious authorities that Matthew reports at length and with very little sympathy. It ends with an execution, an empty tomb, and eleven men on a Galilean hillside being told to go and make disciples of every nation — the promise made to Abraham back in Genesis, finally pointed outward.
+
+[matthew.figcaption.1]
+<b>Bethlehem, Egypt, Nazareth, Galilee, Jerusalem.</b> Matthew’s geography is a chain of fulfilments: born in Bethlehem as Micah said, called out of Egypt as Hosea said, settled in Nazareth, teaching in Galilee of the nations, and going up to Jerusalem to die.
+
+[matthew.h3.1]
+Five blocks, each closed the same way
+
+[matthew.figcaption.2]
+<b>The formula is the seam.</b> Five times Matthew closes a teaching block with almost the same sentence, and each time the narrative resumes. Five blocks, in a gospel that opens by tracing Jesus to Abraham and spends its first four chapters walking him through Israel’s history in miniature, is a deliberate echo of the five books of Moses — and an argument about who is doing the teaching.
+
+[matthew.h3.2]
+Watch first
+
+[matthew.vidcap.1]
+<b>Part 1</b> · Matthew 1–13
+
+[matthew.vidcap.2]
+<b>Part 2</b> · Matthew 14–28
+
+[mark.sub.1]
+The shortest and fastest gospel, hinged exactly in the middle on a question and the right answer given for the wrong reasons.
+
+[mark.loccap.1]
+<b>Events</b> c. AD 27 – 30<span class="sep">·</span><b>Written</b> c. AD 55<span class="sep">·</span>No nativity — its bar starts with a grown man walking out of the Jordan
+
+[mark.prose.1]
+Mark is the shortest gospel and reads like it was written in a hurry — no genealogy, no nativity, the word “immediately” more than forty times, and a flat opening sentence that tells you exactly what the book thinks it is. It divides almost in half. The first eight chapters pile up miracles and exorcisms while nobody can work out who Jesus is: the demons know and are told to be quiet, the crowds do not, and the disciples keep missing it. Then at Caesarea Philippi he asks them directly, Peter gets the answer right — you are the Messiah — and immediately gets the meaning wrong, because Jesus starts explaining that this involves being killed, and Peter takes him aside to talk him out of it. Everything after that hinge walks toward Jerusalem. Three times Jesus predicts his death; three times the disciples respond by misunderstanding or arguing about who is most important; three times he answers with the same point about whoever wants to be first. The passion account then takes up a disproportionate share of an already short book. The oldest manuscripts end at 16:8, with the women running from the tomb and saying nothing to anyone because they were afraid — an ending abrupt enough that later scribes wrote two different replacements for it.
+
+[mark.figcaption.1]
+<b>One road.</b> Half the book happens around Capernaum and the lake. Then in chapter ten Jesus turns south, and the road to Jerusalem is the other half. He goes to the city once and does not come back.
+
+[mark.h3.1]
+The book turns on one question
+
+[mark.figcaption.2]
+<b>Right answer, wrong idea.</b> The confession at Caesarea Philippi sits at the physical centre of the book, and it is a pivot rather than a climax: the moment the question changes from <em>who is he</em> to <em>what kind of king is that</em>. Peter is correct and then immediately rebuked, which is Mark’s method throughout — the title is never the problem, the expectations attached to it are.
+
+[mark.h3.2]
+Watch first
+
+[mark.vidcap.1]
+<b>Overview</b> · the hinge, and the pace
+
+[luke.sub.1]
+A researched account written for an outsider, with the longest road trip in the New Testament sitting in the middle of it.
+
+[luke.loccap.1]
+<b>Events</b> c. 6 BC – AD 30<span class="sep">·</span><b>Written</b> c. AD 62<span class="sep">·</span>Opens at the nativity, which is why it sorts ahead of Mark by events
+
+[luke.prose.1]
+Luke is the only gospel that opens by explaining its method: the author has investigated everything carefully from the beginning and is writing an orderly account for a man named Theophilus, so that he can know how reliable the things he has been taught actually are. It is the longest of the four and the one most interested in people at the edges — shepherds hear the announcement first, a Samaritan is the hero of its most famous parable, women fund and follow the movement and are named for it, and tax collectors and the notoriously disreputable keep turning out to be the ones who understand. Its structural oddity is enormous: nearly ten chapters, roughly two fifths of the book, are a single journey to Jerusalem that begins when Jesus “set his face” to go there and then proceeds at the pace of a man in no hurry to arrive. Much of the best-known material sits inside that stretch, including the prodigal son and the good Samaritan, neither of which appears anywhere else. It ends with two disillusioned people walking to Emmaus, being talked through their own scriptures by a stranger, and recognising him only when he breaks the bread — then a instruction to wait in the city, which is exactly where the sequel picks up.
+
+[luke.figcaption.1]
+<b>The long way to Jerusalem.</b> Luke opens and closes in the temple. In between, from 9:51, Jesus sets his face toward Jerusalem and takes ten chapters to arrive — through Samaria, which the other gospels go around.
+
+[luke.h3.1]
+Two fifths of it is one journey
+
+[luke.figcaption.2]
+<b>Widths are proportional to the number of chapters.</b> The travel narrative is not a transition between two halves — it is the largest single section of the book, and geographically it barely moves. Luke uses it as a container for teaching found in no other gospel, held together by the repeated reminder that Jerusalem is where this is going and what waits there.
+
+[luke.h3.2]
+Watch first
+
+[luke.vidcap.1]
+<b>Part 1</b> · Luke 1–9
+
+[luke.vidcap.2]
+<b>Part 2</b> · Luke 10–24
+
+[john.sub.1]
+Roughly nine tenths of it appears in no other gospel, and it opens before the first sentence of Genesis.
+
+[john.loccap.1]
+<b>Events</b> c. AD 27 – 30<span class="sep">·</span><b>Written</b> c. AD 90<span class="sep">·</span>The faded bar is the prologue, which reaches back off the left edge of the chart
+
+[john.prose.1]
+John is the odd one out and knows it. Something like nine tenths of its material appears in no other gospel: no parables, no exorcisms, no transfiguration, no institution of the bread and cup, and only a handful of miracles, which it insists on calling signs. It begins not with a birth but before the opening sentence of Genesis — in the beginning was the Word — and it is organised around seven of those signs and seven statements beginning “I am”, which is also the name God gives himself at the burning bush, a point the hostile crowd in chapter 8 grasps immediately and picks up stones over. The pace is unlike the others: long conversations running whole chapters, with Nicodemus at night, with a Samaritan woman at a well at noon, and five uninterrupted chapters of farewell in an upstairs room while the arrest is being arranged outside. The author states his purpose plainly near the end — these are written so that you may believe — and mentions twice that there was a great deal more to tell and he has left most of it out.
+
+[john.figcaption.1]
+<b>Mostly Jerusalem.</b> The other three keep Jesus in Galilee until the last week. John has him in Jerusalem for feast after feast, with excursions: water into wine at Cana, the well at Sychar, Lazarus at Bethany.
+
+[john.h3.1]
+Seven signs, seven claims
+
+[john.figcaption.2]
+<b>Both sevens are doing the same job.</b> The signs are never described as proofs — each one starts an argument, and several get Jesus into serious trouble. The “I am” sayings borrow the phrase God uses of himself in Exodus, which is why chapter 8 ends with a stoning attempt rather than a debate. John says outright that he has selected from a much larger set, and the selection is the argument.
+
+[john.h3.2]
+Watch first
+
+[john.vidcap.1]
+<b>Part 1</b> · John 1–12
+
+[john.vidcap.2]
+<b>Part 2</b> · John 13–21
+
+[acts.sub.1]
+The sequel to Luke, structured by a single sentence in its first chapter and ending in the middle of the story.
+
+[acts.loccap.1]
+<b>Events</b> AD 30 – 62<span class="sep">·</span><b>Written</b> c. AD 62<span class="sep">·</span>Thirty years, from a room in Jerusalem to a rented house in Rome
+
+[acts.prose.1]
+Acts is the second half of Luke, by the same author and addressed to the same man, and it answers the question the gospel leaves open: what happened next. The programme is set out in one sentence in the first chapter — you will be my witnesses in Jerusalem, in all Judea and Samaria, and to the ends of the earth — and the rest of the book is that sentence being carried out geographically. It starts with a room in Jerusalem, wind and fire and a crowd hearing their own languages, and a movement of a few thousand entirely Jewish believers. Then the boundaries begin to give way. A persecution scatters them into Judea and Samaria. Philip explains a passage of Isaiah to an Ethiopian official in a moving chariot. Peter, after an emphatic vision about food, walks into a Roman centurion’s house and is visibly astonished when the same thing happens to Gentiles. The movement’s most effective persecutor is blinded on the road to Damascus and becomes its most effective missionary, and the back half of the book follows him out through Asia Minor and Greece by ship and on foot — arguing in synagogues, getting run out of cities, surviving a shipwreck — until he appeals to Caesar and is sent to Rome in chains. It ends without an ending: Paul under house arrest, still preaching, and the narrative simply stops.
+
+[acts.figcaption.1]
+<b>One sentence, drawn.</b> The solid line is the missionary expansion out of Jerusalem and Antioch, through Asia Minor into Greece. The dashed line is Paul’s last journey, made as a prisoner and interrupted by a shipwreck off Malta, ending in Rome — where the book leaves him under guard, still talking, mid-sentence.
+
+[acts.h3.1]
+One sentence, executed geographically
+
+[acts.figcaption.2]
+<b>Widths are proportional to chapters.</b> Acts 1:8 is not a summary written afterwards — it is the table of contents, and the book follows it in order. More than half the pages go to the third clause, which is the point being argued: a movement that began inside one temple courtyard had no theological reason to stop at any border, and Acts spends its back half showing the first generation working that out, usually reluctantly.
+
+[acts.h3.2]
+Watch first
+
+[acts.vidcap.1]
+<b>Part 1</b> · Acts 1–12, Jerusalem outward
+
+[acts.vidcap.2]
+<b>Part 2</b> · Acts 13–28, out to Rome
+
+[romans.sub.1]
+Paul writes ahead to a church he has never met, and ends up setting out his whole gospel from first principles.
+
+[romans.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 57, from Corinth<span class="sep">·</span>Carried to Rome by Phoebe, a deacon of Cenchreae
+
+[romans.prose.1]
+Every other letter of Paul’s answers a crisis in a church he planted. Romans answers nothing; he is writing ahead to a congregation he has never visited, hoping to be sent on from there to Spain, and so he lays out the whole argument from the ground up. The first three chapters work like a prosecution: the pagan world stands condemned, the moral world stands condemned by the standard it applies to others, and the Jewish world stands condemned by the law it was given — so that every mouth is stopped. Then the turn, that God puts people right with himself as a gift, through Jesus, received by trust rather than earned; Abraham is produced as the precedent, reckoned righteous before he was circumcised. Chapters five to eight follow the consequences: released from condemnation, from sin’s ownership, from the law’s accusation, and finally the great passage on the Spirit, on creation groaning like a woman in labour, and on the impossibility of being separated from the love of God. Chapters nine to eleven wrestle with the question that hurts him most — if the message is true, why has his own people largely not accepted it — and he refuses every easy answer, ending in a doxology rather than a solution. Only then does he turn to ordinary conduct: honest self-assessment, hospitality, paying taxes, and the long argument about the strong and the weak in which the person with the freer conscience is asked to yield to the person with the tighter one. The last chapter is a list of names, twenty-six of them, a third of them women.
+
+[romans.figcaption.1]
+<b>From Corinth to Rome.</b> Written at the end of the third journey to a church Paul had never visited, ahead of a visit he meant to make on the way to Spain.
+
+[romans.note.1]
+The letter has a courier, and she has a name
+
+[romans.note.2]
+Romans 16 opens by commending Phoebe, “a deacon of the church at Cenchreae” and a <i>prostatis</i> — patron — of many, including Paul himself. Letters in the ancient world were not posted; they were carried, and the carrier normally read the letter aloud and answered questions about it. The first person ever to perform Romans, in all likelihood, was Phoebe.
+
+[romans.h3.1]
+Watch first
+
+[romans.vidcap.1]
+<b>Overview, part one</b> · chapters 1–4: the case that everyone is in the same position
+
+[romans.vidcap.2]
+<b>Overview, part two</b> · chapters 5–16: new humanity, Israel’s future, and life in the church
+
+[corinthians-1.sub.1]
+A brilliant, wealthy, quarrelling church gets a letter that answers its questions one at a time and refuses to flatter it once.
+
+[corinthians-1.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 55, from Ephesus<span class="sep">·</span>Answering both a report from Chloe’s household and a letter from the church
+
+[corinthians-1.prose.1]
+Corinth was a rebuilt Roman colony — rich, transient and obsessed with rank — and the church had absorbed the city’s instincts wholesale. Paul works through the damage item by item. They have split into fan clubs behind rival teachers, so he argues that the message they were converted by was deliberately unimpressive — a crucified man — and that admiring the messenger misses the point. A man is sleeping with his stepmother and the congregation is proud of its broad-mindedness. Believers are suing each other in front of pagan magistrates. Some are visiting prostitutes on the theory that the body does not matter. From chapter seven the letter shifts to answering their own written questions: about marriage and singleness, about meat that has been through a temple, about head coverings, about the Lord’s Supper, which they are eating in such a way that the rich arrive early and eat well while the poor get nothing. Then the long treatment of spiritual gifts, which insists that the body needs the parts it considers least presentable, and which is interrupted at its centre by chapter thirteen — not a wedding reading in origin but the argument’s hinge, that gifts without love are noise. It closes with the resurrection: if Christ was not raised the whole thing is a waste of a life, and if he was, then the body has a future and nothing done for God is wasted.
+
+[corinthians-1.figcaption.1]
+<b>From Ephesus to Corinth.</b> Across the Aegean to a church Paul had founded and was hearing bad reports of, answering their letter point by point.
+
+[corinthians-1.note.1]
+A conversation with half the tape missing
+
+[corinthians-1.note.2]
+“Now concerning the matters about which you wrote” (7:1) marks the point where Paul starts answering a letter we do not have. Several famously difficult verses read much better as quotations of the Corinthians’ own slogans that he is about to qualify — “all things are lawful for me”, “food is meant for the stomach”. Greek had no quotation marks, so where the Corinthians stop speaking and Paul starts is an editorial judgement, and translations disagree.
+
+[corinthians-1.h3.1]
+Watch first
+
+[corinthians-1.vidcap.1]
+<b>Overview</b> · the letter’s structure, question by question
+
+[corinthians-2.sub.1]
+The most personal thing Paul wrote: a defence of his own ministry by a man who keeps listing his failures as credentials.
+
+[corinthians-2.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 56, from Macedonia<span class="sep">·</span>After a painful visit and a severe letter, neither of which survives
+
+[corinthians-2.prose.1]
+Between the two Corinthian letters something went badly wrong. Paul made a visit he calls painful, wrote a letter he wrote with many tears, and then waited in Troas and Macedonia for Titus to bring word of how it had landed. Relief runs through the opening chapters: they have responded, and he can breathe. But rival teachers have arrived in the meantime — impressive speakers with letters of recommendation — and they have been undermining him: his speech is contemptible, he takes no money, he keeps changing his travel plans, he does not look like a man God is backing. The letter is his answer, and it is strange, because he refuses to compete on their terms. He describes the ministry as treasure carried in clay pots, so that the obvious explanation for any power is not the pot. He describes his own body as wasting away while something else is renewed. Chapters eight and nine turn to the collection he is gathering for the poor in Jerusalem and make the most sustained case in the New Testament for generosity. Then, in the last four chapters, he does what he calls playing the fool: since they want credentials, he will list his — floggings, shipwreck, sleeplessness, hunger, a night and a day adrift at sea, and the anxiety of every church pressing on him daily. He mentions being caught up to the third heaven and immediately drops it, preferring to talk about a thorn in the flesh that was not taken away, and about the answer he got instead: my grace is enough for you.
+
+[corinthians-2.figcaption.1]
+<b>From Macedonia to Corinth.</b> Written on the road south through Macedonia, after a painful visit and a harsher letter, before Paul arrived in person for the third time.
+
+[corinthians-2.h3.1]
+Watch first
+
+[corinthians-2.vidcap.1]
+<b>Overview</b> · the argument for a ministry shaped like the cross
+
+[galatians.sub.1]
+The angriest letter in the New Testament, written fast, and the one that later split Western Christianity in half.
+
+[galatians.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 48–49, possibly the earliest of Paul’s letters<span class="sep">·</span>On the traditional reading, just before the Jerusalem council of Acts 15
+
+[galatians.prose.1]
+Paul begins every other letter by thanking God for his readers. Here he skips the thanksgiving entirely and goes straight to astonishment: he cannot believe how quickly they are deserting the message. Teachers have arrived in Galatia arguing that gentile converts must be circumcised and keep the law to be full members of the people of God — a reasonable position, since the promises were made to Abraham’s family and circumcision was the sign of that family. Paul’s answer runs at speed. First his own history: he did not receive the gospel from the Jerusalem apostles, and when he did meet them they added nothing, and when Peter came to Antioch and stopped eating with gentiles under pressure Paul told him to his face that he was wrong. Then the argument from Abraham, who was declared righteous by faith four hundred and thirty years before the law existed, so the law cannot be the condition of the promise; the law was a guardian for a period of minority, and that period has ended. He is not gentle about it — there is a line about the circumcision party that most translations soften — but the letter is not merely negative. Its last two chapters describe what actually holds a community together once the rulebook is not doing the work: freedom used to serve rather than to indulge, gentleness towards someone caught out, carrying each other’s burdens, and a list of the fruit the Spirit grows, against which, he notes drily, there is no law.
+
+[galatians.figcaption.1]
+<b>From Antioch to Galatia.</b> To the towns of the first journey — Pisidian Antioch, Iconium, Lystra, Derbe — on the traditional early dating, before the Jerusalem council.
+
+[galatians.note.1]
+The letter that lit the Reformation
+
+[galatians.note.2]
+Luther lectured on Galatians in 1519 and again in 1531, called it “my epistle, to which I am betrothed”, and built his doctrine of justification on it. Whether he read Paul’s opponents correctly — as legalists earning salvation, or as Jewish believers arguing about how gentiles join a covenant people — has been the central question of Pauline scholarship for the last fifty years.
+
+[galatians.h3.1]
+Watch first
+
+[galatians.vidcap.1]
+<b>Overview</b> · the argument from Abraham, and what freedom is for
+
+[ephesians.sub.1]
+A prison letter with no crisis to solve, written in enormous sentences about one new humanity made out of two old ones.
+
+[ephesians.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 60–62, from imprisonment<span class="sep">·</span>The oldest manuscripts do not contain the words “in Ephesus”
+
+[ephesians.prose.1]
+Ephesians has no quarrel in it. Nobody is being corrected, no crisis is being managed, and the first three chapters are a single sustained act of praise that includes, in the Greek, one sentence running twelve verses. God’s plan, Paul says, was always to gather everything in heaven and on earth into one under Christ, and the church is where that gathering has started to show. Then the pivot the letter is built on: you gentiles were outsiders, without hope and without God in the world, and Christ has made the two groups one by demolishing the dividing wall of hostility — a phrase that would have carried a physical charge for anyone who had seen the barrier in the Jerusalem temple beyond which no gentile could pass on pain of death. The result is not a merger of one group into the other but one new humanity in place of both. Chapters four to six work out what that costs in practice: speaking truthfully because we are parts of each other, working in order to have something to give away, and the household code, in which the startling line is the one addressed to husbands and to masters rather than to wives and slaves. It closes with the armour of God, a picture assembled out of Isaiah, in which the only offensive weapon is a word and the enemy is explicitly not the human being in front of you.
+
+[ephesians.figcaption.1]
+<b>From Rome to Ephesus.</b> A prison letter, carried by Tychicus, to the city where Paul had stayed longer than anywhere else.
+
+[ephesians.note.1]
+A letter to nobody in particular
+
+[ephesians.note.2]
+The phrase “in Ephesus” in 1:1 is missing from the earliest and best manuscripts, and the letter contains no personal greetings at all — odd for a city where Paul spent three years. The likeliest explanation is that it was a circular, carried around the province with the address left blank and filled in as it went, which is also why it reads more like a sermon than a piece of correspondence.
+
+[ephesians.h3.1]
+Watch first
+
+[ephesians.vidcap.1]
+<b>Overview</b> · one new humanity, and the household code
+
+[philippians.sub.1]
+A thank-you note from prison that turns into the earliest Christian hymn we possess.
+
+[philippians.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 61–62, from imprisonment<span class="sep">·</span>To the first church Paul planted in Europe
+
+[philippians.prose.1]
+Philippi was a Roman colony full of retired soldiers, proud of its citizenship, and the church there had sent Paul money more than once — the only church he let do it. This letter is partly a receipt and partly a report on how he is: in custody, chained to a rotating guard, and pleased about it, because the whole praetorium now knows why he is there. He genuinely cannot decide whether he would rather live or die, and says so. Two women in the congregation, Euodia and Syntyche, have fallen out badly enough for it to reach him, and the letter’s central appeal is aimed at that. To make it, he quotes what appears to be an existing hymn: that Christ, being in the form of God, did not treat equality with God as something to exploit, but emptied himself, took the form of a slave, and became obedient to the point of death — even death on a cross — and that God therefore exalted him and gave him the name above every name. It is the highest thing said about Jesus anywhere in Paul, and it is deployed to settle an argument between two church members. The rest follows from it. He lists his own impeccable credentials and calls them refuse. He tells them to think about whatever is true, honourable, just, pure, lovely. And he says he has learned to be content, which he presents as a skill acquired rather than a temperament possessed.
+
+[philippians.figcaption.1]
+<b>From Rome to Macedonia.</b> A prison letter to the first church Paul planted in Europe, thanking them for a gift brought by Epaphroditus.
+
+[philippians.h3.1]
+Watch first
+
+[philippians.vidcap.1]
+<b>Overview</b> · the hymn at the centre, and the argument it settles
+
+[colossians.sub.1]
+Written to a town Paul had never visited, against a teaching we can only see through his answer to it.
+
+[colossians.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 60–61, from imprisonment<span class="sep">·</span>Carried by Tychicus alongside Philemon, to the same town
+
+[colossians.prose.1]
+Paul had never been to Colossae; the church was planted by Epaphras, one of his converts, who has now come to him with a problem. Something is being taught there that combines Jewish observance with ascetic practice and some kind of angelic devotion — we cannot reconstruct it properly, because we only have Paul’s reply. What we can see is his strategy, which is not to refute the teaching point by point but to make it look small. He answers with another hymn: Christ is the image of the invisible God, the firstborn of all creation, in whom all things were created, things visible and invisible, thrones and dominions and rulers and powers — the very categories the new teachers are worried about, listed and placed under him. All the fullness of God was pleased to dwell in him. So the festivals and food rules are a shadow, and the substance has arrived; and the ascetic regime, with its do-not-handle and do-not-taste, has the appearance of wisdom but no power against self-indulgence at all. What replaces it is not another regime but a change of clothes: strip off anger, malice, slander, filthy language; put on compassion, kindness, humility, patience, and above all love, which binds everything together. The closing greetings are unusually warm, and include a note to a man named Archippus telling him to finish the job he was given.
+
+[colossians.figcaption.1]
+<b>From Rome to Colossae.</b> A prison letter to a church Paul had never seen, in the Lycus valley inland from Ephesus, delivered together with Philemon.
+
+[colossians.note.1]
+A shadow of the thing that casts it
+
+[colossians.note.2]
+Colossians 2:17 calls the sabbaths and food laws “a shadow of what is to come, but the substance belongs to Christ”. The image is precise rather than dismissive: a shadow is genuine evidence of a real body, correctly shaped and cast by the thing itself. Paul is not saying the practices were false, but that they were the outline of someone who has since walked into the room.
+
+[colossians.h3.1]
+Watch first
+
+[colossians.vidcap.1]
+<b>Overview</b> · the hymn of chapter one, and what it makes unnecessary
+
+[thessalonians-1.sub.1]
+Possibly the oldest surviving Christian document, written weeks after Paul was run out of town.
+
+[thessalonians-1.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 50–51, from Corinth<span class="sep">·</span>Within months of the church being founded
+
+[thessalonians-1.prose.1]
+Paul was in Thessalonica for a matter of weeks before a riot forced him out, and he left with no idea whether the handful of new believers would survive. This letter is written after Timothy came back with news that they had, and the relief is audible: he keeps returning to how much he wanted to come himself and could not. Two things are on his mind. The first is that they are under social pressure from their own neighbours, and he wants them to know that suffering was always in the job description rather than a sign that something has gone wrong. The second is a question they have sent him, and it is a question that can only arise once: some of the congregation have died, and the church is grieving on the assumption that those people have missed the return of Christ altogether. Paul’s answer is the passage that has shaped Christian funerals ever since — that the dead in Christ will rise first, that the living will not precede them, and that the point of knowing this is not speculation but that they should grieve differently from people with no hope. He is unbothered about timing, tells them the day will come like a thief, and then gives the practical instructions this church apparently needed: work with your hands, mind your own business, respect the people doing the hard work among you, and do not put out the Spirit’s fire.
+
+[thessalonians-1.figcaption.1]
+<b>From Corinth to Thessalonica.</b> Written within months of leaving, once Timothy had come back with news that the church had survived.
+
+[thessalonians-1.h3.1]
+Watch first
+
+[thessalonians-1.vidcap.1]
+<b>Overview</b> · a young church under pressure, and the question about the dead
+
+[thessalonians-2.sub.1]
+A follow-up written because the first letter was misread, and someone may have forged a second one.
+
+[thessalonians-2.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 51–52, from Corinth<span class="sep">·</span>Months after 1 Thessalonians, to the same church
+
+[thessalonians-2.prose.1]
+Something has gone wrong with the first letter. A report is circulating in Thessalonica — by prophecy, by word of mouth, or by a letter claiming to be from Paul — that the day of the Lord has already arrived. Some in the congregation have responded by giving up work altogether and living off everyone else, and the church is fraying. Paul writes to shut the rumour down. He argues that the day cannot have come, because certain things have not happened first: a rebellion, and the revealing of a figure he calls the man of lawlessness, currently held back by something or someone he declines to name, because the Thessalonians already know what he means and we do not. It is the most cryptic passage he ever wrote, and centuries of interpreters have filled the gap with everything from the Roman empire to the papacy to a future antichrist. Then he turns to the practical damage, and is blunt about it: anyone unwilling to work should not eat, and the busybodies should settle down and earn their own living. He signs the last lines in his own handwriting and points out the signature as the mark of a genuine letter — which is the clearest evidence in the New Testament that forged apostolic letters were already circulating.
+
+[thessalonians-2.figcaption.1]
+<b>From Corinth to Thessalonica.</b> A follow-up from the same stay, correcting what the first letter had been taken to mean.
+
+[thessalonians-2.note.1]
+“See what large letters I make”
+
+[thessalonians-2.note.2]
+Paul dictated his letters to a secretary — Tertius names himself in Romans 16:22 — and then took the pen for a closing line. In 2 Thessalonians 3:17 he calls that signature “the mark in every letter of mine”, and in Galatians 6:11 he remarks on the size of his own handwriting. Both make a good deal more sense once you notice that 2:2 has just warned them about a letter “seeming to be from us”.
+
+[thessalonians-2.h3.1]
+Watch first
+
+[thessalonians-2.vidcap.1]
+<b>Overview</b> · the rumour, the restrainer, and the instruction to work
+
+[timothy-1.sub.1]
+Instructions to a young man left behind to sort out a church, from the man who left him there.
+
+[timothy-1.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 63–64<span class="sep">·</span>After a release from the imprisonment Acts ends with, on the traditional reckoning
+
+[timothy-1.prose.1]
+Paul has left Timothy in Ephesus with an unenviable job: stop certain people teaching a mixture of speculative genealogies and law-keeping that produces arguments rather than anything useful. The letter is a working manual, and it moves quickly between very different registers. There is prayer for kings and everyone in authority, on the grounds that God wants everyone saved. There is a passage on how men and women should conduct themselves in the assembly that contains one of the most fiercely contested sentences in the New Testament. There are the qualifications for overseers and deacons, which are almost entirely about character and household management rather than ability — not a drunkard, not violent, not a lover of money, able to manage his own house. There are instructions about widows that reveal an organised welfare register with an age threshold and eligibility rules. And there is a sustained attack on the love of money, including the line that is almost always misquoted: not that money is the root of all evil, but that the love of it is a root of all kinds of evil, and that some people, reaching for it, have wandered away and pierced themselves with many pangs. Throughout, Paul writes as a man handing something over, and the repeated instruction is to guard what has been entrusted.
+
+[timothy-1.figcaption.1]
+<b>From Macedonia to Ephesus.</b> From Macedonia to Timothy, left behind in Ephesus to sort out the church there.
+
+[timothy-1.note.1]
+Written by Paul, or written in his name?
+
+[timothy-1.note.2]
+The three pastoral letters share a vocabulary and a settled church structure that the undisputed letters do not, which is why much modern scholarship treats them as written by a follower in Paul’s name — a recognised practice in antiquity. The traditional view, followed by the dating used here, takes them as genuine and late: after a release from the Roman custody Acts leaves him in, and before a second arrest.
+
+[timothy-1.h3.1]
+Watch first
+
+[timothy-1.vidcap.1]
+<b>Overview</b> · a church being ordered, and the false teaching behind it
+
+[timothy-2.sub.1]
+The last thing Paul wrote: cold, alone, asking for a coat and his notebooks.
+
+[timothy-2.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 66–67, from a Roman prison<span class="sep">·</span>Traditionally the last of Paul’s letters, shortly before his execution
+
+[timothy-2.prose.1]
+The tone changes completely. Paul is in custody again, and this time he does not expect to be released; he says his life is already being poured out like a drink offering. He writes to Timothy as a father to a son, remembering the faith he first saw in the boy’s grandmother Lois and mother Eunice, and telling him to fan into flame what is in him, because God did not give a spirit of timidity. The instruction that runs through the letter is about transmission: what you heard from me, entrust to reliable people who will be able to teach others — four generations in a single sentence. He warns that people will accumulate teachers to tell them what their ears itch to hear. He describes scripture as God-breathed and useful, which is where that phrase comes from. And then, near the end, the letter stops being theological altogether and becomes unbearably specific. Demas has deserted him, in love with this present world. Only Luke is with him. Bring Mark, he is useful. When you come, bring the cloak I left at Troas with Carpus, and the books, especially the parchments. At his first defence no one stood by him. He asks that it not be held against them. Come before winter.
+
+[timothy-2.figcaption.1]
+<b>From Rome to Ephesus.</b> Paul’s last letter, from a second and harsher imprisonment, asking Timothy to come before winter.
+
+[timothy-2.h3.1]
+Watch first
+
+[timothy-2.vidcap.1]
+<b>Overview</b> · a final charge, and the loneliness underneath it
+
+[titus.sub.1]
+Appoint elders, silence the talkers, and remember what these people were like before — including us.
+
+[titus.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 63–64<span class="sep">·</span>Alongside 1 Timothy, to a colleague in the same situation
+
+[titus.prose.1]
+Titus has been left on Crete to finish what was unfinished and appoint elders town by town, and the letter is the shortest of the three pastorals and the most concentrated. The qualifications repeat 1 Timothy’s emphasis on character over talent, with one addition suited to the island: an elder must hold firmly to the message so as to be able to answer back, because there are plenty of people there talking nonsense for money. Paul then quotes a Cretan poet’s line about Cretans always being liars, agrees with it, and moves on — a joke with an edge that has embarrassed commentators for centuries. The middle chapter is a household code addressed by age and station, and it is followed by the reason for all of it, put twice in the letter as compact creedal statements: the grace of God has appeared, training us to renounce godlessness and to live sensibly in the present age while we wait; and he saved us, not because of works done by us in righteousness, but according to his own mercy. The instruction that closes it is characteristically down to earth — avoid stupid controversies and genealogies and quarrels about the law, because they are unprofitable and futile — and there is a last, practical line about making sure Zenas the lawyer and Apollos lack nothing for their journey.
+
+[titus.figcaption.1]
+<b>From Macedonia to Crete.</b> From Macedonia, probably, to Titus, left on the island to appoint elders in every town; Paul planned to winter at Nicopolis.
+
+[titus.note.1]
+“Cretans are always liars”
+
+[titus.note.2]
+Titus 1:12 quotes the Cretan seer Epimenides, and does it knowingly: a Cretan saying all Cretans lie is the classic form of the liar paradox, which logicians still call the Epimenides paradox. Paul’s comment — “this testimony is true” — may be the only joke in the pastoral letters.
+
+[titus.h3.1]
+Watch first
+
+[titus.vidcap.1]
+<b>Overview</b> · appointing elders, and grace that trains behaviour
+
+[philemon.sub.1]
+A single page about one runaway slave, which never quite says what it is asking for.
+
+[philemon.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 60–61, from imprisonment<span class="sep">·</span>Carried to Colossae with Colossians, by Onesimus himself
+
+[philemon.prose.1]
+The shortest thing Paul wrote is a single sheet about one man. Onesimus was Philemon’s slave; he ran, somehow reached Paul in custody, and became a believer there. Paul is sending him back — which he must, since harbouring a runaway was itself a crime — carrying this letter, and the letter is a masterpiece of pressure applied without ever being named. Paul says he could command, but appeals instead. He puns on the name: Onesimus means useful, and he was formerly useless to you but now he is useful to both of us. He asks Philemon to receive him no longer as a slave but as more than a slave, a beloved brother. He offers to cover any debt in his own hand, and then mentions, in passing, that Philemon owes him his very self. He says he is confident of Philemon’s obedience, knowing he will do even more than asked. And he adds that he hopes to visit soon, so prepare a guest room. What he never does is state the request. Whether he is asking for forgiveness, for manumission, or for Onesimus to be sent back to him as a co-worker is left for Philemon to work out — in front of the whole church, since the letter is addressed to them too.
+
+[philemon.figcaption.1]
+<b>From Rome to Colossae.</b> Carried with Colossians by Tychicus and Onesimus himself, to a house in the same town.
+
+[philemon.h3.1]
+Watch first
+
+[philemon.vidcap.1]
+<b>Overview</b> · a private letter read to a whole congregation
+
+[hebrews.sub.1]
+An anonymous sermon in the finest Greek in the New Testament, arguing that the old arrangement was always a sketch.
+
+[hebrews.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 65–68<span class="sep">·</span>Before AD 70: it discusses the temple sacrifices as still being offered
+
+[hebrews.prose.1]
+Hebrews does not open like a letter. There is no author, no addressee, no greeting — it begins with a sentence of formal Greek rhetoric about God having spoken in many ways through the prophets and now speaking through a Son, and it ends, thirteen chapters later, with a note that reads like a postscript stapled on. In between is a sermon, and its argument is comparative. The Son is better than the angels; Moses was faithful in the house, but Jesus is the Son over it. The priesthood is better, because it belongs to the order of Melchizedek, who appears for three verses in Genesis without genealogy and is used here to argue for a priest whose qualification is not descent but an indestructible life. The covenant is better, on the authority of Jeremiah, who said God would make a new one. And the sacrifice is better, because the old one had to be repeated — the very repetition being the proof that it never finished anything — while this one was made once. Cutting across the argument are five warnings, sharp enough that the church spent centuries arguing about them, urging readers not to drift, not to fall away, not to give up meeting together. Then chapter eleven, the roll call of people who lived by faith without receiving what was promised, and chapter twelve’s image of that crowd as spectators in a stadium while the reader runs.
+
+[hebrews.h3.1]
+Watch first
+
+[hebrews.vidcap.1]
+<b>Overview</b> · the comparative argument, and the five warnings inside it
+
+[james.sub.1]
+The Sermon on the Mount rewritten as a list of instructions, by someone who grew up in the same house as the preacher.
+
+[james.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 45<span class="sep">·</span>Possibly the earliest book in the New Testament
+
+[james.prose.1]
+James writes from Jerusalem to Jewish believers scattered outside Palestine, and the result reads less like Paul's careful arguments than like the Sermon on the Mount broken into hard, short instructions. There is almost no theology in the abstract; instead the letter keeps asking what faith actually looks like on an ordinary Tuesday. Endure trials, because they are producing something. Ask for wisdom and expect to be given it. Do not seat the man with the gold ring at the front and leave the poor man standing at the back. Watch your tongue, which is a small thing that sets whole forests alight. Do not announce that you will do business in such-and-such a city next year, as though tomorrow belonged to you. Its most contested line — that faith without works is dead — has been read as a rebuttal of Paul for centuries, though James is arguing against a claimed faith that changes nothing rather than against grace, and the two are answering different questions. The letter stops abruptly, with instructions about prayer, confession and anointing the sick, and no closing greeting of any kind.
+
+[james.h3.1]
+The shape of a letter, and what is missing from it
+
+[james.figcaption.1]
+<b>Measured against the standard Greco-Roman letter, James is missing most of the envelope.</b> It keeps the salutation and then abandons the form, which is part of why it reads like collected wisdom sayings with an address stapled to the front — closer to Proverbs than to Romans.
+
+[james.note.1]
+On the argument with Paul
+
+[james.note.2]
+Paul says a person is justified by faith apart from works of the law; James says faith without works is dead. They use the same two words for different things. Paul's “works” are the boundary markers of the law — circumcision, food, calendar. James's are whether you fed anyone. Luther called James “an epistle of straw” over this and it has never quite shaken the label.
+
+[james.h3.2]
+Watch first
+
+[james.vidcap.1]
+<b>Overview</b> · the wisdom-speech structure of the letter
+
+[peter-1.sub.1]
+A letter to people who have become foreigners in the towns they were born in.
+
+[peter-1.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 62–64, from “Babylon”<span class="sep">·</span>Circulated around five provinces of northern Asia Minor
+
+[peter-1.prose.1]
+Peter writes to believers spread across five Roman provinces and calls them exiles and resident aliens — legal terms for people living somewhere they do not belong, with no civic standing and no protection from the crowd. That is his diagnosis of their situation and also his instruction for handling it. They are not being executed; they are being talked about, excluded, insulted for no longer joining in, and the letter takes that ordinary social pain entirely seriously. His answer runs on two tracks at once. On one, the language of enormous privilege: a chosen race, a royal priesthood, a holy nation, a people for God’s own possession — every phrase lifted from what was said to Israel at Sinai and applied to a scattered gentile minority. On the other, a strategy of conspicuous decency: live such good lives among the pagans that the accusations fail on inspection, honour the emperor, do good and suffer for it if you must, and always be ready to give a reason for the hope you have — but with gentleness and respect. Running underneath is the example of Jesus, who when insulted did not retaliate, and the promise that the suffering is brief. It closes with greetings from “she who is in Babylon” and from Mark, whom Peter calls his son.
+
+[peter-1.note.1]
+Babylon means Rome
+
+[peter-1.note.2]
+Peter sends greetings from “Babylon” (5:13), a city he had no known connection with and which was by then largely deserted. Early Christian writers read it as code for Rome — the empire that had destroyed the temple standing in for the empire that destroyed the first one — and Revelation uses the same substitution for the same city a generation later.
+
+[peter-1.h3.1]
+Watch first
+
+[peter-1.vidcap.1]
+<b>Overview</b> · exile as a status, and what to do with it
+
+[peter-2.sub.1]
+A last testament against teachers who have worked out that a delayed promise is hard to defend.
+
+[peter-2.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 65–67<span class="sep">·</span>Shares most of a chapter of material with Jude
+
+[peter-2.prose.1]
+Peter writes as a man putting his affairs in order — he says he knows the putting off of his body is imminent, and wants this on record so it can be recalled after he is gone. The threat he is addressing is teachers inside the community who deny the coming judgement, and whose argument is straightforward and rather good: everything has carried on exactly as it always has since the ancestors died, so where is this promised arrival? Peter answers on three fronts. First, testimony: he was on the mountain, he heard the voice, this is not a cleverly devised myth. Second, precedent: the flood is proof that the world is not in fact a closed system that carries on regardless. Third, and most memorably, a change of scale — with the Lord one day is like a thousand years and a thousand years like one day, and what looks like slowness is patience, God not wanting anyone to be lost. The central chapter is a sustained assault on the teachers themselves, in language of real disgust, comparing them to irrational animals, waterless springs, and a dog returning to its vomit. At the very end comes an aside of enormous consequence: our brother Paul writes about these things in all his letters, in which there are some things hard to understand, which the ignorant twist as they do the other scriptures.
+
+[peter-2.h3.1]
+Watch first
+
+[peter-2.vidcap.1]
+<b>Overview</b> · the scoffers’ argument, and the answer about time
+
+[john-1.sub.1]
+Written after a split, for the people who stayed, in a vocabulary of about three hundred words.
+
+[john-1.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 85–95, from Ephesus<span class="sep">·</span>After a group had already left the community
+
+[john-1.prose.1]
+Something has already happened before this letter starts: a group has left. “They went out from us, but they were not of us” is the wound the whole thing is written around, and what they took with them was a teaching that Christ did not truly come in the flesh. The letter never argues the point in a systematic way. Instead it circles, repeating a small set of words — light, darkness, love, truth, life, know, abide — in a Greek so simple it is the passage beginning readers are usually given first, and so slippery that its pronouns have defeated commentators for two thousand years. What it offers the people who stayed is a set of tests they can apply to themselves without needing to win an argument. Do you keep his commands. Do you love your brother, or only say you do — because anyone who claims to love the God he has not seen while hating the brother he has seen is lying. Do you confess that Jesus came in the flesh. The letter is unsparing about self-deception and then unexpectedly gentle: if we confess our sins he is faithful and just to forgive them, and if our own heart condemns us, God is greater than our heart. It contains the flattest statement about God in the New Testament — God is love — and immediately defines the word by pointing at a specific death rather than at a feeling.
+
+[john-1.note.1]
+A verse that was added, and then removed again
+
+[john-1.note.2]
+Some older English Bibles carry a trinitarian sentence at 1 John 5:7–8 — the “Johannine Comma” — about three that bear witness in heaven. It appears in no Greek manuscript before the fourteenth century, entered the printed text through a promise Erasmus is said to have regretted, and travelled from there into the King James Version. Modern translations omit it or footnote it.
+
+[john-1.h3.1]
+Watch first
+
+[john-1.vidcap.1]
+<b>Overview</b> · one video covering all three Johannine letters
+
+[john-2.sub.1]
+Thirteen verses to a congregation about who to let through the door.
+
+[john-2.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 90–95, from Ephesus<span class="sep">·</span>One of the two shortest books in the Bible
+
+[john-2.prose.1]
+This is a real letter of the ordinary ancient kind — one sheet of papyrus, thirteen verses, about as long as a page would allow — addressed to “the elect lady and her children”, almost certainly a church and its members rather than an individual. The elder is glad to have found some of them walking in the truth, and repeats the commandment that was there from the beginning, which is to love one another. Then he comes to the point. Travelling teachers are circulating who do not confess that Jesus Christ has come in the flesh, and because early Christian mission ran entirely on hospitality — a visiting teacher stayed in a member’s house and was fed and sent on with supplies — taking such a person in was not a private courtesy but a public endorsement, and funded the next stop. So: do not receive him into the house or give him any greeting. It is a hard instruction from the letters most associated with love, and it is aimed narrowly, at teachers on a circuit rather than at neighbours. He ends by saying he has much more to write but would rather not use paper and ink, and hopes to come and talk face to face.
+
+[john-2.note.1]
+Why the shortest books are the shortest
+
+[john-2.note.2]
+2 and 3 John are each about the length of a single sheet of papyrus, roughly 20 by 25 centimetres — the standard unit of ancient correspondence. Both end by saying the writer has more to say and would rather say it in person. They are not summaries of anything; they are simply as long as the paper was.
+
+[john-2.h3.1]
+Watch first
+
+[john-2.vidcap.1]
+<b>Overview</b> · one video covering all three Johannine letters
+
+[john-3.sub.1]
+A note about a man named Diotrephes, who likes to put himself first.
+
+[john-3.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 90–95, from Ephesus<span class="sep">·</span>The only New Testament book that never mentions Jesus by name
+
+[john-3.prose.1]
+The companion piece to 2 John, and its mirror image: where that letter says refuse hospitality to the wrong teachers, this one says extend it to the right ones. It is written to a man named Gaius, praised for looking after travelling brothers who were strangers to him, and asked to send them on their way in a manner worthy of God, since they set out for the sake of the Name and accept nothing from non-believers. Then the letter turns to the actual problem, and it is startlingly small and startlingly familiar. A man named Diotrephes, who likes to put himself first, refuses to acknowledge the elder’s authority, spreads malicious talk about him, will not welcome the travelling brothers, and throws out of the church anyone who does. The elder says that if he comes he will bring it up. Set against him is Demetrius, who is well spoken of by everyone. That is the whole letter — a first-century congregational dispute over who controls the guest room — and it survived because someone in that community thought it was worth copying.
+
+[john-3.h3.1]
+Watch first
+
+[john-3.vidcap.1]
+<b>Overview</b> · one video covering all three Johannine letters
+
+[jude.sub.1]
+Twenty-five verses of controlled fury, quoting two books that never made it into the Bible.
+
+[jude.loccap.1]
+<b>Events</b> none narrated — it is a letter, not a story<span class="sep">·</span><b>Written</b> c. AD 65–67<span class="sep">·</span>Shares most of its material with 2 Peter 2
+
+[jude.prose.1]
+Jude says outright that he meant to write a different letter. He had been intending something warm about their common salvation and found he had to write this instead, urging them to contend for the faith once for all entrusted to God’s people, because certain people have slipped in among them — turning grace into licence and denying the master. What follows is twenty-five verses of accumulating examples, delivered in threes: the wilderness generation, the angels who left their proper place, Sodom and Gomorrah; Cain, Balaam, Korah. He calls the intruders blemishes at the love feasts, shepherds feeding only themselves, waterless clouds, autumn trees without fruit and twice dead, wild waves foaming up their own shame, wandering stars for whom the deepest darkness has been reserved. It is the most concentrated invective in the New Testament. And then, having spent the whole letter condemning, he turns at the last moment to the congregation itself with something completely different in tone: build yourselves up, pray, keep yourselves in the love of God — and have mercy on those who doubt, snatch others out of the fire, and show mercy to still others mixed with fear. The closing doxology, to him who is able to keep you from stumbling, is read at the end of services to this day.
+
+[jude.h3.1]
+Watch first
+
+[jude.vidcap.1]
+<b>Overview</b> · the triads, the invective, and the turn at the end
+
+[revelation.sub.1]
+A letter to seven real churches under pressure, written in the borrowed imagery of Daniel and Ezekiel, ending with a garden rebuilt as a city.
+
+[revelation.loccap.1]
+<b>Events</b> AD 95, and then off the end of the chart<span class="sep">·</span><b>Written</b> c. AD 95, from Patmos<span class="sep">·</span>The only book whose bar has no right-hand edge
+
+[revelation.prose.1]
+Revelation is a letter, a prophecy and an apocalypse at once, written by John from exile on Patmos to seven real congregations in western Asia Minor that were under real pressure to compromise with Rome. It opens with dictated messages to those seven — praise, rebuke and warning, church by church, each ending with a promise to whoever holds out — and then John is called up through an open door in heaven and shown the throne room, where a scroll sealed seven times can be opened by no one at all until a slaughtered Lamb takes it. What follows is three telescoping cycles of seven, in which the created order comes apart under judgment, interrupted twice by visions that reframe the whole conflict: a woman and a dragon, a beast out of the sea and the mark it puts on people, Babylon the great riding the beast in imperial luxury and falling in a single hour while the merchants of the earth stand at a distance and weep for their lost trade. The imagery is drawn almost entirely from Daniel, Ezekiel, Exodus and Isaiah, and it is doing to Rome exactly what those books did to Babylon. It ends with the dragon defeated, the dead judged out of the books, and the new Jerusalem coming down out of heaven — the garden of Genesis rebuilt as a city, with the tree of life growing in the middle of the street and no temple anywhere in it, because God is living there in person.
+
+[revelation.figcaption.1]
+<b>The seven churches are a postal route.</b> They are addressed in chapters 2 and 3 in the exact order a courier landing at Ephesus would reach them — north up the coast, inland across, then south and east — a strong hint the book was written to be carried around this loop and read aloud in each city.
+
+[revelation.h3.1]
+Three sevens, each opening the next
+
+[revelation.figcaption.2]
+<b>The cycles are nested, not sequential.</b> The seventh seal does not add a seventh disaster — it opens into the seven trumpets, and the seventh trumpet announces that the kingdom has changed hands, with the bowls following as the last and fastest cycle. Each of the first two sets also pauses between its sixth and seventh members for an interlude, which is where the sealed multitude and the two witnesses appear. The centre of the diagram is chapters 4 and 5, because nothing in the three cycles happens until the Lamb takes the scroll.
+
+[revelation.h3.2]
+Watch first
+
+[revelation.vidcap.1]
+<b>Part 1</b> · Revelation 1–11, the seven churches and the scroll
+
+[revelation.vidcap.2]
+<b>Part 2</b> · Revelation 12–22, the dragon, Babylon and the new city
+
+[revelation.prose.2]
+<strong>This site follows the traditional chronology.</strong> That means Mosaic authorship of the Pentateuch, an Exodus around 1446 BC, a single eighth-century Isaiah, and a sixth-century Daniel. It is a coherent position and it is not the only one. Critical scholarship dates much of the Pentateuch to the monarchy and later, splits Isaiah into two or three authors, and places Daniel in the second century BC. Where a book's date is genuinely contested, the difference can be several hundred years, which on the spine above would move a dot most of the way across an era. Read the timeline as one defensible reconstruction rather than as settled fact.
