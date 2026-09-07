@@ -957,6 +957,15 @@ main { display: flex; flex-direction: column; }
   letter-spacing: 0; text-transform: none; color: var(--k-muted);
   margin-top: .5rem; max-width: 58ch;
 }
+.ch-title .ch-link {
+  color: inherit; text-decoration: none;
+}
+.ch-title .ch-link:hover {
+  color: var(--k-accent);
+  text-decoration: underline; text-decoration-color: var(--k-accent);
+  text-underline-offset: 3px; text-decoration-thickness: 2px;
+}
+.ch-title .ch-link:focus-visible { outline: 2px solid var(--k-accent); outline-offset: 3px; border-radius: 2px; }
 .chapter h3.sec {
   font-family: var(--f-head); font-weight: 600; font-size: 1.22rem;
   color: var(--k-ink); margin: 2.4rem 0 .85rem;
@@ -2006,7 +2015,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">01</div>
-      <h2 class="ch-title">Genesis
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/GEN.1.ESV" target="_blank" rel="noopener" title="Read Genesis in the ESV on Bible.com">Genesis</a>
         <span class="sub">A world spoken into order, and then a promise made to one childless couple that the editors insist is for everybody.</span>
       </h2>
     </div>
@@ -2074,8 +2083,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/GEN.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Genesis"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-genesis/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Genesis"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2085,7 +2094,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">02</div>
-      <h2 class="ch-title">Exodus
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/EXO.1.ESV" target="_blank" rel="noopener" title="Read Exodus in the ESV on Bible.com">Exodus</a>
         <span class="sub">A slave nation walks out of the strongest empire on earth, and then spends the rest of the book learning to live with the God who got them out.</span>
       </h2>
     </div>
@@ -2149,8 +2158,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/EXO.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Exodus"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-exodus/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Exodus"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2160,7 +2169,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">03</div>
-      <h2 class="ch-title">Leviticus
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/LEV.1.ESV" target="_blank" rel="noopener" title="Read Leviticus in the ESV on Bible.com">Leviticus</a>
         <span class="sub">Twenty-seven chapters of instruction, folded in half, with the Day of Atonement at the exact centre.</span>
       </h2>
     </div>
@@ -2223,8 +2232,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/LEV.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Leviticus"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-leviticus/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Leviticus"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2234,7 +2243,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">04</div>
-      <h2 class="ch-title">Numbers
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/NUM.1.ESV" target="_blank" rel="noopener" title="Read Numbers in the ESV on Bible.com">Numbers</a>
         <span class="sub">Two censuses, thirty-eight years apart, with an entire generation missing in between.</span>
       </h2>
     </div>
@@ -2294,8 +2303,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/NUM.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Numbers"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-numbers/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Numbers"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2305,7 +2314,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">05</div>
-      <h2 class="ch-title">Deuteronomy
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/DEU.1.ESV" target="_blank" rel="noopener" title="Read Deuteronomy in the ESV on Bible.com">Deuteronomy</a>
         <span class="sub">Moses' last three speeches, laid out in the exact form of a treaty between a great king and a subject people.</span>
       </h2>
     </div>
@@ -2380,8 +2389,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/DEU.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Deuteronomy"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-deuteronomy/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Deuteronomy"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2404,7 +2413,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">06</div>
-      <h2 class="ch-title">Joshua
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JOS.1.ESV" target="_blank" rel="noopener" title="Read Joshua in the ESV on Bible.com">Joshua</a>
         <span class="sub">The land taken in twelve chapters and divided in twelve more &mdash; and the dividing is the half the book cares about.</span>
       </h2>
     </div>
@@ -2456,8 +2465,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JOS.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Joshua"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-joshua/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Joshua"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2467,7 +2476,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">07</div>
-      <h2 class="ch-title">Judges
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JDG.1.ESV" target="_blank" rel="noopener" title="Read Judges in the ESV on Bible.com">Judges</a>
         <span class="sub">The same five steps, six times over, and the nation is worse at the end of each round than it was at the start.</span>
       </h2>
     </div>
@@ -2523,8 +2532,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JDG.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Judges"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-judges/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Judges"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2534,7 +2543,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">08</div>
-      <h2 class="ch-title">Ruth
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/RUT.1.ESV" target="_blank" rel="noopener" title="Read Ruth in the ESV on Bible.com">Ruth</a>
         <span class="sub">Four chapters set during the worst period in the book before it, and almost nothing bad happens in them.</span>
       </h2>
     </div>
@@ -2585,8 +2594,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/RUT.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Ruth"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-ruth/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Ruth"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2596,7 +2605,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">09</div>
-      <h2 class="ch-title">1 Samuel
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1SA.1.ESV" target="_blank" rel="noopener" title="Read 1 Samuel in the ESV on Bible.com">1 Samuel</a>
         <span class="sub">Israel asks for a king so it can be like the other nations, and gets exactly what it asked for.</span>
       </h2>
     </div>
@@ -2649,8 +2658,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1SA.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Books_of_Samuel"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-samuel/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Books_of_Samuel"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2660,7 +2669,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">10</div>
-      <h2 class="ch-title">2 Samuel
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2SA.1.ESV" target="_blank" rel="noopener" title="Read 2 Samuel in the ESV on Bible.com">2 Samuel</a>
         <span class="sub">David&rsquo;s reign, hinged in the middle on an afternoon he should have spent at war.</span>
       </h2>
     </div>
@@ -2713,8 +2722,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2SA.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Books_of_Samuel"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-samuel/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Books_of_Samuel"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2724,7 +2733,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">11</div>
-      <h2 class="ch-title">1 Kings
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1KI.1.ESV" target="_blank" rel="noopener" title="Read 1 Kings in the ESV on Bible.com">1 Kings</a>
         <span class="sub">A temple, a golden age, and then the kingdom splits in two over a tax question.</span>
       </h2>
     </div>
@@ -2796,8 +2805,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1KI.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Books_of_Kings"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-kings/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Books_of_Kings"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2807,7 +2816,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">12</div>
-      <h2 class="ch-title">2 Kings
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2KI.1.ESV" target="_blank" rel="noopener" title="Read 2 Kings in the ESV on Bible.com">2 Kings</a>
         <span class="sub">Both kingdoms fall, a hundred and thirty-five years apart, and the book explains at length why neither was a surprise.</span>
       </h2>
     </div>
@@ -2860,8 +2869,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2KI.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Books_of_Kings"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-kings/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Books_of_Kings"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2871,7 +2880,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">13</div>
-      <h2 class="ch-title">1 Chronicles
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1CH.1.ESV" target="_blank" rel="noopener" title="Read 1 Chronicles in the ESV on Bible.com">1 Chronicles</a>
         <span class="sub">Nine chapters of names, and then David again &mdash; the same king, retold for people who have just come home from exile.</span>
       </h2>
     </div>
@@ -2923,8 +2932,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1CH.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Books_of_Chronicles"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-chronicles/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Books_of_Chronicles"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -2934,7 +2943,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">14</div>
-      <h2 class="ch-title">2 Chronicles
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2CH.1.ESV" target="_blank" rel="noopener" title="Read 2 Chronicles in the ESV on Bible.com">2 Chronicles</a>
         <span class="sub">The same four centuries as Kings, with the northern kingdom almost entirely left out and a different question being asked.</span>
       </h2>
     </div>
@@ -3004,8 +3013,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2CH.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Books_of_Chronicles"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-chronicles/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Books_of_Chronicles"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3015,7 +3024,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">15</div>
-      <h2 class="ch-title">Ezra
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/EZR.1.ESV" target="_blank" rel="noopener" title="Read Ezra in the ESV on Bible.com">Ezra</a>
         <span class="sub">Two returns sixty years apart, a temple finished under protest, and a scribe who is horrified by what he finds.</span>
       </h2>
     </div>
@@ -3070,8 +3079,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/EZR.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Ezra"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-ezra-nehemiah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Ezra"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3081,7 +3090,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">16</div>
-      <h2 class="ch-title">Nehemiah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/NEH.1.ESV" target="_blank" rel="noopener" title="Read Nehemiah in the ESV on Bible.com">Nehemiah</a>
         <span class="sub">A wall in fifty-two days, and then the much harder work of rebuilding the people behind it.</span>
       </h2>
     </div>
@@ -3133,8 +3142,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/NEH.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Nehemiah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-ezra-nehemiah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Nehemiah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3144,7 +3153,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">17</div>
-      <h2 class="ch-title">Esther
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/EST.1.ESV" target="_blank" rel="noopener" title="Read Esther in the ESV on Bible.com">Esther</a>
         <span class="sub">God is never mentioned, and the whole plot turns on coincidences the book pointedly refuses to explain.</span>
       </h2>
     </div>
@@ -3202,8 +3211,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/EST.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Esther"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-esther/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Esther"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3226,7 +3235,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">18</div>
-      <h2 class="ch-title">Job
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JOB.1.ESV" target="_blank" rel="noopener" title="Read Job in the ESV on Bible.com">Job</a>
         <span class="sub">The oldest question there is, argued for thirty-nine chapters, and answered with a whirlwind full of ostriches.</span>
       </h2>
     </div>
@@ -3279,8 +3288,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JOB.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Job"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-job/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Job"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3290,7 +3299,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">19</div>
-      <h2 class="ch-title">Psalms
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/PSA.1.ESV" target="_blank" rel="noopener" title="Read Psalms in the ESV on Bible.com">Psalms</a>
         <span class="sub">A thousand years of prayer, edited into five books &mdash; and roughly a third of it is complaint the editors chose not to soften.</span>
       </h2>
     </div>
@@ -3343,8 +3352,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/PSA.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Psalms"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-psalms/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Psalms"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3354,7 +3363,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">20</div>
-      <h2 class="ch-title">Proverbs
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/PRO.1.ESV" target="_blank" rel="noopener" title="Read Proverbs in the ESV on Bible.com">Proverbs</a>
         <span class="sub">Not one book but seven collections, with the first nine chapters as the instruction manual for reading the other twenty-two.</span>
       </h2>
     </div>
@@ -3404,8 +3413,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/PRO.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Proverbs"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-proverbs/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Proverbs"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3415,7 +3424,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">21</div>
-      <h2 class="ch-title">Ecclesiastes
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/ECC.1.ESV" target="_blank" rel="noopener" title="Read Ecclesiastes in the ESV on Bible.com">Ecclesiastes</a>
         <span class="sub">The same sentence opens and closes it, and the twelve chapters in between are spent testing whether it is true.</span>
       </h2>
     </div>
@@ -3461,8 +3470,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/ECC.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Ecclesiastes"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-ecclesiastes/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Ecclesiastes"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3472,7 +3481,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">22</div>
-      <h2 class="ch-title">Song of Songs
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/SNG.1.ESV" target="_blank" rel="noopener" title="Read Song of Songs in the ESV on Bible.com">Song of Songs</a>
         <span class="sub">Eight chapters of love poetry with no narrator, no plot to speak of, no moral, and no mention of God.</span>
       </h2>
     </div>
@@ -3519,8 +3528,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/SNG.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Song_of_Songs"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/song-of-songs/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Song_of_Songs"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3530,7 +3539,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">23</div>
-      <h2 class="ch-title">Isaiah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/ISA.1.ESV" target="_blank" rel="noopener" title="Read Isaiah in the ESV on Bible.com">Isaiah</a>
         <span class="sub">Sixty-six chapters that turn on a hinge in the middle &mdash; from a court prophet warning Jerusalem to a voice comforting exiles not yet born.</span>
       </h2>
     </div>
@@ -3586,8 +3595,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/ISA.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Isaiah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-isaiah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Isaiah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3597,7 +3606,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">24</div>
-      <h2 class="ch-title">Jeremiah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JER.1.ESV" target="_blank" rel="noopener" title="Read Jeremiah in the ESV on Bible.com">Jeremiah</a>
         <span class="sub">Forty years of being ignored, and the only prophet whose book records what a king did with the scroll.</span>
       </h2>
     </div>
@@ -3651,8 +3660,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JER.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Jeremiah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-jeremiah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Jeremiah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3662,7 +3671,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">25</div>
-      <h2 class="ch-title">Lamentations
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/LAM.1.ESV" target="_blank" rel="noopener" title="Read Lamentations in the ESV on Bible.com">Lamentations</a>
         <span class="sub">Five poems on the fall of one city, held together by the alphabet &mdash; until the last one lets go of it.</span>
       </h2>
     </div>
@@ -3710,8 +3719,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/LAM.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Lamentations"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-lamentations/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Lamentations"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3721,7 +3730,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">26</div>
-      <h2 class="ch-title">Ezekiel
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/EZK.1.ESV" target="_blank" rel="noopener" title="Read Ezekiel in the ESV on Bible.com">Ezekiel</a>
         <span class="sub">A priest deported before the city fell, handed the strangest visions in the Bible and told to act most of them out.</span>
       </h2>
     </div>
@@ -3778,8 +3787,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/EZK.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Ezekiel"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-ezekiel/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Ezekiel"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3789,7 +3798,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">27</div>
-      <h2 class="ch-title">Daniel
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/DAN.1.ESV" target="_blank" rel="noopener" title="Read Daniel in the ESV on Bible.com">Daniel</a>
         <span class="sub">Six court tales and six visions, written in two languages, about how to live under an empire that is not going to last.</span>
       </h2>
     </div>
@@ -3850,8 +3859,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/DAN.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Daniel"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-daniel/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Daniel"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3861,7 +3870,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">28</div>
-      <h2 class="ch-title">Hosea
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/HOS.1.ESV" target="_blank" rel="noopener" title="Read Hosea in the ESV on Bible.com">Hosea</a>
         <span class="sub">A prophet told to marry a woman who will leave him, and to name his children after the disaster.</span>
       </h2>
     </div>
@@ -3919,8 +3928,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/HOS.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Hosea"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-hosea/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Hosea"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3930,7 +3939,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">29</div>
-      <h2 class="ch-title">Joel
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JOL.1.ESV" target="_blank" rel="noopener" title="Read Joel in the ESV on Bible.com">Joel</a>
         <span class="sub">A locust plague read as a rehearsal, and a promise that the Spirit will be poured out on absolutely everyone.</span>
       </h2>
     </div>
@@ -3983,8 +3992,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JOL.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Joel"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-joel/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Joel"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -3994,7 +4003,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">30</div>
-      <h2 class="ch-title">Amos
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/AMO.1.ESV" target="_blank" rel="noopener" title="Read Amos in the ESV on Bible.com">Amos</a>
         <span class="sub">A shepherd from the south walks into the northern kingdom at its wealthiest and tells it the party is over.</span>
       </h2>
     </div>
@@ -4045,8 +4054,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/AMO.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Amos"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-amos/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Amos"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4056,7 +4065,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">31</div>
-      <h2 class="ch-title">Obadiah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/OBA.1.ESV" target="_blank" rel="noopener" title="Read Obadiah in the ESV on Bible.com">Obadiah</a>
         <span class="sub">Twenty-one verses, the shortest book in the Old Testament, and every one of them is about a brother.</span>
       </h2>
     </div>
@@ -4109,8 +4118,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/OBA.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Obadiah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-obadiah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Obadiah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4120,7 +4129,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">32</div>
-      <h2 class="ch-title">Jonah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JON.1.ESV" target="_blank" rel="noopener" title="Read Jonah in the ESV on Bible.com">Jonah</a>
         <span class="sub">Four chapters, almost every sentence ironic, ending on a question the prophet never answers.</span>
       </h2>
     </div>
@@ -4184,8 +4193,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JON.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Jonah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-jonah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Jonah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4195,7 +4204,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">33</div>
-      <h2 class="ch-title">Micah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/MIC.1.ESV" target="_blank" rel="noopener" title="Read Micah in the ESV on Bible.com">Micah</a>
         <span class="sub">A country prophet on the same crisis as Isaiah, alternating between demolition and hope three times over.</span>
       </h2>
     </div>
@@ -4251,8 +4260,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/MIC.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Micah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-micah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Micah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4262,7 +4271,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">34</div>
-      <h2 class="ch-title">Nahum
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/NAM.1.ESV" target="_blank" rel="noopener" title="Read Nahum in the ESV on Bible.com">Nahum</a>
         <span class="sub">Nineveh again, a hundred and fifty years after Jonah &mdash; and this time nobody repents.</span>
       </h2>
     </div>
@@ -4322,8 +4331,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/NAM.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Nahum"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-nahum/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Nahum"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4333,7 +4342,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">35</div>
-      <h2 class="ch-title">Habakkuk
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/HAB.1.ESV" target="_blank" rel="noopener" title="Read Habakkuk in the ESV on Bible.com">Habakkuk</a>
         <span class="sub">The only prophet who spends his book arguing with God rather than delivering messages for him.</span>
       </h2>
     </div>
@@ -4388,8 +4397,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/HAB.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Habakkuk"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-habakkuk/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Habakkuk"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4399,7 +4408,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">36</div>
-      <h2 class="ch-title">Zephaniah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/ZEP.1.ESV" target="_blank" rel="noopener" title="Read Zephaniah in the ESV on Bible.com">Zephaniah</a>
         <span class="sub">Three chapters that begin by threatening to undo creation and end with God singing.</span>
       </h2>
     </div>
@@ -4452,8 +4461,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/ZEP.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Zephaniah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-zephaniah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Zephaniah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4463,7 +4472,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">37</div>
-      <h2 class="ch-title">Haggai
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/HAG.1.ESV" target="_blank" rel="noopener" title="Read Haggai in the ESV on Bible.com">Haggai</a>
         <span class="sub">Four months, five dated messages, and the only prophet in the Bible whose audience does exactly what he says.</span>
       </h2>
     </div>
@@ -4520,8 +4529,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/HAG.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Haggai"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-haggai/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Haggai"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4531,7 +4540,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">38</div>
-      <h2 class="ch-title">Zechariah
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/ZEC.1.ESV" target="_blank" rel="noopener" title="Read Zechariah in the ESV on Bible.com">Zechariah</a>
         <span class="sub">Eight visions in a single night, and then fourteen chapters that the Gospels quote at almost every turn.</span>
       </h2>
     </div>
@@ -4589,8 +4598,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/ZEC.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Zechariah"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-zechariah/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Zechariah"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4600,7 +4609,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">39</div>
-      <h2 class="ch-title">Malachi
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/MAL.1.ESV" target="_blank" rel="noopener" title="Read Malachi in the ESV on Bible.com">Malachi</a>
         <span class="sub">The last book of the Old Testament, written as an argument in six rounds &mdash; and the people answer back every time.</span>
       </h2>
     </div>
@@ -4656,8 +4665,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/MAL.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Malachi"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-malachi/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Malachi"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4680,7 +4689,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">40</div>
-      <h2 class="ch-title">Matthew
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/MAT.1.ESV" target="_blank" rel="noopener" title="Read Matthew in the ESV on Bible.com">Matthew</a>
         <span class="sub">Written for readers who know the Hebrew scriptures cold, and built in five blocks of teaching, like the five books of Moses.</span>
       </h2>
     </div>
@@ -4738,8 +4747,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/MAT.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Gospel_of_Matthew"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/gospel-of-matthew/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Gospel_of_Matthew"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4749,7 +4758,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">41</div>
-      <h2 class="ch-title">Mark
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/MRK.1.ESV" target="_blank" rel="noopener" title="Read Mark in the ESV on Bible.com">Mark</a>
         <span class="sub">The shortest and fastest gospel, hinged exactly in the middle on a question and the right answer given for the wrong reasons.</span>
       </h2>
     </div>
@@ -4802,8 +4811,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/MRK.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Gospel_of_Mark"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/gospel-of-mark/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Gospel_of_Mark"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4813,7 +4822,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">42</div>
-      <h2 class="ch-title">Luke
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/LUK.1.ESV" target="_blank" rel="noopener" title="Read Luke in the ESV on Bible.com">Luke</a>
         <span class="sub">A researched account written for an outsider, with the longest road trip in the New Testament sitting in the middle of it.</span>
       </h2>
     </div>
@@ -4870,8 +4879,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/LUK.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Gospel_of_Luke"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/gospel-of-luke/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Gospel_of_Luke"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4881,7 +4890,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">43</div>
-      <h2 class="ch-title">John
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JHN.1.ESV" target="_blank" rel="noopener" title="Read John in the ESV on Bible.com">John</a>
         <span class="sub">Roughly nine tenths of it appears in no other gospel, and it opens before the first sentence of Genesis.</span>
       </h2>
     </div>
@@ -4958,8 +4967,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JHN.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Gospel_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/gospel-of-john/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Gospel_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -4982,7 +4991,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">44</div>
-      <h2 class="ch-title">Acts
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/ACT.1.ESV" target="_blank" rel="noopener" title="Read Acts in the ESV on Bible.com">Acts</a>
         <span class="sub">The sequel to Luke, structured by a single sentence in its first chapter and ending in the middle of the story.</span>
       </h2>
     </div>
@@ -5038,8 +5047,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/ACT.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Acts_of_the_Apostles"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-acts/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Acts_of_the_Apostles"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5049,7 +5058,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">45</div>
-      <h2 class="ch-title">Romans
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/ROM.1.ESV" target="_blank" rel="noopener" title="Read Romans in the ESV on Bible.com">Romans</a>
         <span class="sub">Paul writes ahead to a church he has never met, and ends up setting out his whole gospel from first principles.</span>
       </h2>
     </div>
@@ -5099,8 +5108,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/ROM.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Romans"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-romans/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Romans"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5109,7 +5118,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">46</div>
-      <h2 class="ch-title">1 Corinthians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1CO.1.ESV" target="_blank" rel="noopener" title="Read 1 Corinthians in the ESV on Bible.com">1 Corinthians</a>
         <span class="sub">A brilliant, wealthy, quarrelling church gets a letter that answers its questions one at a time and refuses to flatter it once.</span>
       </h2>
     </div>
@@ -5156,8 +5165,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1CO.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/First_Epistle_to_the_Corinthians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-corinthians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/First_Epistle_to_the_Corinthians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5166,7 +5175,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">47</div>
-      <h2 class="ch-title">2 Corinthians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2CO.1.ESV" target="_blank" rel="noopener" title="Read 2 Corinthians in the ESV on Bible.com">2 Corinthians</a>
         <span class="sub">The most personal thing Paul wrote: a defence of his own ministry by a man who keeps listing his failures as credentials.</span>
       </h2>
     </div>
@@ -5213,8 +5222,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2CO.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Second_Epistle_to_the_Corinthians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-corinthians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Second_Epistle_to_the_Corinthians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5223,7 +5232,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">48</div>
-      <h2 class="ch-title">Galatians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/GAL.1.ESV" target="_blank" rel="noopener" title="Read Galatians in the ESV on Bible.com">Galatians</a>
         <span class="sub">The angriest letter in the New Testament, written fast, and the one that later split Western Christianity in half.</span>
       </h2>
     </div>
@@ -5270,8 +5279,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/GAL.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Galatians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-galatians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Galatians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5280,7 +5289,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">49</div>
-      <h2 class="ch-title">Ephesians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/EPH.1.ESV" target="_blank" rel="noopener" title="Read Ephesians in the ESV on Bible.com">Ephesians</a>
         <span class="sub">A prison letter with no crisis to solve, written in enormous sentences about one new humanity made out of two old ones.</span>
       </h2>
     </div>
@@ -5327,8 +5336,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/EPH.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Ephesians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-ephesians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Ephesians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5337,7 +5346,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">50</div>
-      <h2 class="ch-title">Philippians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/PHP.1.ESV" target="_blank" rel="noopener" title="Read Philippians in the ESV on Bible.com">Philippians</a>
         <span class="sub">A thank-you note from prison that turns into the earliest Christian hymn we possess.</span>
       </h2>
     </div>
@@ -5384,8 +5393,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/PHP.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Philippians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-philippians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Philippians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5394,7 +5403,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">51</div>
-      <h2 class="ch-title">Colossians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/COL.1.ESV" target="_blank" rel="noopener" title="Read Colossians in the ESV on Bible.com">Colossians</a>
         <span class="sub">Written to a town Paul had never visited, against a teaching we can only see through his answer to it.</span>
       </h2>
     </div>
@@ -5441,8 +5450,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/COL.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Colossians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-colossians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Colossians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5451,7 +5460,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">52</div>
-      <h2 class="ch-title">1 Thessalonians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1TH.1.ESV" target="_blank" rel="noopener" title="Read 1 Thessalonians in the ESV on Bible.com">1 Thessalonians</a>
         <span class="sub">Possibly the oldest surviving Christian document, written weeks after Paul was run out of town.</span>
       </h2>
     </div>
@@ -5498,8 +5507,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1TH.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/First_Epistle_to_the_Thessalonians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-thessalonians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/First_Epistle_to_the_Thessalonians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5508,7 +5517,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">53</div>
-      <h2 class="ch-title">2 Thessalonians
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2TH.1.ESV" target="_blank" rel="noopener" title="Read 2 Thessalonians in the ESV on Bible.com">2 Thessalonians</a>
         <span class="sub">A follow-up written because the first letter was misread, and someone may have forged a second one.</span>
       </h2>
     </div>
@@ -5555,8 +5564,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2TH.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Second_Epistle_to_the_Thessalonians"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-thessalonians/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Second_Epistle_to_the_Thessalonians"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5565,7 +5574,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">54</div>
-      <h2 class="ch-title">1 Timothy
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1TI.1.ESV" target="_blank" rel="noopener" title="Read 1 Timothy in the ESV on Bible.com">1 Timothy</a>
         <span class="sub">Instructions to a young man left behind to sort out a church, from the man who left him there.</span>
       </h2>
     </div>
@@ -5612,8 +5621,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1TI.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/First_Epistle_to_Timothy"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-timothy/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/First_Epistle_to_Timothy"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5622,7 +5631,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">55</div>
-      <h2 class="ch-title">2 Timothy
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2TI.1.ESV" target="_blank" rel="noopener" title="Read 2 Timothy in the ESV on Bible.com">2 Timothy</a>
         <span class="sub">The last thing Paul wrote: cold, alone, asking for a coat and his notebooks.</span>
       </h2>
     </div>
@@ -5669,8 +5678,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2TI.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Second_Epistle_to_Timothy"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-timothy/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Second_Epistle_to_Timothy"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5679,7 +5688,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">56</div>
-      <h2 class="ch-title">Titus
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/TIT.1.ESV" target="_blank" rel="noopener" title="Read Titus in the ESV on Bible.com">Titus</a>
         <span class="sub">Appoint elders, silence the talkers, and remember what these people were like before &mdash; including us.</span>
       </h2>
     </div>
@@ -5726,8 +5735,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/TIT.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_Titus"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-titus/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_Titus"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5736,7 +5745,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">57</div>
-      <h2 class="ch-title">Philemon
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/PHM.1.ESV" target="_blank" rel="noopener" title="Read Philemon in the ESV on Bible.com">Philemon</a>
         <span class="sub">A single page about one runaway slave, which never quite says what it is asking for.</span>
       </h2>
     </div>
@@ -5783,8 +5792,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/PHM.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_Philemon"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-philemon/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_Philemon"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5793,7 +5802,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">58</div>
-      <h2 class="ch-title">Hebrews
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/HEB.1.ESV" target="_blank" rel="noopener" title="Read Hebrews in the ESV on Bible.com">Hebrews</a>
         <span class="sub">An anonymous sermon in the finest Greek in the New Testament, arguing that the old arrangement was always a sketch.</span>
       </h2>
     </div>
@@ -5833,8 +5842,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/HEB.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Hebrews"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-hebrews/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_to_the_Hebrews"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5843,7 +5852,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">59</div>
-      <h2 class="ch-title">James
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JAS.1.ESV" target="_blank" rel="noopener" title="Read James in the ESV on Bible.com">James</a>
         <span class="sub">The Sermon on the Mount rewritten as a list of instructions, by someone who grew up in the same house as the preacher.</span>
       </h2>
     </div>
@@ -5897,8 +5906,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JAS.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_of_James"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-james/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_of_James"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5908,7 +5917,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">60</div>
-      <h2 class="ch-title">1 Peter
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1PE.1.ESV" target="_blank" rel="noopener" title="Read 1 Peter in the ESV on Bible.com">1 Peter</a>
         <span class="sub">A letter to people who have become foreigners in the towns they were born in.</span>
       </h2>
     </div>
@@ -5948,8 +5957,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1PE.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/First_Epistle_of_Peter"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-peter/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/First_Epistle_of_Peter"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -5958,7 +5967,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">61</div>
-      <h2 class="ch-title">2 Peter
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2PE.1.ESV" target="_blank" rel="noopener" title="Read 2 Peter in the ESV on Bible.com">2 Peter</a>
         <span class="sub">A last testament against teachers who have worked out that a delayed promise is hard to defend.</span>
       </h2>
     </div>
@@ -5998,8 +6007,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2PE.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Second_Epistle_of_Peter"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-peter/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Second_Epistle_of_Peter"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -6008,7 +6017,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">62</div>
-      <h2 class="ch-title">1 John
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/1JN.1.ESV" target="_blank" rel="noopener" title="Read 1 John in the ESV on Bible.com">1 John</a>
         <span class="sub">Written after a split, for the people who stayed, in a vocabulary of about three hundred words.</span>
       </h2>
     </div>
@@ -6048,8 +6057,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/1JN.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/First_Epistle_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-1-john/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/First_Epistle_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -6058,7 +6067,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">63</div>
-      <h2 class="ch-title">2 John
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/2JN.1.ESV" target="_blank" rel="noopener" title="Read 2 John in the ESV on Bible.com">2 John</a>
         <span class="sub">Thirteen verses to a congregation about who to let through the door.</span>
       </h2>
     </div>
@@ -6098,8 +6107,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/2JN.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Second_Epistle_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-2-john/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Second_Epistle_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -6108,7 +6117,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">64</div>
-      <h2 class="ch-title">3 John
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/3JN.1.ESV" target="_blank" rel="noopener" title="Read 3 John in the ESV on Bible.com">3 John</a>
         <span class="sub">A note about a man named Diotrephes, who likes to put himself first.</span>
       </h2>
     </div>
@@ -6148,8 +6157,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/3JN.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Third_Epistle_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-3-john/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Third_Epistle_of_John"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -6158,7 +6167,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">65</div>
-      <h2 class="ch-title">Jude
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/JUD.1.ESV" target="_blank" rel="noopener" title="Read Jude in the ESV on Bible.com">Jude</a>
         <span class="sub">Twenty-five verses of controlled fury, quoting two books that never made it into the Bible.</span>
       </h2>
     </div>
@@ -6198,8 +6207,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/JUD.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Epistle_of_Jude"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-jude/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Epistle_of_Jude"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>
@@ -6208,7 +6217,7 @@ html { scroll-behavior: smooth; }
   <div class="wrap">
     <div class="ch-head">
       <div class="ch-num">66</div>
-      <h2 class="ch-title">Revelation
+      <h2 class="ch-title"><a class="ch-link" href="https://www.bible.com/bible/59/REV.1.ESV" target="_blank" rel="noopener" title="Read Revelation in the ESV on Bible.com">Revelation</a>
         <span class="sub">A letter to seven real churches under pressure, written in the borrowed imagery of Daniel and Ezekiel, ending with a garden rebuilt as a city.</span>
       </h2>
     </div>
@@ -6285,8 +6294,8 @@ html { scroll-behavior: smooth; }
 
     <div class="links">
       <a class="read" href="https://www.bible.com/bible/59/REV.1.ESV"><span class="ico">&#10070;</span>Read it &middot; ESV</a>
-      <a href="https://en.wikipedia.org/wiki/Book_of_Revelation"><span class="ico">&#9906;</span>Wikipedia</a>
       <a href="https://bibleproject.com/guides/book-of-revelation/"><span class="ico">&#9656;</span>BibleProject guide</a>
+      <a href="https://en.wikipedia.org/wiki/Book_of_Revelation"><span class="ico">&#9906;</span>Wikipedia</a>
     </div>
   </div>
 </section>

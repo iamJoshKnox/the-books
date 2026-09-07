@@ -368,6 +368,19 @@ for bid in NAME:
     s = s[:m.start()] + m.group(1) + link + '\n' + s[m.end():]
     edits += 1
 
+# ---- the title itself is a link to the book, opened in its own tab
+for bid in NAME:
+    href = 'https://www.bible.com/bible/%d/%s.1.ESV' % (ESV, USFM[bid])
+    m = re.search(r'(<section class="chapter" id="%s".*?<h2 class="ch-title">)'
+                  r'(?:<a class="ch-link"[^>]*>)?(.*?)(?:</a>)?'
+                  r'(\s*<span class="sub">)' % re.escape(bid), s, re.S)
+    assert m, 'no ch-title in %s' % bid
+    a = ('<a class="ch-link" href="%s" target="_blank" rel="noopener"'
+         ' title="Read %s in the ESV on Bible.com">%s</a>'
+         % (href, NAME[bid], m.group(2).strip()))
+    s = s[:m.start()] + m.group(1) + a + m.group(3) + s[m.end():]
+    edits += 1
+
 print('eras: %d bands, boundaries %s' % (len(ERAS), [b[0] for b in BOUNDS] + [100]))
 print('books: %d of %d written' % (len(built), len(BOOKS)))
 for bid in ('genesis', 'joshua', 'kings-2', 'psalms', 'matthew', 'revelation'):
