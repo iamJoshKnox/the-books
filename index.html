@@ -1083,6 +1083,7 @@ main { display: flex; flex-direction: column; }
    group's accent bar by 9px and sits under the chevron, and the longest name
    (1 Thessalonians, ~98px) still fits the ~107px it is left with */
 .srow[data-tracked] { grid-template-columns: 34px calc(var(--namecol) - 34px) 1fr; }
+.srow[data-tracked] .srow-name { white-space: nowrap; }   /* 1 Thessalonians was breaking at the space */
 .srow-check {
   width: .8rem; height: .8rem; margin: 0 0 0 12px; align-self: center; justify-self: start;
   accent-color: var(--accent); cursor: pointer;
