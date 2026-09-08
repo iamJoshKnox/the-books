@@ -144,7 +144,8 @@ check(s.count('class="segctl filterctl"') == 1, 'read filter control missing or 
 for f in ('all', 'unread', 'read'):
     check(('data-filter="%s"' % f) in s, 'read filter button %r missing' % f)
 check("thebooks-read" in s, 'read-state storage key missing')
-check('btn.className = "readbox"' in s, 'read checkbox is never built')
+for c in ('"ch-check"', '"srow-check"', 'chip.className = "readchip"'):
+    check(c in s, 'read control %s is never built' % c)
 for rule in (':root[data-filter="unread"] .chapter[data-read]',
              ':root[data-filter="read"] .chapter:not([data-read])',
              '.srow[data-read]', '.bn-books a[data-read]'):

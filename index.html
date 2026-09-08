@@ -1066,31 +1066,39 @@ main { display: flex; flex-direction: column; }
 .note.hot .tag { color: var(--k-accent2); }
 
 /* ---------- read tracker: one per book, kept in this browser ---------- */
-.readbox {
-  grid-column: 2; justify-self: start; margin-top: .9rem;
-  display: inline-flex; align-items: center; gap: .45rem;
-  font: inherit; font-family: var(--f-body); font-size: .66rem; font-weight: 700;
-  letter-spacing: .14em; text-transform: uppercase;
-  padding: .34rem .8rem; cursor: pointer;
-  border: 1px solid var(--k-line); border-radius: 999px;
-  background: transparent; color: var(--k-muted); white-space: nowrap;
+/* the header reads 01 [ ] GENESIS; the box takes the title's size so it
+   scales with it, and the three-column grid only applies once JS has
+   put the box there */
+.ch-head[data-tracked] { grid-template-columns: auto auto 1fr; }
+.ch-check {
+  align-self: start; font-size: clamp(1.35rem, 4vw, 2.1rem);
+  width: .52em; height: .52em; margin: .29em 0 0;
+  accent-color: var(--k-accent); cursor: pointer;
 }
-.readbox:hover { color: var(--k-accent); border-color: var(--k-accent); }
-.readbox:focus-visible { outline: 2px solid var(--k-accent); outline-offset: 3px; }
-.rb-tick {
-  position: relative; flex: 0 0 auto; width: .78rem; height: .78rem;
-  border: 1px solid currentColor; border-radius: 3px;
+.ch-check:focus-visible { outline: 2px solid var(--k-accent); outline-offset: 3px; }
+
+/* the spine: the box sits inside the name column, so the tracks keep their
+   left edge against the era strip and the master band */
+.srow[data-tracked] { grid-template-columns: 20px calc(var(--namecol) - 20px) 1fr; }
+.srow-check {
+  width: .8rem; height: .8rem; margin: 0; align-self: center; justify-self: start;
+  accent-color: var(--accent); cursor: pointer;
 }
-.readbox[aria-pressed="true"] {
+
+/* the links row: a chip cut like "Read it", placed straight after it */
+.links .readchip {
+  display: inline-flex; align-items: center; gap: .5rem;
+  font: inherit; font-size: .86rem; font-weight: 500; cursor: pointer;
+  padding: .48rem .9rem; border-radius: 999px;
+  border: 1px solid var(--k-line); background: var(--k-surface); color: var(--k-ink2);
+}
+.links .readchip:hover { border-color: var(--k-accent); color: var(--k-accent); }
+.links .readchip .ico { font-size: .95rem; opacity: .7; }
+.links .readchip[aria-pressed="true"] {
   background: var(--k-accent); border-color: var(--k-accent); color: var(--k-ground);
 }
-.rb-tick::after {
-  content: ""; position: absolute; opacity: 0;
-  left: 50%; top: 47%; width: .2rem; height: .42rem;
-  border: solid currentColor; border-width: 0 1.5px 1.5px 0;
-  transform: translate(-50%, -55%) rotate(45deg);
-}
-.readbox[aria-pressed="true"] .rb-tick::after { opacity: 1; }
+.links .readchip[aria-pressed="true"] .ico { opacity: 1; }
+.links .readchip:focus-visible { outline: 2px solid var(--k-accent); outline-offset: 3px; }
 
 /* the filter hides whole books; the spine and the chips only dim, so the
    timeline keeps its proportions */
@@ -1104,7 +1112,7 @@ main { display: flex; flex-direction: column; }
   font-size: 1.02rem; color: var(--muted);
 }
 :root[data-none] .emptynote { display: block; }
-.srow[data-read] { opacity: .34; }
+.srow[data-read] .srow-name, .srow[data-read] .track { opacity: .34; }
 .bn-books a[data-read] { opacity: .5; }
 </style>
 
@@ -1532,7 +1540,7 @@ html { scroll-behavior: smooth; }
 :target { scroll-margin-top: 165px; }
 
 @media print {
-  .controls, .toc, .vid-btn, .readbox { display: none; }
+  .controls, .toc, .vid-btn, .ch-check, .srow-check, .readchip { display: none; }
   .chapter { break-inside: avoid; border-top: 2px solid #000; }
 }
 </style>
@@ -6855,9 +6863,11 @@ html { scroll-behavior: smooth; }
     });
   }
 
-  /* --- read tracker: a checkbox per book, remembered in this browser.
-         Built here rather than written into the markup, because build_spine.py
-         rewrites the spine rows, the chip nav and parts of every section. --- */
+  /* --- read tracker: three controls per book, kept in step - a box before
+         the title, a box on the spine row, a chip in the links row - and
+         remembered in this browser. Built here rather than written into the
+         markup, because build_spine.py rewrites the spine rows, the chip nav
+         and parts of every section. --- */
   var READ_KEY = "thebooks-read";
   var read = {};
   try {
@@ -6869,22 +6879,40 @@ html { scroll-behavior: smooth; }
     try { localStorage.setItem(READ_KEY, JSON.stringify(read)); } catch (e) {}
   }
 
-  /* the section, its spine row and its chip all carry data-read */
+  var ctl = {};   /* bid -> { sec, srow, chip, box, sbox, rchip } */
+
   function markRead(bid, on) {
-    var sec = document.getElementById(bid);
-    var chip = document.querySelector('.bn-books a[href="#' + bid + '"]');
-    var nameLink = document.querySelector('.srow-name[href="#' + bid + '"]');
-    var targets = [sec, chip, nameLink ? nameLink.parentNode : null];
-    targets.forEach(function (el) {
+    var c = ctl[bid];
+    if (!c) return;
+    [c.sec, c.srow, c.chip].forEach(function (el) {
       if (!el) return;
       if (on) el.setAttribute("data-read", "");
       else el.removeAttribute("data-read");
     });
-    var btn = sec ? sec.querySelector(".readbox") : null;
-    if (btn) {
-      btn.setAttribute("aria-pressed", String(!!on));
-      btn.querySelector(".rb-lab").textContent = on ? "Read" : "Mark read";
+    if (c.box) c.box.checked = !!on;
+    if (c.sbox) c.sbox.checked = !!on;
+    if (c.rchip) {
+      c.rchip.setAttribute("aria-pressed", String(!!on));
+      c.rchip.lastChild.textContent = on ? "Read" : "Mark as read";
     }
+  }
+
+  function toggleRead(bid) {
+    var on = !read[bid];
+    if (on) read[bid] = 1;
+    else delete read[bid];
+    markRead(bid, on);
+    saveRead();
+    applyEmpty();
+  }
+
+  function makeBox(bid, name, className) {
+    var box = document.createElement("input");
+    box.type = "checkbox";
+    box.className = className;
+    box.setAttribute("aria-label", "Mark " + name + " as read");
+    box.addEventListener("change", function () { toggleRead(bid); });
+    return box;
   }
 
   /* a division preface with nothing left under it should go too, and a filter
@@ -6919,39 +6947,55 @@ html { scroll-behavior: smooth; }
   }
 
   document.querySelectorAll("section.chapter").forEach(function (sec) {
-    var head = sec.querySelector(".ch-head");
-    if (!head) return;
     var bid = sec.id;
+    var link = sec.querySelector(".ch-title .ch-link");
+    var name = link ? link.textContent : bid;
+    var c = ctl[bid] = { sec: sec };
+    c.chip = document.querySelector('.bn-books a[href="#' + bid + '"]');
 
-    var btn = document.createElement("button");
-    btn.type = "button";
-    btn.className = "readbox";
-    btn.setAttribute("aria-pressed", "false");
+    /* 01 [ ] GENESIS */
+    var head = sec.querySelector(".ch-head");
+    var title = sec.querySelector(".ch-title");
+    if (head && title) {
+      c.box = makeBox(bid, name, "ch-check");
+      head.insertBefore(c.box, title);
+      head.setAttribute("data-tracked", "");
+    }
 
-    var tick = document.createElement("span");
-    tick.className = "rb-tick";
-    tick.setAttribute("aria-hidden", "true");
-    btn.appendChild(tick);
+    /* [ ] Genesis  ----bar---- on the spine. A duplicate, so not a tab stop:
+       keyboard users have the two in the section, and the spine keeps its
+       seventeen */
+    var sname = document.querySelector('.srow-name[href="#' + bid + '"]');
+    if (sname) {
+      c.srow = sname.parentNode;
+      c.sbox = makeBox(bid, name, "srow-check");
+      c.sbox.tabIndex = -1;
+      c.srow.insertBefore(c.sbox, sname);
+      c.srow.setAttribute("data-tracked", "");
+    }
 
-    var lab = document.createElement("span");
-    lab.className = "rb-lab";
-    lab.textContent = "Mark read";
-    btn.appendChild(lab);
-
-    btn.addEventListener("click", function () {
-      var on = !read[bid];
-      if (on) read[bid] = 1;
-      else delete read[bid];
-      markRead(bid, on);
-      saveRead();
-      applyEmpty();
-    });
-
-    head.appendChild(btn);
+    /* the chip, straight after "Read it" */
+    var links = sec.querySelector(".links");
+    if (links) {
+      var readIt = links.querySelector("a.read");
+      var chip = document.createElement("button");
+      chip.type = "button";
+      chip.className = "readchip";
+      chip.setAttribute("aria-pressed", "false");
+      var ico = document.createElement("span");
+      ico.className = "ico";
+      ico.setAttribute("aria-hidden", "true");
+      ico.textContent = "\u2713";
+      chip.appendChild(ico);
+      chip.appendChild(document.createTextNode("Mark as read"));
+      chip.addEventListener("click", function () { toggleRead(bid); });
+      links.insertBefore(chip, readIt ? readIt.nextSibling : links.firstChild);
+      c.rchip = chip;
+    }
   });
 
   Object.keys(read).forEach(function (bid) {
-    if (document.getElementById(bid)) markRead(bid, true);
+    if (ctl[bid]) markRead(bid, true);
   });
 
   var filterBtns = document.querySelectorAll(".filterctl button[data-filter]");
