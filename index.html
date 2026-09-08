@@ -1085,8 +1085,10 @@ main { display: flex; flex-direction: column; }
   background: var(--k-accent); border-color: var(--k-accent); color: var(--k-ground);
 }
 .rb-tick::after {
-  content: "¹3"; position: absolute; inset: 0; opacity: 0;
-  font-size: .66rem; line-height: .74rem; text-align: center;
+  content: ""; position: absolute; opacity: 0;
+  left: 50%; top: 47%; width: .2rem; height: .42rem;
+  border: solid currentColor; border-width: 0 1.5px 1.5px 0;
+  transform: translate(-50%, -55%) rotate(45deg);
 }
 .readbox[aria-pressed="true"] .rb-tick::after { opacity: 1; }
 
@@ -1096,6 +1098,12 @@ main { display: flex; flex-direction: column; }
 :root[data-filter="read"] .chapter:not([data-read]),
 :root[data-filter="unread"] .division[data-empty],
 :root[data-filter="read"] .division[data-empty] { display: none; }
+.emptynote {
+  display: none; order: 0; max-width: var(--measure);
+  margin: 5rem auto; padding: 0 var(--pad); text-align: center;
+  font-size: 1.02rem; color: var(--muted);
+}
+:root[data-none] .emptynote { display: block; }
 .srow[data-read] { opacity: .34; }
 .bn-books a[data-read] { opacity: .5; }
 </style>
@@ -6879,9 +6887,16 @@ html { scroll-behavior: smooth; }
     }
   }
 
-  /* a division preface with nothing left under it should go too */
+  /* a division preface with nothing left under it should go too, and a filter
+     that matches nothing at all should say so rather than look broken */
+  var emptyNote = document.createElement("p");
+  emptyNote.className = "emptynote";
+  var mainEl = document.querySelector("main");
+  if (mainEl) mainEl.appendChild(emptyNote);
+
   function applyEmpty() {
     var mode = document.documentElement.getAttribute("data-filter") || "all";
+    var total = 0;
     document.querySelectorAll("section.division").forEach(function (div) {
       var books = document.querySelectorAll('section.chapter[data-div="' + div.dataset.div + '"]');
       var shown = 0;
@@ -6889,9 +6904,18 @@ html { scroll-behavior: smooth; }
         var isRead = b.hasAttribute("data-read");
         if (mode === "all" || (mode === "unread") !== isRead) shown++;
       });
+      total += shown;
       if (shown) div.removeAttribute("data-empty");
       else div.setAttribute("data-empty", "");
     });
+    if (total) {
+      document.documentElement.removeAttribute("data-none");
+    } else {
+      emptyNote.textContent = mode === "read"
+        ? "Nothing ticked off yet. Mark a book as read and it will show up here."
+        : "Sixty-six of sixty-six. The whole shelf, read.";
+      document.documentElement.setAttribute("data-none", "");
+    }
   }
 
   document.querySelectorAll("section.chapter").forEach(function (sec) {
