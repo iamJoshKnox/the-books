@@ -482,6 +482,16 @@ strong, b { font-weight: 600; }
   padding: clamp(2.5rem, 7vw, 4.75rem) var(--pad) clamp(1.9rem, 5vw, 3rem);
 }
 .masthead .eyebrow { color: var(--accent-lit); }
+.mast-top { display: flex; align-items: baseline; justify-content: space-between; gap: 1rem; }
+.mast-top .eyebrow { min-width: 0; }
+.aboutlink {
+  flex: 0 0 auto; opacity: .8;
+  font-size: .67rem; font-weight: 700; letter-spacing: .18em; text-transform: uppercase;
+  color: var(--accent-lit); text-decoration: none;
+  border-bottom: 1px solid currentColor; padding-bottom: 3px;
+}
+.aboutlink:hover { opacity: 1; }
+.aboutlink:focus-visible { outline: 2px solid var(--accent-lit); outline-offset: 3px; }
 
 .wordmark {
   font-family: var(--f-display); font-weight: 700;
@@ -1560,7 +1570,10 @@ html { scroll-behavior: smooth; }
 <header class="masthead">
   <div class="scrim"></div>
   <div class="masthead-inner">
-    <p class="eyebrow">66 books &middot; 1,189 chapters &middot; one shelf</p>
+    <div class="mast-top">
+      <p class="eyebrow">66 books &middot; 1,189 chapters &middot; one shelf</p>
+      <a class="aboutlink" href="https://iamjoshknox.com/who-am-i/">About</a>
+    </div>
     <h1 class="wordmark"><span class="lead">A reader's guide to</span>The Books</h1>
     <p class="billing">Every book of the Bible, given its own room &mdash; what happens in it, where it sits on the timeline, and an <em>animated overview</em> to watch before you start.</p>
     <!-- What this is — hidden for now
