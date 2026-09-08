@@ -111,6 +111,85 @@ BOOKS = [
  ('revelation',   '66', 'Revelation',   5, 'apocalyptic',    (95,    100),    95,   'runs_off'),
 ]
 
+# --------------------------------------------------------------- words
+# ESV word count per book, from the translation-comparison table at
+# biblememorygoal.com/bible-books-word-count. Its stated totals are the ones
+# on the masthead - 581,112 Old Testament, 175,734 New Testament, 756,846 in
+# all - and the sixty-six rows add up to them exactly, which is the check
+# below. build_spine.py writes this into the page as var WORDS, where the
+# read tracker apportions the masthead figures to the books ticked off.
+WORDS = {
+    'genesis': 36326,
+    'exodus': 30888,
+    'leviticus': 23440,
+    'numbers': 30965,
+    'deuteronomy': 27573,
+    'joshua': 17972,
+    'judges': 18295,
+    'ruth': 2427,
+    'samuel-1': 24136,
+    'samuel-2': 19751,
+    'kings-1': 23455,
+    'kings-2': 22802,
+    'chronicles-1': 18527,
+    'chronicles-2': 24809,
+    'ezra': 6026,
+    'nehemiah': 9845,
+    'esther': 5478,
+    'job': 17583,
+    'psalms': 42297,
+    'proverbs': 14531,
+    'ecclesiastes': 5339,
+    'song-of-songs': 2533,
+    'isaiah': 35279,
+    'jeremiah': 40508,
+    'lamentations': 3253,
+    'ezekiel': 37210,
+    'daniel': 11237,
+    'hosea': 4967,
+    'joel': 1896,
+    'amos': 4052,
+    'obadiah': 604,
+    'jonah': 1299,
+    'micah': 3002,
+    'nahum': 1111,
+    'habakkuk': 1254,
+    'zephaniah': 1556,
+    'haggai': 1085,
+    'zechariah': 6061,
+    'malachi': 1740,
+    'matthew': 22677,
+    'mark': 14364,
+    'luke': 24645,
+    'john': 18898,
+    'acts': 23495,
+    'romans': 9495,
+    'corinthians-1': 9281,
+    'corinthians-2': 6072,
+    'galatians': 3106,
+    'ephesians': 3016,
+    'philippians': 2147,
+    'colossians': 1936,
+    'thessalonians-1': 1844,
+    'thessalonians-2': 1064,
+    'timothy-1': 2317,
+    'timothy-2': 1633,
+    'titus': 926,
+    'philemon': 460,
+    'hebrews': 6929,
+    'james': 2319,
+    'peter-1': 2393,
+    'peter-2': 1549,
+    'john-1': 2499,
+    'john-2': 300,
+    'john-3': 302,
+    'jude': 604,
+    'revelation': 11463,
+}
+assert len(WORDS) == 66
+assert sum(WORDS[b[0]] for b in BOOKS if b[3] <= 3) == 581112, 'Old Testament words'
+assert sum(WORDS[b[0]] for b in BOOKS if b[3] >= 4) == 175734, 'New Testament words'
+
 DIVISIONS = {1: ('Pentateuch', 5), 2: ('Historical Books', 12),
              3: ('Writings and Prophets', 22), 4: ('Gospels', 4),
              5: ('Acts, Letters and Revelation', 23)}

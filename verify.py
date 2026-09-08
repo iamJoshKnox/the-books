@@ -17,7 +17,7 @@ import sys
 import urllib.parse
 import urllib.request
 
-from books import BOOKS, DIVISIONS, ERAS
+from books import BOOKS, DIVISIONS, ERAS, WORDS
 
 # an explicit path lets a deliberately broken copy prove the checks bite
 P = next((a for a in sys.argv[1:] if not a.startswith('--')), 'index.html')
@@ -165,6 +165,30 @@ check(chip_hrefs == want, 'header chips are not the 66 books in canonical order'
 js_eras = re.search(r'var ERAS = \[(.*?)\];', s, re.S)
 check(js_eras is not None and js_eras.group(1).count('{ n:') == len(ERAS),
       'the JS ERAS array does not match books.py')
+# ------------------------------------------------------ words, and progress
+# the per-book ESV counts must match the masthead exactly, or the progress line
+# under Length could add up to something the cell above it does not say
+m = re.search(r'<div data-kpi="length"><dt>Length</dt><dd>([\d,]+) words<small>.*?Old Testament: ([\d,]+)<br>New Testament: ([\d,]+)', s, re.S)
+check(m is not None, 'the Length cell is not in the shape the words check expects')
+if m:
+    shown = [int(x.replace(',', '')) for x in m.groups()]
+    ot = sum(WORDS[b[0]] for b in BOOKS if b[3] <= 3)
+    nt = sum(WORDS[b[0]] for b in BOOKS if b[3] >= 4)
+    check([ot + nt, ot, nt] == shown, 'books.WORDS sums to %d/%d/%d but the masthead shows %d/%d/%d'
+          % (ot + nt, ot, nt, shown[0], shown[1], shown[2]))
+js_words = re.search(r'var WORDS = \{(.*?)\};', s, re.S)
+check(js_words is not None and js_words.group(1).count('":') == len(BOOKS),
+      'the JS WORDS table does not carry all %d books' % len(BOOKS))
+for bid in want:
+    check(js_words is not None and ('"%s": %d' % (bid, WORDS[bid])) in js_words.group(1),
+          '%s: JS WORDS entry missing or stale' % bid)
+for k in ('canon', 'length', 'time', 'distance'):
+    check(s.count('<div data-kpi="%s">' % k) == 1, 'progress hook %r missing' % k)
+dts = re.findall(r'<dl class="facts">(.*?)</dl>', s, re.S)
+order = re.findall(r'<dt>(.*?)</dt>', dts[0]) if dts else []
+check(order == ['The canon', 'Length', 'Events span', 'Writing span', 'Time to read', 'Distance'],
+      'masthead cells are out of order: %s' % order)
+
 # ----------------------------------------------------- internal anchors
 targets = set(all_ids)
 markup = re.sub(r'<script>.*?</script>', '', s, flags=re.S)   # the JS builds selectors that look like hrefs

@@ -14,7 +14,7 @@ Run from the bible/ directory: python build_spine.py, then python _accents.py
 """
 import io, re, sys
 
-from books import ERAS, BOOKS, DIVISIONS, SHORT
+from books import ERAS, BOOKS, DIVISIONS, SHORT, WORDS
 
 BOUNDS = []
 _c = 0
@@ -101,6 +101,8 @@ sub(r'        <div class="band" id="master-band">\n.*?\n        </div>',
     '        <div class="band" id="master-band">\n%s\n        </div>' % band, flags=re.S)
 js = ',\n'.join('    { n: "%s", w: %d }' % (e[0], e[3]) for e in ERAS)
 sub(r'  var ERAS = \[\n.*?\n  \];', '  var ERAS = [\n%s\n  ];' % js, flags=re.S)
+js = ',\n'.join('    "%s": %d' % (b[0], WORDS[b[0]]) for b in BOOKS)
+sub(r'  var WORDS = \{\n.*?\n  \};', '  var WORDS = {\n%s\n  };' % js, flags=re.S)
 
 # The --era-N hues live in the stylesheet, not here: they change rarely, and an
 # earlier version of this script appended one on every run, which duplicated the

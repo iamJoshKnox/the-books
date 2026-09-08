@@ -527,6 +527,11 @@ strong, b { font-weight: 600; }
   margin: 0; font-family: var(--f-head); font-weight: 600;
   font-size: 1.14rem; line-height: 1.25; color: var(--ink);
 }
+.facts .prog {
+  display: block; margin-top: .38rem; font-family: var(--f-body);
+  font-size: .76rem; font-weight: 600; line-height: 1.4; color: var(--accent);
+}
+.facts .prog:empty { display: none; }
 .facts dd small {
   display: block; font-family: var(--f-body); font-weight: 400;
   font-size: .76rem; color: var(--muted); margin-top: .2rem; line-height: 1.4;
@@ -1567,12 +1572,12 @@ html { scroll-behavior: smooth; }
 </header>
 
 <dl class="facts">
-  <div><dt>The canon</dt><dd>66 books<small>Old Testament and New Testament &mdash; Genesis to Revelation</small></dd></div>
+  <div data-kpi="canon"><dt>The canon</dt><dd>66 books<small>Old Testament and New Testament &mdash; Genesis to Revelation</small></dd></div>
+  <div data-kpi="length"><dt>Length</dt><dd>756,846 words<small>English Standard Version<br>Old Testament: 581,112<br>New Testament: 175,734</small></dd></div>
   <div><dt>Events span</dt><dd>Creation &ndash; AD 95<small>Across ten eras outlined on the spine</small></dd></div>
-  <div><dt>Writing span</dt><dd>c. 1440 BC &ndash; AD 95<small>By traditional dating, a work spanning more than 40 authors</small></dd></div>
-  <div><dt>Length</dt><dd>756,846 words<small>English Standard Version<br>Old Testament: 581,112<br>New Testament: 175,734</small></dd></div>
-  <div><dt>Time to read</dt><dd>~60 hours<small>At the average adult silent reading speed of 200 words per minute</small></dd></div>
-  <div><dt>Distance</dt><dd>~4.5 miles<small>As written on single line, in 12 pt Times New Roman font</small></dd></div>
+  <div><dt>Writing span</dt><dd>c. 1440 BC &ndash; AD 95<small>Traditional dating, a work spanning more than 40 authors</small></dd></div>
+  <div data-kpi="time"><dt>Time to read</dt><dd>~60 hours<small>At the average adult silent reading speed of 200 words per minute</small></dd></div>
+  <div data-kpi="distance"><dt>Distance</dt><dd>~4.5 miles<small>As written on single line, in 12 pt Times New Roman font</small></dd></div>
 </dl>
 
 <!-- ============ THE SPINE ============ -->
@@ -6872,6 +6877,75 @@ html { scroll-behavior: smooth; }
          remembered in this browser. Built here rather than written into the
          markup, because build_spine.py rewrites the spine rows, the chip nav
          and parts of every section. --- */
+  /* ESV words per book, written here by build_spine.py from books.py */
+  var WORDS = {
+    "genesis": 36326,
+    "exodus": 30888,
+    "leviticus": 23440,
+    "numbers": 30965,
+    "deuteronomy": 27573,
+    "joshua": 17972,
+    "judges": 18295,
+    "ruth": 2427,
+    "samuel-1": 24136,
+    "samuel-2": 19751,
+    "kings-1": 23455,
+    "kings-2": 22802,
+    "chronicles-1": 18527,
+    "chronicles-2": 24809,
+    "ezra": 6026,
+    "nehemiah": 9845,
+    "esther": 5478,
+    "job": 17583,
+    "psalms": 42297,
+    "proverbs": 14531,
+    "ecclesiastes": 5339,
+    "song-of-songs": 2533,
+    "isaiah": 35279,
+    "jeremiah": 40508,
+    "lamentations": 3253,
+    "ezekiel": 37210,
+    "daniel": 11237,
+    "hosea": 4967,
+    "joel": 1896,
+    "amos": 4052,
+    "obadiah": 604,
+    "jonah": 1299,
+    "micah": 3002,
+    "nahum": 1111,
+    "habakkuk": 1254,
+    "zephaniah": 1556,
+    "haggai": 1085,
+    "zechariah": 6061,
+    "malachi": 1740,
+    "matthew": 22677,
+    "mark": 14364,
+    "luke": 24645,
+    "john": 18898,
+    "acts": 23495,
+    "romans": 9495,
+    "corinthians-1": 9281,
+    "corinthians-2": 6072,
+    "galatians": 3106,
+    "ephesians": 3016,
+    "philippians": 2147,
+    "colossians": 1936,
+    "thessalonians-1": 1844,
+    "thessalonians-2": 1064,
+    "timothy-1": 2317,
+    "timothy-2": 1633,
+    "titus": 926,
+    "philemon": 460,
+    "hebrews": 6929,
+    "james": 2319,
+    "peter-1": 2393,
+    "peter-2": 1549,
+    "john-1": 2499,
+    "john-2": 300,
+    "john-3": 302,
+    "jude": 604,
+    "revelation": 11463
+  };
   var READ_KEY = "thebooks-read";
   var read = {};
   try {
@@ -6901,6 +6975,50 @@ html { scroll-behavior: smooth; }
     }
   }
 
+  /* --- your progress: the masthead's figures, apportioned to the books
+         ticked. Hours and miles are the masthead's own totals scaled by the
+         share of the words read, so they always agree with the cells above. --- */
+  var HOURS_TOTAL = 60, MILES_TOTAL = 4.5;
+  var WORDS_TOTAL = 0;
+  Object.keys(WORDS).forEach(function (k) { WORDS_TOTAL += WORDS[k]; });
+  var progEls = {};
+  ["canon", "length", "time", "distance"].forEach(function (k) {
+    var dd = document.querySelector('.facts [data-kpi="' + k + '"] dd');
+    if (!dd) return;
+    var el = document.createElement("span");
+    el.className = "prog";
+    dd.appendChild(el);
+    progEls[k] = el;
+  });
+  function thousands(n) {
+    return String(n).replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  }
+  function scaled(share, total, unit) {
+    var v = share * total;
+    if (v > 0 && v < 0.05) return "<0.1 " + unit + "s";
+    var t = Math.round(v * 10) / 10;
+    var txt = (t % 1 === 0) ? String(t) : t.toFixed(1);
+    return "~" + txt + " " + (t === 1 ? unit : unit + "s");
+  }
+  function updateProgress() {
+    var n = 0, words = 0;
+    Object.keys(read).forEach(function (bid) {
+      if (!ctl[bid]) return;
+      n++;
+      words += WORDS[bid] || 0;
+    });
+    var share = WORDS_TOTAL ? words / WORDS_TOTAL : 0;
+    var lines = n ? {
+      canon:    "Your progress: " + n + "/66",
+      length:   "Your progress: " + thousands(words) + " words",
+      time:     "Your progress: " + scaled(share, HOURS_TOTAL, "hour"),
+      distance: "Your progress: " + scaled(share, MILES_TOTAL, "mile")
+    } : {};
+    Object.keys(progEls).forEach(function (k) {
+      progEls[k].textContent = lines[k] || "";
+    });
+  }
+
   function toggleRead(bid) {
     var on = !read[bid];
     if (on) read[bid] = 1;
@@ -6908,6 +7026,7 @@ html { scroll-behavior: smooth; }
     markRead(bid, on);
     saveRead();
     applyEmpty();
+    updateProgress();
   }
 
   function makeBox(bid, name, className) {
@@ -7001,6 +7120,7 @@ html { scroll-behavior: smooth; }
   Object.keys(read).forEach(function (bid) {
     if (ctl[bid]) markRead(bid, true);
   });
+  updateProgress();
 
   var filterBtns = document.querySelectorAll(".filterctl button[data-filter]");
   filterBtns.forEach(function (btn) {

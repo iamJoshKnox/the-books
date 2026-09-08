@@ -246,6 +246,11 @@ interesting thing on the page and it makes the disclaimer visible rather than
 footnoted. Opt-in, off by default, keeping the traditional dating as the
 site's own position.
 
+**19. Live masthead figures from what you have read.** (M) &mdash; done: `WORDS` in
+`books.py`, a "Your progress" line under the canon, length, time and distance.
+
+*(original text kept below)*
+
 **19. Live masthead figures from what you have read.** (M)
 The tracker knows which books are ticked; the masthead's *Time to read* and
 *Distance* do not. They should count down as you work through &mdash; the hours
