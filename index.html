@@ -1079,9 +1079,12 @@ main { display: flex; flex-direction: column; }
 
 /* the spine: the box sits inside the name column, so the tracks keep their
    left edge against the era strip and the master band */
-.srow[data-tracked] { grid-template-columns: 20px calc(var(--namecol) - 20px) 1fr; }
+/* 34px for the box, the name takes the rest of the column: the box clears the
+   group's accent bar by 9px and sits under the chevron, and the longest name
+   (1 Thessalonians, ~98px) still fits the ~107px it is left with */
+.srow[data-tracked] { grid-template-columns: 34px calc(var(--namecol) - 34px) 1fr; }
 .srow-check {
-  width: .8rem; height: .8rem; margin: 0; align-self: center; justify-self: start;
+  width: .8rem; height: .8rem; margin: 0 0 0 12px; align-self: center; justify-self: start;
   accent-color: var(--accent); cursor: pointer;
 }
 
