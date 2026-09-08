@@ -77,6 +77,7 @@ most pages. Three sittings; 2.1–2.3 are the first one.
 | 3.1 | Fourth sort, by author: one more `--o-author` per section from `books.py`; Paul's thirteen, Moses' five, John's five, Luke's two, Solomon's three, then the rest canonical | 15 | The topbar has four buttons and the caption explains the fourth |
 | 3.2 | `/` opens a filter over the chip strip; typing narrows; Enter jumps to the first match | 16 | You can reach Habakkuk in four keystrokes |
 | 3.3 | Contested-date overlay: a toggle that draws ghost bars at the critical-scholarship positions (Pentateuch → monarchy and later; Isaiah split; Daniel → 160s BC; the Pastorals → early second century). Data as a second date column in `books.py`, off by default | 17 | The footnote at the end becomes something you can *see* |
+| 3.4 | Live masthead figures: *Time to read* and *Distance* count down as books are ticked off. Needs per-book word counts in `books.py` first | 19 | The masthead answers "how much is left", not "how much is there" |
 
 **Acceptance:** each feature is independent; do them in any order, or skip
 3.3 if it feels like it changes what the site is claiming.

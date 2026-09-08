@@ -129,12 +129,26 @@ for bid in want:
     sec = section(bid)
     m = re.search(r'<p class="reads">(.*?)</p>', sec, re.S)
     check(m is not None, '%s: no "reads with" line' % bid)
+    check(sec.count('<p class="reads">') == 1, '%s: duplicated "reads with" line' % bid)
     links[bid] = set(re.findall(r'<a href="#([^"]+)">', m.group(1))) if m else set()
     check(bool(links[bid]), '%s: "reads with" names no books' % bid)
 for a, tos in links.items():
     for b in tos:
         check(b in links, '%s reads with %s, which is not a book' % (a, b))
         check(a in links.get(b, ()), '%s reads with %s but not the other way round' % (a, b))
+
+# ------------------------------------------------------ read tracker
+# the per-book checkbox is built at runtime, so what can be checked here is the
+# filter control, the storage key and the CSS the two of them rely on
+check(s.count('class="segctl filterctl"') == 1, 'read filter control missing or duplicated')
+for f in ('all', 'unread', 'read'):
+    check(('data-filter="%s"' % f) in s, 'read filter button %r missing' % f)
+check("thebooks-read" in s, 'read-state storage key missing')
+check('btn.className = "readbox"' in s, 'read checkbox is never built')
+for rule in (':root[data-filter="unread"] .chapter[data-read]',
+             ':root[data-filter="read"] .chapter:not([data-read])',
+             '.srow[data-read]', '.bn-books a[data-read]'):
+    check(rule in s, 'read tracker CSS missing: %r' % rule)
 
 # ---------------------------------------------------------- front matter
 for stale in ('46 of 66', 'Built so far', 'slice-note', 'design slice', 'none built yet',

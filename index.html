@@ -1064,6 +1064,40 @@ main { display: flex; flex-direction: column; }
 .note p:last-child { margin: 0; color: var(--k-ink2); font-size: .95rem; }
 .note.hot { border-left-color: var(--k-accent2); }
 .note.hot .tag { color: var(--k-accent2); }
+
+/* ---------- read tracker: one per book, kept in this browser ---------- */
+.readbox {
+  grid-column: 2; justify-self: start; margin-top: .9rem;
+  display: inline-flex; align-items: center; gap: .45rem;
+  font: inherit; font-family: var(--f-body); font-size: .66rem; font-weight: 700;
+  letter-spacing: .14em; text-transform: uppercase;
+  padding: .34rem .8rem; cursor: pointer;
+  border: 1px solid var(--k-line); border-radius: 999px;
+  background: transparent; color: var(--k-muted); white-space: nowrap;
+}
+.readbox:hover { color: var(--k-accent); border-color: var(--k-accent); }
+.readbox:focus-visible { outline: 2px solid var(--k-accent); outline-offset: 3px; }
+.rb-tick {
+  position: relative; flex: 0 0 auto; width: .78rem; height: .78rem;
+  border: 1px solid currentColor; border-radius: 3px;
+}
+.readbox[aria-pressed="true"] {
+  background: var(--k-accent); border-color: var(--k-accent); color: var(--k-ground);
+}
+.rb-tick::after {
+  content: "¹3"; position: absolute; inset: 0; opacity: 0;
+  font-size: .66rem; line-height: .74rem; text-align: center;
+}
+.readbox[aria-pressed="true"] .rb-tick::after { opacity: 1; }
+
+/* the filter hides whole books; the spine and the chips only dim, so the
+   timeline keeps its proportions */
+:root[data-filter="unread"] .chapter[data-read],
+:root[data-filter="read"] .chapter:not([data-read]),
+:root[data-filter="unread"] .division[data-empty],
+:root[data-filter="read"] .division[data-empty] { display: none; }
+.srow[data-read] { opacity: .34; }
+.bn-books a[data-read] { opacity: .5; }
 </style>
 
 <style>
@@ -1490,7 +1524,7 @@ html { scroll-behavior: smooth; }
 :target { scroll-margin-top: 165px; }
 
 @media print {
-  .controls, .toc, .vid-btn { display: none; }
+  .controls, .toc, .vid-btn, .readbox { display: none; }
   .chapter { break-inside: avoid; border-top: 2px solid #000; }
 }
 </style>
@@ -1515,8 +1549,8 @@ html { scroll-behavior: smooth; }
 <dl class="facts">
   <div><dt>The canon</dt><dd>66 books<small>Old Testament and New Testament &mdash; Genesis to Revelation</small></dd></div>
   <div><dt>Events span</dt><dd>Creation &ndash; AD 95<small>Across ten eras outlined on the spine</small></dd></div>
-  <div><dt>Writing span</dt><dd>c. 1440 BC &ndash; AD 95<small>Traditional dating, a work spanning more than 40 authors</small></dd></div>
-  <div><dt>Length</dt><dd>756,846 words<small>English Standard Version (ESV)<br>Old Testament: 581,112<br>New Testament: 175,734</small></dd></div>
+  <div><dt>Writing span</dt><dd>c. 1440 BC &ndash; AD 95<small>By traditional dating, a work spanning more than 40 authors</small></dd></div>
+  <div><dt>Length</dt><dd>756,846 words<small>English Standard Version<br>Old Testament: 581,112<br>New Testament: 175,734</small></dd></div>
   <div><dt>Time to read</dt><dd>~60 hours<small>At the average adult silent reading speed of 200 words per minute</small></dd></div>
   <div><dt>Distance</dt><dd>~4.5 miles<small>As written on single line, in 12 pt Times New Roman font</small></dd></div>
 </dl>
@@ -1901,6 +1935,12 @@ html { scroll-behavior: smooth; }
       <button type="button" data-order="canon" aria-pressed="true">Canonical</button>
       <button type="button" data-order="events" aria-pressed="false">By events</button>
       <button type="button" data-order="written" aria-pressed="false">By date written</button>
+    </div>
+    <span class="ctl-label">Show</span>
+    <div class="segctl filterctl" role="group" aria-label="Filter by read state">
+      <button type="button" data-filter="all" aria-pressed="true">All</button>
+      <button type="button" data-filter="unread" aria-pressed="false">Unread</button>
+      <button type="button" data-filter="read" aria-pressed="false">Read</button>
     </div>
     <button type="button" class="themebtn" id="themebtn">Theme: auto</button>
     <p class="order-note" id="order-note">Genesis to Revelation, the order the books sit in on the shelf.</p>
@@ -6806,6 +6846,104 @@ html { scroll-behavior: smooth; }
       applyTheme();
     });
   }
+
+  /* --- read tracker: a checkbox per book, remembered in this browser.
+         Built here rather than written into the markup, because build_spine.py
+         rewrites the spine rows, the chip nav and parts of every section. --- */
+  var READ_KEY = "thebooks-read";
+  var read = {};
+  try {
+    var rawRead = localStorage.getItem(READ_KEY);
+    if (rawRead) read = JSON.parse(rawRead) || {};
+  } catch (e) { read = {}; }
+
+  function saveRead() {
+    try { localStorage.setItem(READ_KEY, JSON.stringify(read)); } catch (e) {}
+  }
+
+  /* the section, its spine row and its chip all carry data-read */
+  function markRead(bid, on) {
+    var sec = document.getElementById(bid);
+    var chip = document.querySelector('.bn-books a[href="#' + bid + '"]');
+    var nameLink = document.querySelector('.srow-name[href="#' + bid + '"]');
+    var targets = [sec, chip, nameLink ? nameLink.parentNode : null];
+    targets.forEach(function (el) {
+      if (!el) return;
+      if (on) el.setAttribute("data-read", "");
+      else el.removeAttribute("data-read");
+    });
+    var btn = sec ? sec.querySelector(".readbox") : null;
+    if (btn) {
+      btn.setAttribute("aria-pressed", String(!!on));
+      btn.querySelector(".rb-lab").textContent = on ? "Read" : "Mark read";
+    }
+  }
+
+  /* a division preface with nothing left under it should go too */
+  function applyEmpty() {
+    var mode = document.documentElement.getAttribute("data-filter") || "all";
+    document.querySelectorAll("section.division").forEach(function (div) {
+      var books = document.querySelectorAll('section.chapter[data-div="' + div.dataset.div + '"]');
+      var shown = 0;
+      books.forEach(function (b) {
+        var isRead = b.hasAttribute("data-read");
+        if (mode === "all" || (mode === "unread") !== isRead) shown++;
+      });
+      if (shown) div.removeAttribute("data-empty");
+      else div.setAttribute("data-empty", "");
+    });
+  }
+
+  document.querySelectorAll("section.chapter").forEach(function (sec) {
+    var head = sec.querySelector(".ch-head");
+    if (!head) return;
+    var bid = sec.id;
+
+    var btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "readbox";
+    btn.setAttribute("aria-pressed", "false");
+
+    var tick = document.createElement("span");
+    tick.className = "rb-tick";
+    tick.setAttribute("aria-hidden", "true");
+    btn.appendChild(tick);
+
+    var lab = document.createElement("span");
+    lab.className = "rb-lab";
+    lab.textContent = "Mark read";
+    btn.appendChild(lab);
+
+    btn.addEventListener("click", function () {
+      var on = !read[bid];
+      if (on) read[bid] = 1;
+      else delete read[bid];
+      markRead(bid, on);
+      saveRead();
+      applyEmpty();
+    });
+
+    head.appendChild(btn);
+  });
+
+  Object.keys(read).forEach(function (bid) {
+    if (document.getElementById(bid)) markRead(bid, true);
+  });
+
+  var filterBtns = document.querySelectorAll(".filterctl button[data-filter]");
+  filterBtns.forEach(function (btn) {
+    btn.addEventListener("click", function () {
+      var mode = btn.dataset.filter;
+      if (mode === "all") document.documentElement.removeAttribute("data-filter");
+      else document.documentElement.setAttribute("data-filter", mode);
+      filterBtns.forEach(function (b) {
+        b.setAttribute("aria-pressed", String(b === btn));
+      });
+      applyEmpty();
+      refreshTitle();
+    });
+  });
+  applyEmpty();
 
   /* --- video facades: the iframe is built only on click --- */
   document.querySelectorAll(".video[data-yt]").forEach(function (fig) {

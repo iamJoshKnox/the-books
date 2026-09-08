@@ -246,6 +246,14 @@ interesting thing on the page and it makes the disclaimer visible rather than
 footnoted. Opt-in, off by default, keeping the traditional dating as the
 site's own position.
 
+**19. Live masthead figures from what you have read.** (M)
+The tracker knows which books are ticked; the masthead's *Time to read* and
+*Distance* do not. They should count down as you work through &mdash; the hours
+and the miles left, not the hours and miles there are. **Prerequisite:** per-book
+word counts. `books.py` holds chapters, not words, so the two totals in the
+masthead are hard-coded and cannot be apportioned. Add a words column there,
+derive 756,846 from it rather than stating it, and the rest is arithmetic.
+
 **18. Sharing metadata.** (S)
 No description, no Open Graph tags, no favicon. A link to this page currently
 previews as bare text. One block in the head.
