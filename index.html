@@ -7010,7 +7010,7 @@ html { scroll-behavior: smooth; }
     var share = WORDS_TOTAL ? words / WORDS_TOTAL : 0;
     var lines = n ? {
       canon:    "Your progress: " + n + "/66",
-      length:   "Your progress: " + thousands(words) + " words",
+      length:   "Your progress: " + thousands(words),
       time:     "Your progress: " + scaled(share, HOURS_TOTAL, "hour"),
       distance: "Your progress: " + scaled(share, MILES_TOTAL, "mile")
     } : {};
